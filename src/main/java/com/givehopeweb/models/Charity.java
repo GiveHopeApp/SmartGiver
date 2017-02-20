@@ -17,10 +17,22 @@ public class Charity {
     private String charityName;
 
     @Column (nullable = false)
-    private String charityInfo;
+    private long ein;
 
     @Column (nullable = false)
-    private String location;
+    private String url;
+
+    @Column (nullable = false)
+    private String city;
+
+    @Column (nullable = false)
+    private String state;
+
+    @Column (nullable = false)
+    private String zipCode;
+
+    @Column (nullable = false)
+    private String category;
 
     @Column (nullable = false)
     private boolean favoritedByUser;
@@ -44,22 +56,6 @@ public class Charity {
         this.charityName = charityName;
     }
 
-    public String getCharityInfo() {
-        return charityInfo;
-    }
-
-    public void setCharityInfo(String charityInfo) {
-        this.charityInfo = charityInfo;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
     public boolean isFavoritedByUser() {
         return favoritedByUser;
     }
@@ -74,5 +70,53 @@ public class Charity {
 
     public void setPromoted(boolean promoted) {
         this.promoted = promoted;
+    }
+
+    public long getEin() {
+        return ein;
+    }
+
+    public void setEin(long ein) {
+        this.ein = ein;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getZipCode() {
+        return zipCode;
+    }
+
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }
