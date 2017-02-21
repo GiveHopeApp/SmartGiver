@@ -17,14 +17,13 @@ public class Donation {
     @Column (nullable = false, precision = 4)
     private BigDecimal amount;
 
-    @Column (nullable = false)
-    private int charityId;
+    @ManyToOne
+    @JoinColumn (name = "charity_id")
+    private Charity charity;
 
-    @Column (nullable = false)
-    private int userId;
-
-    @Column (nullable = false)
-    private boolean hidden;
+    @ManyToOne
+    @JoinColumn (name = "user_id")
+    private User user;
 
     public int getId() {
         return id;
@@ -42,27 +41,19 @@ public class Donation {
         this.amount = amount;
     }
 
-    public int getCharityId() {
-        return charityId;
+    public User getUser() {
+        return user;
     }
 
-    public void setCharityId(int charityId) {
-        this.charityId = charityId;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public int getUserId() {
-        return userId;
+    public Charity getCharity() {
+        return charity;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
-
-    public boolean isHidden() {
-        return hidden;
-    }
-
-    public void setHidden(boolean hidden) {
-        this.hidden = hidden;
+    public void setCharity(Charity charity) {
+        this.charity = charity;
     }
 }
