@@ -51,7 +51,7 @@ public class User {
     @OneToMany (cascade = CascadeType.ALL, mappedBy = "user")
     private List<Donation> donations;
 
-    @OneToMany (mappedBy = "favoritedByUser")
+    @OneToMany (mappedBy = "user")
     private List<Charity> favoriteCharities;
 
     public int getId() {
