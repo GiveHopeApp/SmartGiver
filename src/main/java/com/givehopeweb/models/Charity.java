@@ -1,6 +1,7 @@
 package com.givehopeweb.models;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Created by David on 2/17/17.
@@ -34,11 +35,15 @@ public class Charity {
     @Column (nullable = false)
     private String category;
 
-    @Column (nullable = false)
-    private boolean favoritedByUser;
-
-    @Column (nullable = false)
+    @Column
     private boolean promoted;
+
+    @OneToMany (mappedBy = "charity")
+    private List<Donation> donations;
+
+    @ManyToOne
+    @JoinColumn (name = "saved_by_user_id")
+    private User user;
 
     public int getId() {
         return id;
@@ -54,14 +59,6 @@ public class Charity {
 
     public void setCharityName(String charityName) {
         this.charityName = charityName;
-    }
-
-    public boolean isFavoritedByUser() {
-        return favoritedByUser;
-    }
-
-    public void setFavoritedByUser(boolean favoritedByUser) {
-        this.favoritedByUser = favoritedByUser;
     }
 
     public boolean isPromoted() {
@@ -118,5 +115,21 @@ public class Charity {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public List<Donation> getDonations() {
+        return donations;
+    }
+
+    public void setDonations(List<Donation> donations) {
+        this.donations = donations;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

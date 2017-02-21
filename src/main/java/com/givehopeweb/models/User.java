@@ -5,6 +5,7 @@ import org.hibernate.validator.constraints.NotBlank;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
+import java.util.List;
 
 /**
  * Created by David on 2/17/17.
@@ -47,6 +48,12 @@ public class User {
     @Column
     private String profilePicture;
 
+    @OneToMany (cascade = CascadeType.ALL, mappedBy = "user")
+    private List<Donation> donations;
+
+    @OneToMany (mappedBy = "favoritedByUser")
+    private List<Charity> favoriteCharities;
+
     public int getId() {
         return id;
     }
@@ -85,5 +92,21 @@ public class User {
 
     public void setProfilePicture(String profilePicture) {
         this.profilePicture = profilePicture;
+    }
+
+    public List<Donation> getDonations() {
+        return donations;
+    }
+
+    public void setDonations(List<Donation> donations) {
+        this.donations = donations;
+    }
+
+    public List<Charity> getFavoriteCharities() {
+        return favoriteCharities;
+    }
+
+    public void setFavoriteCharities(List<Charity> favoriteCharities) {
+        this.favoriteCharities = favoriteCharities;
     }
 }
