@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Give Hope</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:600"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:700"/>
+    <link rel="stylesheet" href="css/home_screen.css"/>
+    <link rel="stylesheet" href="css/navbar.css"/>
+</head>
+<body>
+<nav th:include="fragments/navbar :: navbar"></nav>
+<section id="home-div">
+    <h1 id="main-header" class="homepage-headers">GIVE HOPE</h1>
+    <h1 id="tagline-header" class="homepage-headers">find a cause</h1>
+    <button id="home-button" class="btn btn-secondary">How It Works</button>
+    <img id="home-arrow-down" src="images/category.png"/>
+</section>
+<section id="guide-div">
+    <h1 class="guide-headers">We make it easy to donate</h1>
+    <h1 class="guide-headers">We help you find a top rated organization for a cause of your choosing and allow you to make a donation directly through our site.</h1>
+</section>
+</body>
+<script src="js/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script th:include="fragments/navbarScroll :: navbarScroll"></script>
+</html>
+
+
+<!--<section id="search-by-div">-->
+<!--<h1 id="search-by-header">FIND CHARITIES BY</h1>-->
+<!--<div id="categories-div">-->
+<!--<div class="tile">-->
+<!--<div>-->
+<!--<img class="tile-icon" src="images/trophy_icon.jpg"/>-->
+<!--<div class="info">-->
+<!--<h1 class="info-header">Top Rated</h1>-->
+<!--<p class="info-paragraph">Find The Highest Rated Charities In The Country</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="tile">-->
+<!--<div>-->
+<!--<img class="tile-icon" src="images/category.jpg"/>-->
+<!--<div class="info">-->
+<!--<h1 class="info-header">Category</h1>-->
+<!--<p class="info-paragraph">Find By Charities By A Specific Cause</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="tile">-->
+<!--<div>-->
+<!--<img class="tile-icon" src="images/location-pin.png"/>-->
+<!--<div class="info">-->
+<!--<h1 class="info-header">Location</h1>-->
+<!--<p class="info-paragraph">Find Charities In Your Area Or City Of Your Choice</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</section>-->

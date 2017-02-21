@@ -1,0 +1,48 @@
+.scrolled {
+    background-color: beige;
+}
+#nav {
+    padding: 6px;
+    border-color: transparent;
+}
+.navbar {
+    background-color: transparent;
+}
+.nav-a {
+    color: white;
+    font-size: 20px;
+}
+.nav-a:first-of-type {
+    font-size: 25px;
+}
+a:hover {
+    background-color: transparent;
+    color: white;
+}
+.nav>li>a:hover {
+    background-color: transparent;
+    color: white;
+}
+#search-input {
+    background-color: transparent;
+    border-color: white;
+    border-width: 3px;
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+    outline: none;
+    letter-spacing: 2px;
+}
+#search-input::-webkit-input-placeholder { /* Chrome */
+    color: white;
+}
+#search-input:-ms-input-placeholder { /* IE 10+ */
+    color: white;
+}
+#search-input::-moz-placeholder { /* Firefox 19+ */
+    color: white;
+    opacity: 1;
+}
+#search-input:-moz-placeholder { /* Firefox 4 - 18 */
+    color: white;
+    opacity: 1;
+}
