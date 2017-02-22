@@ -9,8 +9,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class GiveHopeController {
 
-    @GetMapping ("/")
-    public String showLandingPage () {
-        return "/home-screen";
+    @GetMapping ("/home")
+    public String showLandingPage() {
+        return "home_screen";
+    }
+
+    @GetMapping ("/donate")
+    public String showDonationForm() {
+        return "donation_form";
     }
 }

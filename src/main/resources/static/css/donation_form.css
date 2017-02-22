@@ -1,0 +1,46 @@
+#main-wrapper-div {
+    padding: 60px 0 20px 0;
+    text-align: center;
+}
+#form-div {
+    display: inline-block;
+    width: 738px;
+}
+#main-header {
+    font-size: 35px;
+    text-decoration: underline;
+    margin-bottom: 35px;
+
+}
+input:focus {
+    outline: none;
+}
+
+
+.name-div {
+    display: inline-block;
+}
+
+
+.inputs {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: transparent;
+    height: 45px;
+    padding: 0 12px 0 6px;
+    line-height: 45px;
+}
+.name-inputs {
+}
+#card-input {
+}
+#expiration-input {
+}
+#cvv-input {
+}
+#donate-btn {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.form-labels {
+    font-size: 25px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
