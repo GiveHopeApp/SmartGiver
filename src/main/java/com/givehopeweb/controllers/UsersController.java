@@ -32,12 +32,14 @@ public class UsersController {
         this.roles = roles;
     }
 
-    @GetMapping ("/registration")
-    public String showRegistrationPage () {
+    @GetMapping ("/register")
+    public String showRegistrationPage (Model model) {
+
+        model.addAttribute("user", new User() );
         return  "/users/registration";
     }
 
-    @PostMapping("/registration")
+    @PostMapping("/register")
     public String registerUser (
             @Valid User user,
             Errors validation,
