@@ -11,6 +11,6 @@ public class GiveHopeController {
 
     @GetMapping ("/")
     public String showLandingPage () {
-        return "/home-screen";
+        return "/home_screen";
     }
 }
