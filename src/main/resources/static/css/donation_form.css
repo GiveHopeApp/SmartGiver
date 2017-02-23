@@ -1,46 +1,86 @@
+/*---DIVS---*/
 #main-wrapper-div {
-    padding: 60px 0 20px 0;
-    text-align: center;
+    padding: 50px 250px 0 250px;
 }
 #form-div {
+    border: solid;
+    border-width: 2px;
+    border-color: lightgray;
+    border-radius: 5px;
+    padding: 50px 100px 30px 100px;
+    background: linear-gradient(to bottom, #6637fd 45%, #ffffff 0%);
+}
+.input-field-div:nth-of-type(2) {
     display: inline-block;
-    width: 738px;
+    float: left;
+    width: 47%;
 }
+.input-field-div:nth-of-type(3) {
+    display: inline-block;
+    float: right;
+    width: 47%;
+}
+/*---HEADERS---*/
 #main-header {
-    font-size: 35px;
-    text-decoration: underline;
-    margin-bottom: 35px;
-
+    margin-bottom: 20px;
 }
-input:focus {
+/*---INPUTS---*/
+*:focus {
     outline: none;
 }
-
-
-.name-div {
-    display: inline-block;
-}
-
-
-.inputs {
-    font-family: 'Source Sans Pro', sans-serif;
-    background-color: transparent;
+input {
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+    box-shadow: none;
     height: 45px;
-    padding: 0 12px 0 6px;
-    line-height: 45px;
+    width: 100%;
+    font-size: 20px;
 }
-.name-inputs {
+.numbers {
+    border-radius: 3px;
+    padding: 5px 0 5px 0;
+    background-color: #5d33ea;
+    color: white;
+    text-align: center;
 }
-#card-input {
+.numbers:first-of-type {
+    margin-bottom: 20px;
 }
-#expiration-input {
+.names {
+    border: none;
+    border-bottom: solid;
+    border-color: lightgray;
+    border-width: 2px;
+    padding: 0 0 5px 6px;
+    background-color: transparent;
 }
-#cvv-input {
+#first-name {
+    margin-top: 35px;
+    margin-bottom: 20px;
 }
-#donate-btn {
-    font-family: 'Source Sans Pro', sans-serif;
+.numbers::-webkit-input-placeholder {
+    color: white;
+    text-align: center;
 }
-.form-labels {
-    font-size: 25px;
-    font-family: 'Source Sans Pro', sans-serif;
+.numbers:-moz-placeholder {
+    color: white;
+}
+.numbers::-moz-placeholder {
+    color: white;
+}
+.numbers:-ms-input-placeholder {
+    color: white;
+}
+/*---BUTTONS---*/
+#donate_btn {
+    background-color: #6637fd;
+    color: white;
+    box-shadow: none;
+    width: 100%;
+    margin: 30px 0 10px 0;
+    border: none;
+    height: 35px;
+    font-size: 22px;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
 }

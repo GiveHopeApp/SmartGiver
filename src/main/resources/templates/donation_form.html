@@ -2,48 +2,44 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>Donation Form</title>
+    <title>Donate</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:600"/>
-    <link rel="stylesheet" href="css/donation_form.css"/>
+    <link rel="stylesheet" href="css/donation_form2.css"/>
 </head>
 <body>
-<div>
-    <nav th:include="fragments/navbar :: navbar"></nav>
-    <div id="main-wrapper-div">
-        <h1 id="main-header">Payment Information</h1>
-        <div id="form-div">
-            <form id="panda_cc_form">
-                <div class="form-group name-div">
-                    <label for="first-name-input" class="form-labels">First Name</label>
-                    <input id="first-name-input" class="form-control name-inputs inputs" type="text" data-panda="first_name"/>
-                </div>
-                <div class="form-group name-div">
-                    <label for="last-name-input" class="form-labels">Last Name</label>
-                    <input id="last-name-input" class="form-control name-inputs inputs" type="text" data-panda="last_name"/>
-                </div>
-                <div class="form-group">
-                    <label for="card-input" class="form-labels">Credit Card Number</label>
-                    <input id="card-input" class="form-control form-inputs inputs" type="text" data-panda="credit_card"/>
-                </div>
-                <div class="form-group">
-                    <label for="expiration-input" class="form-labels">Expiration</label>
-                    <input id="expiration-input" class="form-control form-inputs inputs" type="text" data-panda="expiration"/>
-                </div>
-                <div class="form-group">
-                    <label for="cvv-input" class="form-labels">CVV</label>
-                    <input id="cvv-input" class="form-control form-inputs inputs" type="text" data-panda="cvv"/>
-                </div>
-                <div id="tokenize" class="form-group">
-                    <button type="submit" id="donate-btn" class="btn btn-primary btn-block">Donate</button>
-                </div>
-            </form>
-        </div>
+<div id="main-wrapper-div">
+    <h1 id="main-header">Enter Payment Information</h1>
+    <div id="form-div">
+        <form id="panda_cc_form">
+            <div class="input-field-div">
+                <input class="inputs numbers" type="text" placeholder="Card Number" maxlength="16" data-panda="credit_card"/>
+            </div>
+
+            <div class="input-field-div">
+                <input class="inputs numbers" type="text" placeholder="MM/YYYY" maxlength="7" data-panda="expiration"/>
+            </div>
+
+            <div class="input-field-div">
+                <input class="inputs numbers" type="text" placeholder="CVV" maxlength="3" data-panda="cvv"/>
+            </div>
+
+            <div class="input-field-div">
+                <input id="first-name" class="inputs names" type="text" placeholder="First Name" data-panda="first_name"/>
+            </div>
+
+            <div class="input-field-div">
+                <input id="last-name" class="inputs names" type="text" placeholder="Last Name" data-panda="last_name"/>
+            </div>
+
+            <div id="tokenize">
+                <button id="donate_btn" type="submit">DONATE</button>
+            </div>
+        </form>
     </div>
 </div>
 <script src="//d2t45z63lq9zlh.cloudfront.net/panda-v0.0.5.min.js"></script>
-
 <script>
     // Call Panda.init() with your Panda Publishable Key and the DOM id of the
     // credit card-related form element
