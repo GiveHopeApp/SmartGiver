@@ -7,7 +7,7 @@
     <body>
 
         <div class="container" th:object="${user}">
-            <h1 th:text="*{username}"></h1>
+            <h1>Hello, <span th:text="*{username}"></span>!</h1>
             <p th:text="*{email}"></p>
         </div>
 
