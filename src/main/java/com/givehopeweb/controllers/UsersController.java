@@ -2,9 +2,12 @@ package com.givehopeweb.controllers;
 
 import com.givehopeweb.models.User;
 import com.givehopeweb.models.UserRole;
+import com.givehopeweb.repositories.Charities;
+import com.givehopeweb.repositories.Donations;
 import com.givehopeweb.repositories.Roles;
 import com.givehopeweb.repositories.Users;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,12 +28,17 @@ public class UsersController {
     private Users users;
     private PasswordEncoder encoder;
     private Roles roles;
+    private Donations donations;
+    private Charities charities;
 
     @Autowired
-    public UsersController (Users users, PasswordEncoder encoder, Roles roles) {
+    public UsersController (Users users, PasswordEncoder encoder, Roles roles, Donations
+            donations, Charities charities) {
         this.users = users;
         this.encoder = encoder;
         this.roles = roles;
+        this.donations = donations;
+        this.charities = charities;
     }
 
     @GetMapping ("/register")
@@ -75,10 +83,10 @@ public class UsersController {
         return "redirect:/home_screen";
     }
 
-    @GetMapping ("profile/{id}")
-    public String showUser (@PathVariable Integer id, Model model) {
+    @GetMapping ("profile")
+    public String showUser (Model model) {
 
-        User user = users.findOne(id);
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         model.addAttribute("user", user);
 
         return "/users/profile";
