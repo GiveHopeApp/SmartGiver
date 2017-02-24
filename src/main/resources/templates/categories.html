@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="../css/demo.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+
+    <!--<link rel="stylesheet" type="text/css" href="../css/styleNoJS.css"/>-->
+    <title>Categories</title>
+</head>
+<body>
+
+<div id="va-accordion" class="va-container">
+    <div class="va-nav">
+        <span class="va-nav-prev">Previous</span>
+        <span class="va-nav-next">Next</span>
+    </div>
+    <div class="va-wrapper">
+        <div class="va-slice va-slice-color-1 va-slice-1">
+            <h3 class="va-title">Cancer</h3>
+            <div class="va-content">
+                <p>Charity</p>
+
+                <!--<div id=""></div>-->
+                <ul>
+                    <li><a href="#">About</a></li>
+
+                </ul>
+
+                <br/>
+
+                <p>Charity</p>
+
+                <!--<div id=""></div>-->
+                <ul>
+                    <li><a href="#">About</a></li>
+
+                </ul>
+
+                <br/>
+                <p>Charity</p>
+
+                <!--<div id=""></div>-->
+                <ul>
+                    <li><a href="#">About</a></li>
+
+                </ul>
+
+                <br/>
+                <p>Charity</p>
+
+                <!--<div id=""></div>-->
+                <ul>
+                    <li><a href="#">About</a></li>
+
+                </ul>
+
+
+                <br/>
+                <p>Charity</p>
+
+                <!--<div id=""></div>-->
+                <ul>
+                    <li><a href="#">About</a></li>
+
+                </ul>
+
+
+                <br/>
+                <p>Charity</p>
+
+                <!--<div id=""></div>-->
+                <ul>
+                    <li><a href="#">About</a></li>
+
+                </ul>
+
+                <br/>
+                <p>Charity</p>
+
+                <!--<div id=""></div>-->
+                <ul>
+                    <li><a href="#">About</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+        <div class="va-slice va-slice-2">
+            <h3 class="va-title">Health</h3>
+            <div class="va-content">
+                <p>Charity</p>
+                <ul>
+                    <li><a href="#">About</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="va-slice va-slice-3">
+            <h3 class="va-title">Veterans</h3>
+            <div class="va-content">
+                <p>Charity</p>
+                <ul>
+                    <li><a href="#">About</a></li>
+\
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery.vaccordion.js"></script>
+<script src="../js/jquery.easing.1.3.js"></script>
+<script src="../js/jquery.mousewheel.js"></script>
+<script>
+    $('#va-accordion').vaccordion({
+        accordionW		: $(window).width(),
+        accordionH		: $(window).height(),
+        visibleSlices	: 5,
+        expandedHeight	: 600,
+        animOpacity		: 0.1,
+        contentAnimSpeed: 100
+    });
+</script>
+</body>
+</html>

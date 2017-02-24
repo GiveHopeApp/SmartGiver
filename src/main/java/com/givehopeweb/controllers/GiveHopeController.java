@@ -13,4 +13,9 @@ public class GiveHopeController {
     public String showLandingPage () {
         return "/home_screen";
     }
+
+    @GetMapping ("/categories")
+    public String showCategoriesPage () {
+        return "/categories";
+    }
 }
