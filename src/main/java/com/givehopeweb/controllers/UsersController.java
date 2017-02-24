@@ -74,12 +74,17 @@ public class UsersController {
         return "redirect:/home-screen";
     }
 
-    @GetMapping ("profile/{id}")
+    @GetMapping ("/profile/{id}")
     public String showUser (@PathVariable Integer id, Model model) {
 
         User user = users.findOne(id);
         model.addAttribute("user", user);
 
+        return "/users/profile";
+    }
+
+    @GetMapping ("/profile")
+    public String showProfilePage () {  //will delete later, this controller is simply for testing
         return "/users/profile";
     }
 }

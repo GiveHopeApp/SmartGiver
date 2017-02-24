@@ -1,59 +1,59 @@
-#home-div {
-    height: 100vh;
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
 }
 
-#main-header-div {
+#head {
     background-color: #5744e8;
     padding: 20px 0 20px 0;
 }
-#main-header {
+
+#head h1 {
     font-size: 65px;
-    font-family: 'Source Sans Pro', sans-serif;
     text-align: center;
     margin: 0;
-    color: white;
 }
 
-#guide-headers-div {
-    width: 450px;
-    margin-left: 130px;
-    margin-top: 100px;
+#main {
+    padding: 100px 130px 0 130px;
+    display: inline-block;
+    width: 100%;
 }
-.guide-headers {
+
+#main div {
+    width: 450px;
+}
+
+#main h1 {
     color: black;
 }
-.guide-headers:first-of-type {
+
+#main h1:first-of-type {
     font-size: 56px;
-    font-family: 'Source Sans Pro', sans-serif;
     margin: 0;
 }
-.guide-headers:last-of-type {
+
+#main h1:last-of-type {
     font-size: 20px;
     font-family: 'Open Sans', sans-serif;
 }
-#guide-btn {
+
+button {
     margin-top: 10px;
     width: 165px;
     height: 50px;
-    outline: none;
     font-size: 16px;
     letter-spacing: 1px;
-    box-shadow: none;
-    border-radius: 0;
-    color: white;
+    border: none;
     background-color: #6637fd;
-    font-family: 'Source Sans Pro', sans-serif;
     padding: 10px 20px 10px 20px;
 }
-#guide-glyphicon {
-    color: white;
+
+.glyphicon {
     font-size: 14px;
     margin-left: 5px;
 }
 
-
-
-
-.form-control:focus {
+*:focus {
     outline: none;
 }

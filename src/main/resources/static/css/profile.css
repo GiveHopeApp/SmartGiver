@@ -1,0 +1,29 @@
+body {
+    font-family: 'Titillium Web', sans-serif;
+}
+.profile {
+    padding: 50px 200px 0 200px;
+    text-align: center;
+}
+.img-wrap {
+    padding: 5px;
+    background-color: white;
+    display: inline-block;
+    float: left;
+}
+.name-wrap {
+    display: inline-block;
+}
+.name-wrap h1 {
+    display: inline-block;
+}
+img {
+    width: 150px;
+    height: 150px;
+}
+h1 {
+    font-size: 40px;
+}
+h2 {
+    font-size: 25px;
+}
