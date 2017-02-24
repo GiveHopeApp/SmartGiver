@@ -8,7 +8,7 @@
     border-color: lightgray;
     border-radius: 5px;
     padding: 50px 100px 30px 100px;
-    background: linear-gradient(to bottom, #6637fd 45%, #ffffff 0%);
+    background: linear-gradient(to bottom, #6035e7 45%, #ffffff 0%);
 }
 .input-field-div:nth-of-type(2) {
     display: inline-block;
@@ -35,11 +35,14 @@ input {
     height: 45px;
     width: 100%;
     font-size: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #38207c;
 }
 .numbers {
     border-radius: 3px;
     padding: 5px 0 5px 0;
-    background-color: #5d33ea;
+    background-color: #5631d3;
     color: white;
     text-align: center;
 }
@@ -60,26 +63,29 @@ input {
 }
 .numbers::-webkit-input-placeholder {
     color: white;
-    text-align: center;
+    opacity: 0.9;
 }
 .numbers:-moz-placeholder {
     color: white;
+    opacity: 0.9;
 }
 .numbers::-moz-placeholder {
     color: white;
+    opacity: 0.9;
 }
 .numbers:-ms-input-placeholder {
     color: white;
+    opacity: 0.9;
 }
 /*---BUTTONS---*/
 #donate_btn {
-    background-color: #6637fd;
+    background-color: #6035e7;
     color: white;
     box-shadow: none;
     width: 100%;
     margin: 30px 0 10px 0;
     border: none;
-    height: 35px;
+    height: 37px;
     font-size: 22px;
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 1px;

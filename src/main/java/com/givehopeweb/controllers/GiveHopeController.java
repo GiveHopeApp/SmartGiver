@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class GiveHopeController {
 
-    @GetMapping ("/home")
+    @GetMapping ("/")
     public String showLandingPage() {
         return "home_screen";
     }
@@ -17,5 +17,10 @@ public class GiveHopeController {
     @GetMapping ("/donate")
     public String showDonationForm() {
         return "donation_form";
+    }
+
+    @GetMapping ("/login")
+    public String showLoginForm() {
+        return "login-register";
     }
 }
