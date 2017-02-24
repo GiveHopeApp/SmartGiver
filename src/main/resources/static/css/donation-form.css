@@ -1,14 +1,15 @@
-/*---DIVS---*/
-#main-wrapper-div {
-    padding: 50px 250px 0 250px;
+/*---HTML---*/
+html {
+    overflow-y: scroll;
 }
-#form-div {
-    border: solid;
-    border-width: 2px;
-    border-color: lightgray;
-    border-radius: 5px;
-    padding: 50px 100px 30px 100px;
-    background: linear-gradient(to bottom, #6035e7 45%, #ffffff 0%);
+/*---BODY---*/
+body {
+    font-family: 'Titillium Web', sans-serif;
+}
+/*---DIVS---*/
+#form {
+    padding: 50px 200px 30px 200px;
+    background: linear-gradient(to bottom, #6035e7 53%, #ffffff 0%);
 }
 .input-field-div:nth-of-type(2) {
     display: inline-block;
@@ -22,7 +23,10 @@
 }
 /*---HEADERS---*/
 #main-header {
-    margin-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 35px;
+    text-align: center;
+    color: white;
 }
 /*---INPUTS---*/
 *:focus {
