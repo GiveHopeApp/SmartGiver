@@ -14,6 +14,9 @@ public interface Charities extends CrudRepository <Charity, Integer> {
         @Query ("select c from Charity c where c.user.id = ?1")
         List<Charity> findUserFavorites (int userId);
 
-        List<Charity> findByCategoryLike (String category);
+
+        List<Charity>
+        findByCharityNameContainingOrCategoryContainingOrStateContainingOrCityContainingOrDescriptionContaining
+                (String name, String category, String state, String city, String keyword);
 
 }

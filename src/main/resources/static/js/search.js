@@ -5,13 +5,14 @@
 (function () {
 
     $("#searchTerm").keyup(function () {
+
+        var url = "/" + $(this).val() + ".json";
+
         var request = $.ajax ({
-            url: "/charities.json"
+            url: url
         });
 
         request.done(function (charities) {
-
-            console.log("done");
 
             var html = "";
 
@@ -22,13 +23,25 @@
                     + charity.charityName + " "
                     + charity.category + " "
                     + charity.ein + " "
+                    + charity.city + " "
                     + charity.state + " "
                     + charity.description + "</p>";
             });
 
-            $("#searchResults").html(html);
-        })
-    });
+            if (charities.length == 0) {
+                html = "We didn't find anything..."
+            }
 
+            $("#searchResults").html(html);
+        });
+
+        request.fail(function () {
+
+            var html = "";
+
+            $("#searchResults").html(html);
+        });
+
+    });
 
 })();
