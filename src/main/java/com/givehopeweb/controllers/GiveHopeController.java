@@ -1,10 +1,14 @@
 package com.givehopeweb.controllers;
 
 import com.givehopeweb.models.Charity;
+import com.givehopeweb.models.SearchTerm;
 import com.givehopeweb.repositories.Charities;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
@@ -28,13 +32,16 @@ public class GiveHopeController {
     }
 
     @GetMapping ("/search")
-    public String showSearchPage () {
+    public String showSearchPage (Model model) {
+
+        model.addAttribute("searchTerm", new SearchTerm());
+
         return "/charities/search";
     }
 
     @GetMapping ("/charities.json")
-    public @ResponseBody
-    List<Charity> showAllCharities () {
-        return (List<Charity>) charitiesDao.findAll();
+    public @ResponseBody List<Charity> showSearchResults () {
+
+        return charitiesDao.findByCategoryLike("youth");
     }
 }

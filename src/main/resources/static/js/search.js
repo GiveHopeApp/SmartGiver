@@ -4,23 +4,31 @@
 "use strict";
 (function () {
 
-    var request = $.ajax ({
-        url: "/charities.json"
-    });
-
-    request.done(function (charities) {
-
-        var html = "";
-
-        console.log(charities);
-
-        charities.forEach(function (charity) {
-            html += "<p>"
-                + charity.charityName + " "
-                + charity.category + " "
-                + charity.ein + "</p>";
+    $("#searchTerm").keyup(function () {
+        var request = $.ajax ({
+            url: "/charities.json"
         });
 
-        $("#searchResults").html(html);
-    })
+        request.done(function (charities) {
+
+            console.log("done");
+
+            var html = "";
+
+            console.log(charities);
+
+            charities.forEach(function (charity) {
+                html += "<p>"
+                    + charity.charityName + " "
+                    + charity.category + " "
+                    + charity.ein + " "
+                    + charity.state + " "
+                    + charity.description + "</p>";
+            });
+
+            $("#searchResults").html(html);
+        })
+    });
+
+
 })();

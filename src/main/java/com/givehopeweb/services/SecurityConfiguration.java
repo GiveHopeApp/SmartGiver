@@ -35,16 +35,16 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .loginPage("/login")
                 .defaultSuccessUrl("/profile") // user's home page, it can be any URL
                 .permitAll() // Anyone can go to the login page
-                .and()
+            .and()
                 .authorizeRequests()
                 .antMatchers("/",
                         "search",
                         "/logout") // anyone can see these pages
                 .permitAll()
-                .and()
+            .and()
                 .logout()
                 .logoutSuccessUrl("/login?logout") // append a query string value
-                .and()
+            .and()
                 .authorizeRequests()
                 .antMatchers("/profile") // only authenticated users can view their profile
                 .authenticated()

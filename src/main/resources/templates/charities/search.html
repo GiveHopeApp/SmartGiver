@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8"/>
         <title>Search</title>
@@ -9,6 +9,14 @@
     <body>
 
         <div class="container">
+
+            <form th:object="${searchTerm}">
+
+                <label for="searchTerm">Search</label>
+                <input id="searchTerm" name="searchTerm" th:field="*{searchTerm}" type="text"
+                       placeholder="Enter a name, category, or location"/>
+            </form>
+
             <div id="searchResults"></div>
         </div>
 
