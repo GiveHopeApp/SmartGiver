@@ -18,7 +18,7 @@
 	overflow:hidden;
 }
 .va-slice-1{
-	background-image: url("../images/1.jpg");
+	/*background-image: url("../images/1.jpg");*/
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
