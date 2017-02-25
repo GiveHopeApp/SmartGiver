@@ -21,19 +21,16 @@ public class Charity {
     private long ein;
 
     @Column (nullable = false)
-    private String url;
-
-    @Column (nullable = false)
     private String city;
 
     @Column (nullable = false)
     private String state;
 
     @Column (nullable = false)
-    private String zipCode;
-
-    @Column (nullable = false)
     private String category;
+
+    @Column
+    private String description;
 
     @Column
     private boolean promoted;
@@ -77,14 +74,6 @@ public class Charity {
         this.ein = ein;
     }
 
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
     public String getCity() {
         return city;
     }
@@ -99,14 +88,6 @@ public class Charity {
 
     public void setState(String state) {
         this.state = state;
-    }
-
-    public String getZipCode() {
-        return zipCode;
-    }
-
-    public void setZipCode(String zipCode) {
-        this.zipCode = zipCode;
     }
 
     public String getCategory() {
@@ -131,5 +112,13 @@ public class Charity {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
