@@ -11,7 +11,7 @@ import java.util.List;
  */
 public interface Charities extends CrudRepository <Charity, Integer> {
 
-        @Query("select c from Charity c where c.save_by_user_id = ?1")
+        @Query("select c from Charity c where c.user.id = ?1")
         List<Charity> findUserFavorites (int userId);
 
 }
