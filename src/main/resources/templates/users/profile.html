@@ -2,20 +2,20 @@
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8"/>
-        <title>Profile</title><!--th:text="${user.username}">-->
+        <title th:text="${user.username}"></title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
         <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'/>
         <link rel="stylesheet" href="css/profile.css"/>
     </head>
     <body>
-        <div class="profile"><!--th:object="${user}">-->
+        <div th:object="${user}" class="profile">
             <div>
                 <div class="img-wrap">
                     <img src="images/pexels-photo-156731.jpeg"/>
                 </div>
                 <div class="name-wrap">
-                    <h1>Ruben Varela</h1><!--th:text="*{username}">-->
-                    <h2>rubenv6776@gmail.com</h2><!--th:text="*{email}">-->
+                    <h1 th:text="*{username}"></h1>
+                    <h2 th:text="*{email}"></h2>
                 </div>
             </div>
         </div>
