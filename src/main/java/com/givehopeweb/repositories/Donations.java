@@ -11,7 +11,7 @@ import java.util.List;
  */
 public interface Donations extends CrudRepository <Donation, Integer> {
 
-        @Query("select d from Donation d where d.user_id like ?1")
+        @Query("select d from Donation d where d.user.id like ?1")
         List<Donation> findByUserId (int userId);
 
 }
