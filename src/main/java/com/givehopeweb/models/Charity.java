@@ -1,5 +1,7 @@
 package com.givehopeweb.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -12,6 +14,7 @@ public class Charity {
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @JsonIgnore
     private int id;
 
     @Column (nullable = false)
@@ -21,28 +24,28 @@ public class Charity {
     private long ein;
 
     @Column (nullable = false)
-    private String url;
-
-    @Column (nullable = false)
     private String city;
 
     @Column (nullable = false)
     private String state;
 
     @Column (nullable = false)
-    private String zipCode;
-
-    @Column (nullable = false)
     private String category;
 
     @Column
+    private String description;
+
+    @Column
+    @JsonIgnore
     private boolean promoted;
 
     @OneToMany (mappedBy = "charity")
+    @JsonIgnore
     private List<Donation> donations;
 
     @ManyToOne
     @JoinColumn (name = "saved_by_user_id")
+    @JsonIgnore
     private User user;
 
     public int getId() {
@@ -77,14 +80,6 @@ public class Charity {
         this.ein = ein;
     }
 
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
     public String getCity() {
         return city;
     }
@@ -99,14 +94,6 @@ public class Charity {
 
     public void setState(String state) {
         this.state = state;
-    }
-
-    public String getZipCode() {
-        return zipCode;
-    }
-
-    public void setZipCode(String zipCode) {
-        this.zipCode = zipCode;
     }
 
     public String getCategory() {
@@ -131,5 +118,13 @@ public class Charity {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
