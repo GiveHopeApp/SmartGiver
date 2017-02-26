@@ -4,19 +4,24 @@
 "use strict";
 (function () {
 
+    //Global variables
+    var html = "";
+
+    //The event listener for the search bar
     $("#searchTerm").keyup(function () {
 
+        //Makes the search term the path variable for use by the controller
         var url = "/" + $(this).val() + ".json";
 
+        //The ajax request to the search controller
         var request = $.ajax ({
             url: url
         });
 
+        //Generates the html for the results
         request.done(function (charities) {
 
-            var html = "";
-
-            console.log(charities);
+            html = "";
 
             charities.forEach(function (charity) {
                 html += "<p>"
@@ -35,9 +40,10 @@
             $("#searchResults").html(html);
         });
 
+        //Clears the html if there is a failure
         request.fail(function () {
 
-            var html = "";
+            html = "";
 
             $("#searchResults").html(html);
         });
