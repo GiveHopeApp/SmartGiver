@@ -24,13 +24,11 @@
             html = "";
 
             charities.forEach(function (charity) {
+
                 html += "<p>"
-                    + charity.charityName + " "
-                    + charity.category + " "
-                    + charity.ein + " "
-                    + charity.city + " "
-                    + charity.state + " "
-                    + charity.description + "</p>";
+                    + "<a href='/charities/" + charity.id + "'>"
+                    + charity.charityName + "</a> "
+                    + charity.category + "</p>";
             });
 
             if (charities.length == 0) {
