@@ -14,7 +14,6 @@ public class Charity {
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    @JsonIgnore
     private int id;
 
     @Column (nullable = false)
