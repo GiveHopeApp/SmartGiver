@@ -1,6 +1,9 @@
 package com.givehopeweb.controllers;
 
+import com.givehopeweb.models.User;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
@@ -10,7 +13,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class GiveHopeController {
 
     @GetMapping ("/")
-    public String showLandingPage () {
+    public String showLandingPage (Model model) {
+
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        model.addAttribute("user", user);
+
         return "/home-screen";
     }
 
