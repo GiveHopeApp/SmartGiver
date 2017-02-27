@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Navbar-Scroll</title>
+</head>
+<body>
+<script th:fragment="navbar-scroll">
+function checkScroll(){
+var startY = $('#nav').height() * 2; //The point where the navbar changes in px
+
+if ($(window).scrollTop() > startY) {
+    $('#nav').removeClass("navbar");
+    $('#nav').addClass("scrolled");
+} else {
+    $('#nav').removeClass("scrolled");
+    $('#nav').addClass("navbar");
+}
+}
+
+if($('#nav').length > 0){
+    $(window).on("scroll load resize", function(){
+    checkScroll();
+});
+}
+</script>
+</body>
+</html>

@@ -1,5 +1,20 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="${user.username}"></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="css/profile.css"/>
+    <link rel="stylesheet" href="css/navbar.css"/>
+</head>
+<body>
+<nav th:include="fragments/navbar :: navbar"></nav>
+<div th:object="${user}" class="profile">
+    <div>
+        <div class="img-wrap">
+            <img id="profilePic" src="images/user.png"/>
+            <input type="filepicker" data-fp-apikey="A1JDvoVpERDyNr0Ob75a1z" onchange="changePic()"/>
     <head>
         <meta charset="UTF-8"/>
         <title th:text="${user.username}"></title>
@@ -25,6 +40,62 @@
                    th:text="${charity.charityName}"></a>
             </div>
         </div>
+        <div class="name-wrap">
+            <h1>Ruben Varela</h1>
+            <h1 th:text="*{username}"></h1>
+            <h1><span>-</span>-<span>-</span></h1>
+            <h1 th:text="*{email}"></h1>
+        </div>
+        <div class="content-wrap">
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Make</th>
+                        <th>Model</th>
+                        <th>Color</th>
+                        <th>Year</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="filterable-cell">Ford</td>
+                        <td class="filterable-cell">Escort</td>
+                        <td class="filterable-cell">Blue</td>
+                        <td class="filterable-cell">2000</td>
+                    </tr>
+                    <tr>
+                        <td class="filterable-cell">Ford</td>
+                        <td class="filterable-cell">Escort</td>
+                        <td class="filterable-cell">Blue</td>
+                        <td class="filterable-cell">2000</td>
+                    </tr>
+                    <tr>
+                        <td class="filterable-cell">Ford</td>
+                        <td class="filterable-cell">Escort</td>
+                        <td class="filterable-cell">Blue</td>
+                        <td class="filterable-cell">2000</td>
+                    </tr>
+                    <tr>
+                        <td class="filterable-cell">Ford</td>
+                        <td class="filterable-cell">Escort</td>
+                        <td class="filterable-cell">Blue</td>
+                        <td class="filterable-cell">2000</td>
+                    </tr>
+                    </tbody>
 
-    </body>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//api.filestackapi.com/filestack.js"></script>
+<script>
+function changePic() {
+    $('#profilePic').attr('src', event.fpfile.url);
+}
+</script>
+</body>
 </html>

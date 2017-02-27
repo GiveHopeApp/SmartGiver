@@ -11,7 +11,12 @@ public class GiveHopeController {
 
     @GetMapping ("/")
     public String showLandingPage () {
-        return "/home_screen";
+        return "/home-screen";
+    }
+
+    @GetMapping ("/donate")
+    public String showDonationPage() {
+        return "/charities/donation-form";
     }
 
 }
