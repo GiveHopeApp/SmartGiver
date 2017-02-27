@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <title th:text="${charity.charityName}"></title>
+        <link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+    </head>
+    <body>
+        <div class="container" th:object="${charity}">
+
+            <h1 th:text="*{charityName}"></h1>
+
+            <h4>
+                <span th:text="*{city}"></span>,
+                <span th:text="*{state}"></span>
+            </h4>
+
+            <p th:text="*{description}"></p>
+
+        </div>
+
+        <script src="js/jquery-2.2.4.js"></script>
+        <script src="css/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+
+    </body>
+</html>

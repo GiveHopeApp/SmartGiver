@@ -15,6 +15,30 @@
         <div class="img-wrap">
             <img id="profilePic" src="images/user.png"/>
             <input type="filepicker" data-fp-apikey="A1JDvoVpERDyNr0Ob75a1z" onchange="changePic()"/>
+    <head>
+        <meta charset="UTF-8"/>
+        <title th:text="${user.username}"></title>
+    </head>
+    <body>
+        <div class="container">
+
+            <div th:object="${user}">
+                <h1>Hello, <span th:text="*{username}"></span>!</h1>
+                <p th:text="*{email}"></p>
+            </div>
+
+            <div th:object="${totalDonation}">
+                <p>
+                    You have donated: $
+                    <span th:text="*{amount}"></span>
+                    !
+                </p>
+            </div>
+            <h2>Your favorite charities: </h2>
+            <div th:each="charity : ${favorites}">
+                <a th:attr="href=${'/charities/' + charity.id}"
+                   th:text="${charity.charityName}"></a>
+            </div>
         </div>
         <div class="name-wrap">
             <h1>Ruben Varela</h1>

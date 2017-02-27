@@ -1,5 +1,7 @@
 package com.givehopeweb.controllers;
 
+import com.givehopeweb.models.Charity;
+import com.givehopeweb.models.Donation;
 import com.givehopeweb.models.User;
 import com.givehopeweb.models.UserRole;
 import com.givehopeweb.repositories.Charities;
@@ -13,11 +15,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.Valid;
+import java.util.List;
 
 /**
  * Created by David on 2/22/17.
@@ -28,17 +30,17 @@ public class UsersController {
     private Users users;
     private PasswordEncoder encoder;
     private Roles roles;
-    private Donations donations;
-    private Charities charities;
+    private Donations donationsDao;
+    private Charities charitiesDao;
 
     @Autowired
     public UsersController (Users users, PasswordEncoder encoder, Roles roles, Donations
-            donations, Charities charities) {
+            donationsDao, Charities charitiesDao) {
         this.users = users;
         this.encoder = encoder;
         this.roles = roles;
-        this.donations = donations;
-        this.charities = charities;
+        this.donationsDao = donationsDao;
+        this.charitiesDao = charitiesDao;
     }
 
     @GetMapping ("/register")
@@ -88,6 +90,23 @@ public class UsersController {
 
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         model.addAttribute("user", user);
+
+        List<Donation> donations = donationsDao.findByUserId(user.getId());
+
+        Donation totalDonation = new Donation();
+
+        for (Donation donation : donations) {
+            if (totalDonation.getAmount() == null) {
+                totalDonation.setAmount(donation.getAmount());
+            }
+
+            totalDonation.setAmount(totalDonation.getAmount().add(donation.getAmount()));
+        }
+
+        model.addAttribute("totalDonation", totalDonation);
+
+        List<Charity> favoriteCharities = charitiesDao.findUserFavorites(user.getId());
+        model.addAttribute("favorites", favoriteCharities);
 
         return "/users/profile";
     }

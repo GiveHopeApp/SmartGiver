@@ -21,6 +21,8 @@ public class User {
     public User (User user) {
 
         id = user.id;
+        firstName = user.firstName;
+        lastName = user.lastName;
         username = user.username;
         email = user.email;
         password = user.password;
@@ -30,6 +32,14 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @Column (nullable = false)
+    @NotBlank (message = "Cannot be blank")
+    private String firstName;
+
+    @Column (nullable = false)
+    @NotBlank (message = "Cannot be blank")
+    private String lastName;
 
     @Column(nullable = false, unique = true)
     @NotBlank(message = "Cannot be blank")
@@ -108,5 +118,21 @@ public class User {
 
     public void setFavoriteCharities(List<Charity> favoriteCharities) {
         this.favoriteCharities = favoriteCharities;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 }
