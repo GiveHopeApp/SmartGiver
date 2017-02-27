@@ -11,6 +11,7 @@
 	background:#000;
 }
 .va-slice{
+	text-align: center;
 	cursor:pointer;
 	position:absolute;
 	width:100%;
@@ -73,13 +74,13 @@
 	background-color:#002144;
 }
 .va-slice-color-8{
-	background-color:#002144;
+	background-color: #161144;
 }
 .va-slice-color-9{
-	background-color:#002144;
+	background-color: #0d0044;
 }
 .va-slice-color-10{
-	background-color:#002144;
+	background-color: #280044;
 }
 .va-title{
 	font-family: 'Open Sans Condensed', sans-serif;
@@ -107,7 +108,7 @@
 }
 .va-slice ul li a{
 	color:#000;
-	background:#eede2f;
+	background: #f32c2c;
 	padding:3px 6px;
 	font-size:14px;
 	font-family:'PT Sans', sans-serif;
