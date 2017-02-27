@@ -1,5 +1,7 @@
 package com.givehopeweb.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -12,6 +14,7 @@ public class Charity {
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @JsonIgnore
     private int id;
 
     @Column (nullable = false)
@@ -33,13 +36,16 @@ public class Charity {
     private String description;
 
     @Column
+    @JsonIgnore
     private boolean promoted;
 
     @OneToMany (mappedBy = "charity")
+    @JsonIgnore
     private List<Donation> donations;
 
     @ManyToOne
     @JoinColumn (name = "saved_by_user_id")
+    @JsonIgnore
     private User user;
 
     public int getId() {
