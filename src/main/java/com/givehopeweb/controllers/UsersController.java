@@ -82,7 +82,7 @@ public class UsersController {
 
         roles.save(userRole);
 
-        return "redirect:/home-screen";
+        return "redirect:/";
     }
 
     @GetMapping ("/profile")
@@ -112,7 +112,19 @@ public class UsersController {
     }
 
     @GetMapping ("/login")
-    public String showLoginForm () {
+    public String showLoginForm (Model model) {
+
+        if (!SecurityContextHolder.getContext().getAuthentication().getPrincipal()
+                .equals("anonymousUser")) {
+
+            User user = (User) SecurityContextHolder.getContext().getAuthentication()
+                    .getPrincipal();
+
+            model.addAttribute("user", user);
+        } else {
+
+            model.addAttribute("user", new User() );
+        }
 
         return "/users/login-register";
     }
