@@ -1,15 +1,31 @@
+*:focus {
+    outline: none;
+}
 .navbar-login {
     width: 305px;
     padding: 10px;
-    padding-bottom: 0px;
+    padding-bottom: 0p;
 }
 
 .navbar-login-session {
     padding: 10px;
-    padding-bottom: 0px;
-    padding-top: 0px;
+    padding-bottom: 0;
+    padding-top: 0;
 }
 
 .icon-size {
     font-size: 87px;
+}
+
+.login-btn {
+    float: right;
+    margin: 15px;
+    border-width: 1px;
+    border-color: #532ec3;
+    color: #532ec3;
+    background-color: transparent;
+}
+
+.login-btn a:hover {
+    text-decoration: none;
 }

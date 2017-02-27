@@ -1,8 +1,5 @@
 $(document).ready(function() {
 
-    $('.error').each(function() {
-        $(this).addClass('active-error')
-    });
 
     $('.form').find('input, textarea').on('keyup blur focus', function (e) {
 
