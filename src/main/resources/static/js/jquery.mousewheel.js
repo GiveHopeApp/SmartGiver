@@ -41,7 +41,7 @@ $.fn.extend({
         return fn ? this.bind("mousewheel", fn) : this.trigger("mousewheel");
     },
     
-    unmousewheel: function(fn) {
+    onmousewheel: function(fn) {
         return this.unbind("mousewheel", fn);
     }
 });
