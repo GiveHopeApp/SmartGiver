@@ -47,7 +47,7 @@ public class UsersController {
     public String showRegistrationPage (Model model) {
 
         model.addAttribute("user", new User() );
-        return  "/users/registration";
+        return  "/users/login-register";
     }
 
     @PostMapping("/register")
@@ -68,7 +68,7 @@ public class UsersController {
         if (validation.hasErrors()) {
             model.addAttribute("errors", validation);
             model.addAttribute("user", user);
-            return "/users/registration";
+            return "/users/login-register";
         }
 
         String hash = encoder.encode(user.getPassword());
@@ -82,7 +82,7 @@ public class UsersController {
 
         roles.save(userRole);
 
-        return "redirect:/home_screen";
+        return "redirect:/home-screen";
     }
 
     @GetMapping ("/profile")
@@ -114,7 +114,7 @@ public class UsersController {
     @GetMapping ("/login")
     public String showLoginForm () {
 
-        return "/users/login";
+        return "/users/login-register";
     }
 
 }
