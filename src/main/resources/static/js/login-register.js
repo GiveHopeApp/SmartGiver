@@ -1,9 +1,5 @@
 $(document).ready(function() {
 
-    $('.form').submit(function() {
-        console.log('input');
-        $('input').val('');
-    });
 
     $('.form').find('input, textarea').on('keyup blur focus', function (e) {
 
