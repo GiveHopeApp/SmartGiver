@@ -44,7 +44,17 @@ public class GiveHopeController {
     }
 
     @GetMapping ("/categories")
-    public String showCategoriesPage() {
+    public String showCategoriesPage(Model model) {
+
+        if (!SecurityContextHolder.getContext().getAuthentication().getPrincipal()
+                .equals("anonymousUser")) {
+
+            User user = (User) SecurityContextHolder.getContext().getAuthentication()
+                    .getPrincipal();
+
+            model.addAttribute("user", user);
+        }
+
         return "/charities/categories";
     }
 
