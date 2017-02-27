@@ -1,8 +1,0 @@
-#You will need to copy this file and remove the .dist file extension. Fill it in with your
-#database information.
-
-spring.datasource.url=
-spring.datasource.username=
-spring.datasource.password=
-spring.datasource.driver-class-name=com.mysql.jdbc.Driver
-spring.jpa.hibernate.ddl-auto=update

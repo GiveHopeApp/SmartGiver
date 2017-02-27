@@ -1,0 +1,186 @@
+/* Vertical Accordion Style */
+
+#va-accordion {
+	margin-top: 0;
+}
+.va-container{
+	position:relative;
+	margin:40px auto 0 auto;
+	background: #000000 repeat top left;
+
+}
+.va-wrapper{
+	width:100%;
+	height:100%;
+	position:relative;
+	overflow:scroll;
+	background:#000;
+}
+.va-slice{
+	border: black solid 2px;
+	text-align: center;
+	cursor:pointer;
+	position:absolute;
+	width:100%;
+	/*left:0px;*/
+	overflow:hidden;
+}
+/*.va-slice-1{*/
+	/*!*background-image: url("../images/1.jpg");*!*/
+	/*background-attachment: fixed;*/
+	/*background-position: center;*/
+	/*background-size: cover;*/
+
+/*}*/
+/*.va-slice-2{*/
+	/*background:#000 url(../images/2.jpg) no-repeat center center;*/
+/*}*/
+/*.va-slice-3{*/
+	/*background:#000 url(../images/3.jpg) no-repeat center center;*/
+/*}*/
+/*.va-slice-4{*/
+	/*background:#000 url(../images/4.jpg) no-repeat center center;*/
+/*}*/
+/*.va-slice-5{*/
+	/*background:#000 url(../images/5.jpg) no-repeat center center;*/
+/*}*/
+/*.va-slice-6{*/
+	/*background:#000 url(../images/6.jpg) no-repeat center center;*/
+/*}*/
+/*.va-slice-7{*/
+	/*background:#000 url(../images/7.jpg) no-repeat center center;*/
+/*}*/
+/*.va-slice-8{*/
+	/*background:#000 url(../images/8.jpg) no-repeat center center;*/
+/*}*/
+/*.va-slice-9{*/
+	/*background:#000 url(../images/9.jpg) no-repeat center center;*/
+/*}*/
+/*.va-slice-10{*/
+	/*background:#000 url(../images/10.jpg) no-repeat center center;*/
+/*}*/
+
+/*animal welfare*/
+.va-slice-color-1{
+	background-color: #d0ea4a;
+}
+/*cancer*/
+.va-slice-color-2{
+	background-color: #c8afdd;
+}
+/*child*/
+.va-slice-color-3{
+	background-color: #e6836f;
+}
+/*education*/
+.va-slice-color-4{
+	background-color: #da9b28;
+}
+/*environment*/
+.va-slice-color-5{
+	background-color: #36c785;
+}
+/*human rights*/
+.va-slice-color-6{
+	background-color: #4f5eb4;
+}
+/*health services*/
+.va-slice-color-7{
+	background-color: #e23d30;
+}
+/*hunger and shelter*/
+.va-slice-color-8{
+	background-color: #9ec277;
+}
+/*international relief*/
+.va-slice-color-9{
+	background-color: #2cb8d6;
+}
+/*veterans*/
+.va-slice-color-10{
+	background-color: #280044;
+}
+
+
+.va-title{
+	font-family: 'Big Caslon', sans-serif;
+	font-size:60px;
+	margin-left:20px;
+	color:#fff;
+	text-shadow: 1px 1px 1px #000000;
+}
+.va-content{
+	display:none;
+	margin-left:25px;
+}
+.va-slice p{
+	font-size: 22px;
+	font-family: Futura, serif;
+}
+.va-slice ul{
+	margin-top:20px;
+}
+.va-slice ul li{
+	float:left;
+	margin:0px 2px;
+}
+.va-slice ul li a{
+	color:#000;
+	background: #fff482;
+	padding:3px 6px;
+	font-size:14px;
+	font-family:'PT Sans', sans-serif;
+	text-transform:uppercase;
+}
+.va-slice ul li a:hover{
+	background: #00bdd1;
+}
+/*.va-nav span{*/
+
+	/*width:40px;*/
+	/*height:25px;*/
+	/*background:transparent url(../images/prev.png) no-repeat center center;*/
+	/*position:absolute;*/
+	/*top:-35px;*/
+	/*left:50%;*/
+	/*margin-left:-20px;*/
+	/*text-indent:-9000px;*/
+	/*opacity:0.7;*/
+	/*cursor:pointer;*/
+	/*display:none;*/
+	/*z-index:100;*/
+/*}*/
+/*.va-nav span.va-nav-next{*/
+	/*background-image:url(../images/next.png);*/
+	/*top:auto;*/
+	/*bottom:-35px;*/
+/*}*/
+/*.va-nav span:hover{*/
+	/*opacity:1.0;*/
+/*}*/
+
+
+/*body{*/
+	/*!*background: #000000 repeat top left;*!*/
+	/*!*color:#fff;*!*/
+	/*font-size:12px;*/
+	/*margin:0;*/
+	/*!*padding:0;*!*/
+/*}*/
+
+/*.clr{*/
+	/*clear:both;*/
+/*}*/
+
+/*.container {*/
+	/*width:100%;*/
+	/*position:relative;*/
+	/*z-index:100;*/
+	/*margin:40px auto;*/
+/*}*/
+
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+	margin:0;
+	padding:0;
+}

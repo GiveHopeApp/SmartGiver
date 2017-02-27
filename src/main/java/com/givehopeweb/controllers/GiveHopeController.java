@@ -43,4 +43,9 @@ public class GiveHopeController {
         return "/charities/donation-form";
     }
 
+    @GetMapping ("/categories")
+    public String showCategoriesPage() {
+        return "/charities/categories";
+    }
+
 }
