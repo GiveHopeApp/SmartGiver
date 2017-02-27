@@ -31,7 +31,7 @@ public class Charity {
     @Column (nullable = false)
     private String category;
 
-    @Column
+    @Column (length = 1000)
     private String description;
 
     @Column
