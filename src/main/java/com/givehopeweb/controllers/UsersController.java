@@ -83,7 +83,7 @@ public class UsersController {
         return "redirect:/home-screen";
     }
 
-    @GetMapping ("profile")
+    @GetMapping ("/profile")
     public String showUser (Model model) {
 
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -95,7 +95,7 @@ public class UsersController {
     @GetMapping ("/login")
     public String showLoginForm () {
 
-        return "/users/login";
+        return "/users/login-register";
     }
 
 }

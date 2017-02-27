@@ -21,8 +21,8 @@ a:hover {
 }
 
 .form {
-  background: linear-gradient(to bottom, #6035e7 200px, #ffffff 0%);
-  padding: 40px 240px;
+  background: linear-gradient(to bottom, #6035e7 118px, #ffffff 0%);
+  padding: 10px 240px 20px 240px;
   width: 100%;
   margin: 0 auto;
   border-radius: 0;
@@ -31,7 +31,7 @@ a:hover {
 .tab-group {
   list-style: none;
   padding: 0;
-  margin: 0 0 35px 0;
+  margin: 0 0 50px 0;
 }
 .tab-group:after {
   content: "";
@@ -67,22 +67,24 @@ a:hover {
 
 h1 {
   text-align: center;
-  color: #ffffff;
+  color: #6035e7;
   font-weight: 300;
   margin: 0 0 40px;
+  font-size: 32px;
 }
 
 label {
   position: absolute;
-  -webkit-transform: translateY(6px);
-          transform: translateY(6px);
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
   left: 13px;
-  color: #6035e7;
+  color: #000000;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   -webkit-backface-visibility: hidden;
   pointer-events: none;
   font-size: 22px;
+    font-weight: 500;
 }
 label .req {
   margin: 2px;
@@ -106,7 +108,7 @@ label.active .req {
     color: #f50000;
 }
 label.highlight {
-  color: #6035e7;
+  color: #000000;
 }
 
 input, textarea {

@@ -16,12 +16,22 @@ body {
 
 #main {
     padding: 100px 130px 0 130px;
-    display: inline-block;
     width: 100%;
 }
-
 #main div {
+    display: inline-block;
+}
+#text-wrapper {
     width: 450px;
+}
+
+#img-wrapper {
+    float: right;
+}
+
+img {
+    width: 150px;
+    height: 150px;
 }
 
 #main h1 {
@@ -57,3 +67,21 @@ button {
 *:focus {
     outline: none;
 }
+
+
+
+
+
+/*img {*/
+    /*display: inline-block;*/
+    /*width: 120px;*/
+    /*height: 120px;*/
+    /*margin: 7px;*/
+/*}*/
+
+/*#img-wrapper {*/
+    /*width: 420px;*/
+    /*float: right;*/
+    /*text-align: center;*/
+    /*background-color: lightgray;*/
+/*}*/

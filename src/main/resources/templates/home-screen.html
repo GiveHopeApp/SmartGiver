@@ -10,12 +10,12 @@
     <link rel="stylesheet" href="css/navbar.css"/>
 </head>
 <body>
-<!--<nav th:include="fragments/navbar :: navbar"></nav>-->
+<nav th:include="fragments/navbar :: navbar"></nav>
 <div id="head">
     <h1>GIVE HOPE</h1>
 </div>
 <div id="main">
-    <div>
+    <div id="text-wrapper">
         <h1>We make it easy to donate</h1>
         <h1>We help you find a top rated charity for a cause of your choosing and allow you to make a donation directly through our site.</h1>
         <button>Get Started<span class="glyphicon glyphicon-play"></span></button>
@@ -24,5 +24,4 @@
 </body>
 <script src="js/jquery.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script th:include="fragments/navbar-scroll :: navbar-scroll"></script>
 </html>
