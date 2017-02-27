@@ -13,4 +13,5 @@ public class GiveHopeController {
     public String showLandingPage () {
         return "/home_screen";
     }
+
 }

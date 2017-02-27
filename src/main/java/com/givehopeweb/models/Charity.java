@@ -14,14 +14,13 @@ public class Charity {
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    @JsonIgnore
     private int id;
 
     @Column (nullable = false)
     private String charityName;
 
     @Column (nullable = false)
-    private long ein;
+    private String ein;
 
     @Column (nullable = false)
     private String city;
@@ -72,11 +71,11 @@ public class Charity {
         this.promoted = promoted;
     }
 
-    public long getEin() {
+    public String getEin() {
         return ein;
     }
 
-    public void setEin(long ein) {
+    public void setEin(String ein) {
         this.ein = ein;
     }
 
