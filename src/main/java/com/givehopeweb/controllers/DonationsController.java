@@ -4,13 +4,11 @@ import com.givehopeweb.models.Charity;
 import com.givehopeweb.models.Donation;
 import com.givehopeweb.repositories.Charities;
 import com.givehopeweb.repositories.Donations;
+import com.givehopeweb.services.ApiKeyLoader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by David on 2/28/17.
@@ -30,9 +28,19 @@ public class DonationsController {
 
     @PostMapping("/donate/{token}")
     public String showConfirmationPage (@PathVariable String token,
-                                        @ModelAttribute Donation donation) {
+                                        @ModelAttribute Donation donation,
+                                        @RequestParam ("email") String email) {
 
         donationsDao.save(donation);
+
+        String command = "curl -X POST --data " +
+                "source=" + token +
+                "&amount" + donation.getAmount() +
+                "&destination" + donation.getCharity().getEin() +
+                "receipt_email=" + email +
+                "&currency=usd" +
+                "https://" + ApiKeyLoader.getPandaPayKey() + ":@api.pandapay.io/v1/donations";
+
 
 
 
