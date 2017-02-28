@@ -19,7 +19,7 @@
     <div class="tab-content">
         <div id="signup">
             <h1>Enter Payment Information</h1>
-            <form id="panda_cc_form">
+            <form id="panda_cc_form" th:object="${donation}" action="">
                 <div class="field-wrap">
                     <label class="middle">Card Number</label>
                     <input class="center" type="text" maxlength="16" data-panda="credit_card"/>
@@ -42,6 +42,10 @@
                     <label>Last Name</label>
                     <input type="text" maxlength="16" data-panda="last_name"/>
                 </div>
+                <div class="hidden">
+                    <input type="text" th:field="*{charity.ein}"/>
+                    <input type="text" th:field="*{amount}"/>
+                </div>
                 <div id="tokenize">
                     <button id="donate_btn" class="button button-block" type="submit" >DONATE</button>
                 </div>
@@ -57,30 +61,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
  <script src="js/login-register.js"></script>
 <script src="//d2t45z63lq9zlh.cloudfront.net/panda-v0.0.5.min.js"></script>
-<script>
-    // Call Panda.init() with your Panda Publishable Key and the DOM id of the
-    // credit card-related form element
-
-    Panda.init('pk_test_wsQoLJzX6-yUXv1gGcUgvQ', 'panda_cc_form');
-
-    Panda.on('success', function(cardToken) {
-        console.log('success');
-        console.log(cardToken);
-
-        // You now have a token you can use to refer to that credit card later.
-        // This token is used in PandaPay API calls for creating donations and grants
-        // so that you don't have to worry about security concerns with dealing with
-        // credit card data.
-
-    });
-
-    Panda.on('error', function(errors) {
-
-        // errors is a human-readable list of things that went wrong
-        //  (invalid card number, missing last name, etc.)
-        console.log('error');
-        console.log(errors);
-    });
-</script>
+<script src="js/donation.js"></script>
 </body>
 </html>
