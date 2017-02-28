@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
@@ -44,30 +45,13 @@ public class DonationsController {
                 "&currency=usd" +
                 "https://" + ApiKeyLoader.getPandaPayKey() + ":@api.pandapay.io/v1/donations";
 
-        StringBuffer output = new StringBuffer();
-
-        Process process;
-
         try {
-            process = Runtime.getRuntime().exec(command);
-
-            process.waitFor();
-
-            BufferedReader reader =
-                    new BufferedReader (new InputStreamReader(process.getInputStream()));
-
-            String line = "";
-
-            while ((line = reader.readLine()) != null) {
-
-                output.append(line + "\n");
-            }
-        } catch (Exception e) {
+            Runtime.getRuntime().exec(command);
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
-
-        return "/";
+        return "/"; //Send to thank you page
     }
 
     @PostMapping ("/donate/{ein}")
