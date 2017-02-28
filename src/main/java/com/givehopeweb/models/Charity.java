@@ -34,7 +34,7 @@ public class Charity {
     @Column (length = 1000)
     private String description;
 
-    @Column
+    @Column (nullable = false, columnDefinition = "boolean default false")
     @JsonIgnore
     private boolean promoted;
 
