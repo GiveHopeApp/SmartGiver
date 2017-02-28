@@ -37,8 +37,7 @@
                         <label>
                             Last Name<span class="req">*</span>
                         </label>
-                        <label class="error" th:if="${#fields.hasErrors('lastName')}"
-                               th:errors="*{lastName}"></label>
+                        <label class="error" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></label>
                         <input class="input" type="text" th:field="*{lastName}"/>
                     </div>
                 </div>
@@ -46,24 +45,21 @@
                     <label>
                         Username<span class="req">*</span>
                     </label>
-                    <label class="error" th:if="${#fields.hasErrors('username')}"
-                           th:errors="*{username}"></label>
+                    <label class="error" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></label>
                     <input class="input" type="text" th:field="*{username}"/>
                 </div>
                 <div class="field-wrap">
                     <label>
                         Email Address<span class="req">*</span>
                     </label>
-                    <label class="error" th:if="${#fields.hasErrors('email')}"
-                           th:errors="*{email}"></label>
+                    <label class="error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></label>
                     <input class="input" type="email" th:field="*{email}"/>
                 </div>
                 <div class="field-wrap">
                     <label>
                         Password<span class="req">*</span>
                     </label>
-                    <label class="error" th:if="${#fields.hasErrors('password')}"
-                           th:errors="*{password}"></label>
+                    <label class="error" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></label>
                     <input class="input" type="password" th:field="*{password}"/>
                 </div>
                 <div class="field-wrap">
@@ -84,15 +80,14 @@
                     <label>
                         Username<span class="req">*</span>
                     </label>
-                    <input name="username" type="text"/>
+                    <input class="input" name="username" type="text"/>
                 </div>
                 <div class="field-wrap">
                     <label>
                         Password<span class="req">*</span>
                     </label>
-                    <input name="password" type="password"/>
+                    <input class="input" name="password" type="password"/>
                 </div>
-                <p class="forgot"><a href="#">Forgot Password?</a></p>
                 <button class="button button-block" type="submit">Login</button>
             </form>
         </div>
@@ -100,11 +95,6 @@
 </div>
 <script src="js/jquery.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script>
-(function() {
-    $('.input').removeAttr('value');
-})();
-</script>
  <script src="js/login-register.js"></script>
 </body>
 </html>
