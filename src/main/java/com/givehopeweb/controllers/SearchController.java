@@ -52,4 +52,10 @@ public class SearchController {
                 searchTerm,
                 searchTerm);
     }
+
+    @GetMapping ("/category/{searchTerm}.json")
+    public @ResponseBody List<Charity> showCategoryResults (@PathVariable String searchTerm) {
+
+        return charitiesDao.findByCategoryContaining(searchTerm);
+    }
 }
