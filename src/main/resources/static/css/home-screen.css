@@ -48,15 +48,22 @@ img {
     font-family: 'Open Sans', sans-serif;
 }
 
-#text-wrapper > button {
+#text-wrapper > a {
     margin-top: 10px;
+    display: inline-block;
     width: 165px;
-    height: 50px;
+    text-align: center;
     font-size: 16px;
     letter-spacing: 1px;
     border: none;
+    color: white;
     background-color: #6637fd;
     padding: 10px 20px 10px 20px;
+}
+
+a:hover {
+    background-color: #6637fd;
+    text-decoration: none;
 }
 
 .glyphicon {
