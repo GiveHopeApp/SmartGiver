@@ -15,8 +15,8 @@ public class GiveHopeController {
     @GetMapping ("/")
     public String showLandingPage (Model model) {
 
-        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        model.addAttribute("user", user);
+//        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//        model.addAttribute("user", user);
 
         return "/home-screen";
     }

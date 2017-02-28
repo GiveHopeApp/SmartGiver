@@ -19,7 +19,7 @@
 
 .login-btn {
     float: right;
-    margin: 15px;
+    margin: 13px;
     border-width: 1px;
     border-color: #532ec3;
     color: #532ec3;
@@ -28,4 +28,13 @@
 
 .login-btn a:hover {
     text-decoration: none;
+}
+.dropdown-menu a:last-of-type {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+a {
+    text-decoration: none;
+    color: #5f5f5f;
+    font-family: 'Source Sans Pro', sans-serif
 }
