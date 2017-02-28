@@ -19,11 +19,24 @@
 
         <div class="content-wrapper">
             <div class="description-wrapper jumbotron">
+                <h1>Mission Statement</h1>
                 <p th:text="*{description}"></p>
+            </div>
+
+            <div class="donate-wrapper">
+                <h1>Donation Amount</h1>
+                <button value="5">$5</button>
+                <button value="25" class="active">$25</button>
+                <button value="50">$50</button>
+                <button value="100">$100</button>
+                <button value="500">$500</button>
+                <button>Custom</button>
+                <input type="text"/>
             </div>
         </div>
     </div>
     <script src="/js/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="/js/charity-profile.js"></script>
     </body>
 </html>
