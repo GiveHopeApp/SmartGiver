@@ -10,17 +10,17 @@ body {
     font-family: 'Titillium Web', sans-serif;
 }
 
-a {
+.form a {
     text-decoration: none;
     color: #5f5f5f;
     -webkit-transition: .5s ease;
     transition: .5s ease;
 }
-a:hover {
+.form a:hover {
     color: #000000;
 }
 
-.form {
+#form {
     background: linear-gradient(to bottom, #6035e7 110px, #ffffff 0%);
     padding: 15px 240px 20px 240px;
     width: 100%;
@@ -33,7 +33,7 @@ a:hover {
     padding: 0;
     margin: 0 0 30px 0;
 }
-.tab-group h1 {
+.form .tab-group h1 {
     color: white;
     font-size: 40px;
 }
@@ -42,7 +42,7 @@ a:hover {
     display: table;
     clear: both;
 }
-li a {
+.form li a {
     display: block;
     text-decoration: none;
     padding: 15px;
@@ -56,7 +56,7 @@ li a {
     -webkit-transition: .5s ease;
     transition: .5s ease;
 }
-li a:hover {
+.form li a:hover {
     background: #4827c6;
     color: white;
 }
@@ -69,7 +69,7 @@ li a:hover {
     display: none;
 }
 
-h1 {
+.form h1 {
     text-align: center;
     color: #6035e7;
     font-weight: 300;

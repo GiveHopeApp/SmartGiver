@@ -12,7 +12,7 @@
 <body>
 <nav th:include="fragments/navbar :: navbar"></nav>
 
-<div class="form">
+<div id="form" class="form">
     <div class="tab-group">
          <h1>Donate</h1>
     </div>
@@ -47,7 +47,7 @@
                     <input type="text" th:field="*{amount}"/>
                 </div>
                 <div id="tokenize">
-                    <button id="donate_btn" class="button button-block" type="submit" >DONATE</button>
+                    <button id="donate_btn" class="button button-block" type="submit" >NEXT</button>
                 </div>
             </form>
         </div>

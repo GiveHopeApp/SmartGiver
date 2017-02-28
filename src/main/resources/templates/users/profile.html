@@ -8,99 +8,76 @@
     <link rel="stylesheet" href="css/profile.css"/>
     <link rel="stylesheet" href="css/navbar.css"/>
 </head>
-    <body>
-        <nav th:include="fragments/navbar :: navbar"></nav>
-        <div th:object="${user}" class="profile">
-            <div>
-                <div class="img-wrap">
-                    <img id="profilePic" src="images/user.png"/>
-                    <input type="filepicker" data-fp-apikey="A1JDvoVpERDyNr0Ob75a1z" onchange="changePic()"/>
-                </div>
+<body>
+<nav th:include="fragments/navbar :: navbar"></nav>
+<div th:object="${user}" class="profile">
+    <div class="img-wrap">
+        <img id="profilePic" src="images/user.png"/>
+        <input type="filepicker" data-fp-apikey="A1JDvoVpERDyNr0Ob75a1z" onchange="changePic()"/>
+    </div>
 
-                <div class="container">
+    <div class="name-wrap">
+        <h1><span th:text="*{firstName}"></span> <span th:text="*{lastName}"></span></h1>
+        <h1 th:text="*{username}"></h1>
+        <h1><span class="invisible" >-</span>-<span class="invisible">-</span></h1>
+        <h1 th:text="*{email}"></h1>
+    </div>
+    
+    <div class="favorites-wrap wrap">
+        <h1>Your Favorite Charities</h1>
 
-                    <div th:object="${user}">
-                        <h1>Hello, <span th:text="*{username}"></span>!</h1>
-                        <p th:text="*{email}"></p>
-                    </div>
+        <!--<div th:each="charity : ${favorites}">-->
+            <!--<a th:attr="href=${'/charities/' + charity.id}" th:text="${charity.charityName}"></a>-->
+        <!--</div>-->
+        <div class="col-md-12">
+            <table class="table table-striped" align="center">
+                <thead>
+                    <tr>
+                        <th>Charity</th>
+                        <th>Category</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="filterable-cell">Charity Name</td>
+                        <td class="filterable-cell">Category</td>
+                    </tr>
+                    <tr>
+                        <td class="filterable-cell">Charity Name</td>
+                        <td class="filterable-cell">Category</td>
+                    </tr>
+                    <tr>
+                        <td class="filterable-cell">Charity Name</td>
+                        <td class="filterable-cell">Category</td>
+                    </tr>
+                    <tr>
+                        <td class="filterable-cell">Charity Name</td>
+                        <td class="filterable-cell">Category</td>
+                    </tr>
+                </tbody>
 
-                    <div th:object="${totalDonation}">
-                        <p>
-                            You have donated: $
-                            <span th:text="*{amount}"></span>
-                            !
-                        </p>
-                    </div>
-
-                    <h2>Your favorite charities: </h2>
-                    <div th:each="charity : ${favorites}">
-                        <a th:attr="href=${'/charities/' + charity.id}"
-                           th:text="${charity.charityName}"></a>
-                    </div>
-
-                </div>
-
-                <div class="name-wrap">
-                    <h1>Ruben Varela</h1>
-                    <h1 th:text="*{username}"></h1>
-                    <h1><span>-</span>-<span>-</span></h1>
-                    <h1 th:text="*{email}"></h1>
-                </div>
-
-                <div class="content-wrap">
-                    <div class="col-md-12">
-                        <table class="table table-striped">
-                            <thead>
-                            <tr>
-                                <th>Make</th>
-                                <th>Model</th>
-                                <th>Color</th>
-                                <th>Year</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td class="filterable-cell">Ford</td>
-                                <td class="filterable-cell">Escort</td>
-                                <td class="filterable-cell">Blue</td>
-                                <td class="filterable-cell">2000</td>
-                            </tr>
-                            <tr>
-                                <td class="filterable-cell">Ford</td>
-                                <td class="filterable-cell">Escort</td>
-                                <td class="filterable-cell">Blue</td>
-                                <td class="filterable-cell">2000</td>
-                            </tr>
-                            <tr>
-                                <td class="filterable-cell">Ford</td>
-                                <td class="filterable-cell">Escort</td>
-                                <td class="filterable-cell">Blue</td>
-                                <td class="filterable-cell">2000</td>
-                            </tr>
-                            <tr>
-                                <td class="filterable-cell">Ford</td>
-                                <td class="filterable-cell">Escort</td>
-                                <td class="filterable-cell">Blue</td>
-                                <td class="filterable-cell">2000</td>
-                            </tr>
-                            </tbody>
-
-                        </table>
-                    </div>
-                </div>
-            </div>
+            </table>
         </div>
+    </div>
 
-        <script src="js/jquery.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="//api.filestackapi.com/filestack.js"></script>
-        <script>
-            (function() {
-        function changePic() {
-            $('#profilePic').attr('src', event.fpfile.url);
-        }
-            })();
-        </script>
+    <div class="donation-wrap wrap">
+        <div th:object="${totalDonation}">
+            <h1>Amount Donated</h1>
+            <span>$</span>
+            <span th:text="*{amount}"></span>
+        </div>
+    </div>
+</div>
 
-    </body>
+<script src="js/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="//api.filestackapi.com/filestack.js" type="text/javascript"></script>
+<script>
+(function() {
+    function changePic() {
+        $('#profilePic').attr('src', event.fpfile.url);
+    }
+})();
+</script>
+</body>
 </html>
