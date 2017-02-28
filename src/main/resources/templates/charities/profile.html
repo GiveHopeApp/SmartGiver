@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8"/>
-        <title>Charity</title><!--th:text="${charity.charityName}"-->
+        <title th:text="${charity.charityName}"></title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
         <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'/>
         <link rel="stylesheet" href="/css/charity-profile.css"/>
@@ -10,16 +10,16 @@
     </head>
     <body>
     <nav th:include="fragments/navbar :: navbar"></nav>
-    <div class="wrapper"><!--th:object="${charity}"-->
+    <div th:object="${charity}" class="wrapper">
         <div class="header-wrapper">
-            <h1>Cancer Fund For Children</h1><!--th:text="*{charityName}"-->
-            <h2>Denver, </h2><!--th:text="*{city}"-->
-            <h2>Colorado</h2><!--th:text="*{state}"-->
+            <h1 th:text="*{charityName}"></h1>
+            <h2><span th:text="*{city}"></span>, </h2>
+            <h2 th:text="*{state}"></h2>
         </div>
 
-        <div class="container">
-            <div class="content-wrapper">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, aspernatur blanditiis corporis distinctio ea excepturi iste magnam minima natus nemo numquam officiis quae quia quibusdam quod rem suscipit ut voluptate.</p><!--th:text="*{description}"-->
+        <div class="content-wrapper">
+            <div class="description-wrapper jumbotron">
+                <p th:text="*{description}"></p>
             </div>
         </div>
     </div>
