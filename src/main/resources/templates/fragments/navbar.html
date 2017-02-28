@@ -66,13 +66,11 @@
                             </div>
                         </li>
                         <li class="divider navbar-login-session-bg"></li>
-                        <li><a href="#">Account Settings <span class="glyphicon glyphicon-cog pull-right"></span></a></li>
-                        <li class="divider"></li>
                         <li><a href="#">Favourites Snippets<span class="glyphicon glyphicon-heart pull-right"></span></a></li>
-                        <li class="divider"></li>
+                        <li id="last" class="divider"></li>
                         <li>
                             <form th:action="@{/logout}" th:method="POST">
-                                <button>
+                                <button class="signout-btn">
                                     Sign Out
                                     <span class="glyphicon glyphicon-log-out pull-right"></span>
                                 </button>
@@ -86,6 +84,5 @@
 </div>
 <script src="js/jquery.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="js/navbar.js"></script>
 </body>
 </html>

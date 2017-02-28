@@ -29,10 +29,19 @@
 .login-btn a:hover {
     text-decoration: none;
 }
-.dropdown-menu a:last-of-type {
-    margin-top: 0;
-    margin-bottom: 5px;
+
+.signout-btn {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    padding-left: 17px;
+    padding-right: 17px;
 }
+
+#last {
+    margin-bottom: 4px;
+}
+
 a {
     text-decoration: none;
     color: #5f5f5f;

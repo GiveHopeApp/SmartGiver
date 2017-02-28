@@ -2,25 +2,28 @@
 <html xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8"/>
-        <title th:text="${charity.charityName}"></title>
-        <link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.css"/>
+        <title>Charity</title><!--th:text="${charity.charityName}"-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+        <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'/>
+        <link rel="stylesheet" href="/css/charity-profile.css"/>
+        <link rel="stylesheet" href="/css/navbar.css"/>
     </head>
     <body>
-        <div class="container" th:object="${charity}">
-
-            <h1 th:text="*{charityName}"></h1>
-
-            <h4>
-                <span th:text="*{city}"></span>,
-                <span th:text="*{state}"></span>
-            </h4>
-
-            <p th:text="*{description}"></p>
-
+    <nav th:include="fragments/navbar :: navbar"></nav>
+    <div class="wrapper"><!--th:object="${charity}"-->
+        <div class="header-wrapper">
+            <h1>Cancer Fund For Children</h1><!--th:text="*{charityName}"-->
+            <h2>Denver, </h2><!--th:text="*{city}"-->
+            <h2>Colorado</h2><!--th:text="*{state}"-->
         </div>
 
-        <script src="js/jquery-2.2.4.js"></script>
-        <script src="css/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
-
+        <div class="container">
+            <div class="content-wrapper">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, aspernatur blanditiis corporis distinctio ea excepturi iste magnam minima natus nemo numquam officiis quae quia quibusdam quod rem suscipit ut voluptate.</p><!--th:text="*{description}"-->
+            </div>
+        </div>
+    </div>
+    <script src="/js/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </body>
 </html>

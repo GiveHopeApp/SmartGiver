@@ -1,6 +1,14 @@
 $(document).ready(function() {
 
-    $('.input').val('');
+    // $('.input').each(function() {
+    //     if ($(this).val() !== '') {
+    //         console.log('test')
+    //     }
+    // });
+
+    // $('.input').click(function () {
+    //    console.log($(this).val());
+    // });
 
     $('.form').find('input, textarea').on('keyup blur focus', function (e) {
 
