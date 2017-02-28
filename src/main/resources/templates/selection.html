@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection</title>
+
+</head>
+<body>
+
+<div class="container">
+
+
+
+    <div class="row" id="searchRow">
+        <form id="form1">
+            <input type="text" id="search" placeholder="Search Charity">
+            <!--<input type="submit" hidden id="submit">-->
+            <button id ="submit">Search!</button>
+        </form>
+    </div>
+
+    <h1 id="charities"></h1>
+
+</div>
+
+
+
+<script src="../static/js/jquery.js"></script>
+<script>
+    (function() {
+        "use strict";
+
+        var name;
+        var ein;
+
+        function getEverything() {
+            console.log("test");
+            $.ajax({
+                url: "http://data.orghunter.com/v1/charitysearch",
+                method: "POST",
+                data: {
+                    APPID: "5a8f41c4b68a4ba35aebce9d6db819bd",
+                    searchTerm: "youth"
+                }
+            }).done(function (data) {
+                console.log(data);
+            }).fail(function () {
+                console.log("fail");
+            });
+
+        }
+
+        getEverything();
+
+//        var charity;
+//
+//        var api = 'http://data.orghunter.com/v1/charitybasic?q=';
+//        var apiKey = '&APPID=6711a0369455dd135314bc03c3779f75';
+
+//        function buttonSetup() {
+//            var button = select('#submit');
+//            button.click(charitySearch);
+//        }
+//
+//        function charitySearch() {
+//            var url = api + input.valueOf() + apiKey;
+//            loadJSON(url, gotData);
+//        }
+//
+//        function gotData() {
+//            charity = data;
+//        }
+
+    })();
+</script>
+</body>
+</html>
+<!--http://data.orghunter.com/v1/charitybasic-->
+<!--6711a0369455dd135314bc03c3779f75-->

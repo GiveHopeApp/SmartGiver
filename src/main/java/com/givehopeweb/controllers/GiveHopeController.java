@@ -15,15 +15,47 @@ public class GiveHopeController {
     @GetMapping ("/")
     public String showLandingPage (Model model) {
 
-//        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-//        model.addAttribute("user", user);
+        if (!SecurityContextHolder.getContext().getAuthentication().getPrincipal()
+                .equals("anonymousUser")) {
+
+            User user = (User) SecurityContextHolder.getContext().getAuthentication()
+                    .getPrincipal();
+
+            model.addAttribute("user", user);
+        }
+
 
         return "/home-screen";
     }
 
     @GetMapping ("/donate")
-    public String showDonationPage() {
+    public String showDonationPage(Model model) {
+
+        if (!SecurityContextHolder.getContext().getAuthentication().getPrincipal()
+                .equals("anonymousUser")) {
+
+            User user = (User) SecurityContextHolder.getContext().getAuthentication()
+                    .getPrincipal();
+
+            model.addAttribute("user", user);
+        }
+
         return "/charities/donation-form";
+    }
+
+    @GetMapping ("/categories")
+    public String showCategoriesPage(Model model) {
+
+        if (!SecurityContextHolder.getContext().getAuthentication().getPrincipal()
+                .equals("anonymousUser")) {
+
+            User user = (User) SecurityContextHolder.getContext().getAuthentication()
+                    .getPrincipal();
+
+            model.addAttribute("user", user);
+        }
+
+        return "/charities/categories";
     }
 
 }

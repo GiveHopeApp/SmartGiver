@@ -18,4 +18,5 @@ public interface Charities extends CrudRepository <Charity, Integer> {
         findByCharityNameContainingOrCategoryContainingOrStateContainingOrCityContainingOrDescriptionContaining
                 (String name, String category, String state, String city, String keyword);
 
+        List<Charity> findByCategoryContaining (String catgory);
 }

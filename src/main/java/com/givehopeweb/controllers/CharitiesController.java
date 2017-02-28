@@ -1,8 +1,10 @@
 package com.givehopeweb.controllers;
 
 import com.givehopeweb.models.Charity;
+import com.givehopeweb.models.User;
 import com.givehopeweb.repositories.Charities;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +25,15 @@ public class CharitiesController {
 
     @GetMapping ("/charities/{id}")
     public String showCharityProfile (@PathVariable int id, Model model) {
+
+        if (!SecurityContextHolder.getContext().getAuthentication().getPrincipal()
+                .equals("anonymousUser")) {
+
+            User user = (User) SecurityContextHolder.getContext().getAuthentication()
+                    .getPrincipal();
+
+            model.addAttribute("user", user);
+        }
 
         Charity charity = charitiesDao.findOne(id);
 

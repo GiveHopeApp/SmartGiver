@@ -48,4 +48,42 @@
 
     });
 
+    $(".va-title").click(function () {
+
+        //Generate the url
+        var url = "/category/" + $(this).text() + ".json";
+
+        //The ajax request to the search controller
+        var request = $.ajax ({
+            url: url
+        });
+
+        //Generates the html for the results
+        request.done(function (charities) {
+
+            html = "";
+
+            charities.forEach(function (charity) {
+
+                html += "<p>"
+                    + "<a href='/charities/" + charity.id + "'>"
+                    + charity.charityName + "</a></p>";
+            });
+
+            if (charities.length == 0) {
+                html = "We didn't find anything..."
+            }
+
+            $(".va-content").html(html);
+        });
+
+        //Clears the html if there is a failure
+        request.fail(function () {
+
+            html = "";
+
+            $("#searchResults").html(html);
+        });
+    })
+
 })();

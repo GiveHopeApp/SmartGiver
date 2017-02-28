@@ -1,9 +1,12 @@
 package com.givehopeweb.controllers;
 
 import com.givehopeweb.models.Charity;
+import com.givehopeweb.models.User;
 import com.givehopeweb.repositories.Charities;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -24,7 +27,16 @@ public class SearchController {
     }
 
     @GetMapping("/search")
-    public String showSearchPage () {
+    public String showSearchPage (Model model) {
+
+        if (!SecurityContextHolder.getContext().getAuthentication().getPrincipal()
+                .equals("anonymousUser")) {
+
+            User user = (User) SecurityContextHolder.getContext().getAuthentication()
+                    .getPrincipal();
+
+            model.addAttribute("user", user);
+        }
 
         return "/charities/search";
     }
@@ -39,5 +51,11 @@ public class SearchController {
                 searchTerm,
                 searchTerm,
                 searchTerm);
+    }
+
+    @GetMapping ("/category/{searchTerm}.json")
+    public @ResponseBody List<Charity> showCategoryResults (@PathVariable String searchTerm) {
+
+        return charitiesDao.findByCategoryContaining(searchTerm);
     }
 }

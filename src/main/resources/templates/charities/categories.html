@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="css/navbar.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+    <!--<link rel="stylesheet" type="text/css" href="../css/styleNoJS.css"/>-->
+    <title>Categories</title>
+</head>
+<body>
+
+<nav th:include="fragments/navbar :: navbar"></nav>
+
+<div>
+    <h1 style="text-align:center; font-family: Futura; padding: 50px; ">Browse top-rated charities here...</h1>
+</div>
+
+<div id="va-accordion" class="va-container">
+
+    <div class="va-wrapper">
+        <div class="va-slice va-slice-color-1 va-slice-1">
+            <h3 class="va-title">Animal Welfare</h3>
+            <div class="va-content">
+                <p>Charity</p>
+
+                <div id="load-charity-animals"></div>
+                <!--<div id=""></div>-->
+                <ul>
+                    <li><a href="#">About</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="va-slice va-slice-color-2 va-slice-2">
+            <h3 class="va-title">Cancer</h3>
+            <div class="va-content">
+                <p>Charity</p>
+
+                <div id="load-charity-cancer"></div>
+                <!--<div id=""></div>-->
+                <ul>
+                    <li><a href="#">About</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="va-slice va-slice-color-3 va-slice-3">
+            <h3 style="font-size: 42px;" class="va-title">Child Protection, Sponsorship, and Youth Development</h3>
+            <div class="va-content">
+                <p>Charity</p>
+
+                <div id="load-charity-children"></div>
+                <!--<div id=""></div>-->
+                <ul>
+                    <li><a href="#">About</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="va-slice va-slice-color-4 va-slice-4">
+            <h3 class="va-title">Education and Scholarship</h3>
+            <div class="va-content">
+                <p>Charity</p>
+
+                <div id="load-charity-education"></div>
+                <!--<div id=""></div>-->
+                <ul>
+                    <li><a href="#">About</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="va-slice va-slice-color-5 va-slice-5">
+            <h3 class="va-title">Environment</h3>
+            <div class="va-content">
+                <p>Charity</p>
+
+                <div id="load-charity-environment"></div>
+                <!--<div id=""></div>-->
+                <ul>
+                    <li><a href="#">About</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="va-slice va-slice-color-6 va-slice-6">
+            <h3 style="font-size: 45px;" class="va-title">Human Rights, Civil Rights, and Social Responsibility</h3>
+            <div class="va-content">
+                <p>Charity</p>
+
+                <div id="load-charity-rights"></div>
+                <!--<div id=""></div>-->
+                <ul>
+                    <li><a href="#">About</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="va-slice va-slice-color-7 va-slice-7">
+            <h3 class="va-title">Health Services</h3>
+            <div class="va-content">
+                <p>Charity</p>
+
+                <div id="load-charity-health"></div>
+                <!--<div id=""></div>-->
+                <ul>
+                    <li><a href="#">About</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="va-slice va-slice-color-8 va-slice-8">
+            <h3 class="va-title">Hunger and Shelter</h3>
+            <div class="va-content">
+                <p>Charity</p>
+
+                <div id="load-charity-hunger"></div>
+                <!--<div id=""></div>-->
+                <ul>
+                    <li><a href="#">About</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="va-slice va-slice-color-9 va-slice-9">
+            <h3 class="va-title">International Relief</h3>
+            <div class="va-content">
+                <p>Charity</p>
+
+                <div id="load-charity-international"></div>
+                <!--<div id=""></div>-->
+                <ul>
+                    <li><a href="#">About</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="va-slice va-slice-color-10 va-slice-10">
+            <h3 class="va-title">Veterans</h3>
+            <div class="va-content">
+                <p>Charity</p>
+
+                <div id="load-charity-veterans"></div>
+                <!--<div id=""></div>-->
+                <ul>
+                    <li><a href="#">About</a></li>
+
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div>
+
+    <label for="searchTerm">Search</label>
+    <input id="searchTerm" name="searchTerm" type="text" placeholder="Enter a keyword"/>
+
+    <div id="searchResults"></div>
+
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.vaccordion.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.mousewheel.js"></script>
+<script src="js/search.js"></script>
+<script>
+    $('#va-accordion').vaccordion({
+        accordionW		: $(window).width(),
+        accordionH		: $(window).height(),
+        visibleSlices	: 5,
+        expandedHeight	: 600,
+        animOpacity		: 0.1,
+        savePositions	: true,
+        contentAnimSpeed: 100
+    });
+</script>
+</body>
+</html>
