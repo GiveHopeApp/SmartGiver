@@ -2,6 +2,13 @@
  * Created by rubenvarela on 2/28/17.
  */
 $(document).ready(function () {
+
+    $('.submit-btn').attr('disabled', true);
+
+    $('input').keyup(function() {
+        checkInput();
+    });
+
     $('.button').click(function() {
 
         $('.button').removeClass('active');
@@ -9,6 +16,7 @@ $(document).ready(function () {
 
         $('input').val($(this).val());
 
+        checkInput();
 
         console.log($('input').val());
     });
@@ -34,5 +42,14 @@ $(document).ready(function () {
             $('.button:nth-of-type(2)').addClass('active');
             clicked = false
         }
-    })
+    });
+
+
+    function checkInput() {
+        if ($('input').val().length != 0) {
+            $('.submit-btn').attr('disabled', false);
+        } else {
+            $('.submit-btn').attr('disabled', true);
+        }
+    }
 });
