@@ -10,6 +10,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 /**
  * Created by David on 2/28/17.
  */
@@ -41,7 +44,27 @@ public class DonationsController {
                 "&currency=usd" +
                 "https://" + ApiKeyLoader.getPandaPayKey() + ":@api.pandapay.io/v1/donations";
 
+        StringBuffer output = new StringBuffer();
 
+        Process process;
+
+        try {
+            process = Runtime.getRuntime().exec(command);
+
+            process.waitFor();
+
+            BufferedReader reader =
+                    new BufferedReader (new InputStreamReader(process.getInputStream()));
+
+            String line = "";
+
+            while ((line = reader.readLine()) != null) {
+
+                output.append(line + "\n");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
 
         return "/";
