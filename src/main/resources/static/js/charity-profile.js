@@ -3,6 +3,13 @@
  */
 $(document).ready(function () {
 
+    // $('button').each(function () {
+    //     if ($(this).hasClass('active') == true) {
+    //         $('input').val($(this).val());
+    //     }
+    // });
+    // checkInput();
+
     $('.submit-btn').attr('disabled', true);
 
     $('input').keyup(function() {
@@ -26,6 +33,7 @@ $(document).ready(function () {
     $('.button').last().click(function() {
         if (clicked == false) {
             $(this).css('transform', 'translateY(-9px)');
+            $('.submit-btn').css('transform', 'translateY(-9px)');
             $('.button').css('display', 'none');
             $(this).css('display', 'inline-block');
             $(this).text('X');
@@ -34,6 +42,7 @@ $(document).ready(function () {
             clicked = true
         } else {
             $(this).css('transform', 'none');
+            $('.submit-btn').css('transform', 'none');
             $('input').css('display', 'none');
             $('.button').css('display', 'inline-block');
             $(this).text('Custom');
