@@ -38,7 +38,7 @@ body {
 .donate-wrapper h1 {
     margin-left: 5px;
 }
-.donate-wrapper button {
+.donate-wrapper .button {
     width: 100px;
     height: 85px;
     font-size: 23px;
@@ -49,24 +49,30 @@ body {
     border: solid transparent;
     background-color: #DDDDDD;
 }
-.donate-wrapper button:hover {
+.donate-wrapper .button:hover {
     background-color: #e9e9e9;
 }
-.donate-wrapper button.active {
+.donate-wrapper .active {
     background-color: #6035e7;
     color: white;
 }
+.donate-wrapper .active:hover {
+    background-color: #6035e7;
+}
 .donate-wrapper input {
-    padding: 0;
-    width: 300px;
+    width: 42.5%;
     height: 85px;
+    display: none;
     font-size: 46px;
     box-shadow: none;
     margin: 10px 5px;
-    line-height: 80px;
+    line-height: 70px;
     border-radius: 5px;
-    position: absolute;
     border: solid gray;
-    display: inline-block;
+    padding: 0 0 0 10px;
     background-color: white;
+}
+.dollar {
+    display: none;
+    font-size: 45px;
 }
