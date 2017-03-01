@@ -26,8 +26,9 @@
 
             <div class="donate-wrapper">
                 <h1>Donation Amount</h1>
-                <form action="/donate">
-                    <span class="dollar">$</span><input type="text"/>
+                <form th:action="*{'/donate/' + ein}" method="POST">
+                    <span class="dollar">$</span>
+                    <input th:value="${donation.amount}" type="text"/>
                     <button type="button" value="5" class="button">$5</button>
                     <button type="button" value="25" class="active button">$25</button>
                     <button type="button" value="50" class="button">$50</button>

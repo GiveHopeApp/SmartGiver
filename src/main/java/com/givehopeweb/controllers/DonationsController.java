@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.math.BigDecimal;
 
 /**
  * Created by David on 2/28/17.
@@ -30,7 +31,7 @@ public class DonationsController {
         this.donationsDao = donationsDao;
     }
 
-    @PostMapping("/donate/{token}")
+    @PostMapping("/donate/confirm/{token}")
     public String showConfirmationPage (@PathVariable String token,
                                         @ModelAttribute Donation donation,
                                         @RequestParam ("email") String email) {
@@ -55,10 +56,11 @@ public class DonationsController {
     }
 
     @PostMapping ("/donate/{ein}")
-    public String showDonationPage (@PathVariable String ein, @ModelAttribute Donation donation) {
+    public String showDonationPage (@PathVariable String ein, @ModelAttribute Donation donation,
+                                    @RequestParam (name="amount")BigDecimal amount) {
 
-        donation.setCharity( (Charity) charitiesDao.findByEin(ein));
-
+        donation.setCharity(charitiesDao.findByEin(ein));
+        System.out.println(amount);
         return "/charities/donation-form";
     }
 }
