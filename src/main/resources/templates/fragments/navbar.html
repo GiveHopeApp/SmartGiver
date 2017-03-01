@@ -18,20 +18,7 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/donate">Donate</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        Categories<span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Cancer</a></li>
-                        <li><a href="#">Child Services</a></li>
-                        <li><a href="#">African American</a></li>
-                        <li><a href="#">Animal Rights</a></li>
-                        <li><a href="#">Civil</a></li>
-                        <li><a href="#">Education</a></li>
-                    </ul>
-                </li>
+                <li class="active"><a href="/categories">Categories</a></li>
             </ul>
             <button class="login-btn" sec:authorize="!isAuthenticated()"><a href="/register">Log In</a></button>
             <ul class="nav navbar-nav navbar-right" sec:authorize="isAuthenticated()">
