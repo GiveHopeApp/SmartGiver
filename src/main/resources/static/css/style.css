@@ -32,7 +32,8 @@ body {
 	border-radius: 5px;
 	display: inline-block;
 	border: solid transparent;
-	background-color: #DDDDDD;
+	color: white;
+	letter-spacing: 3px;
 }
 
 .categories-wrapper button:hover {
@@ -95,4 +96,28 @@ th {
 td {
 	font-size: 16px;
 	text-align: center;
+}
+
+#animals {
+
+}
+
+#cancer {
+
+}
+
+#environment {
+	background: url("../images/trees.jpg") no-repeat center;
+}
+
+#education {
+
+}
+
+#children {
+
+}
+
+#veterans {
+
 }
