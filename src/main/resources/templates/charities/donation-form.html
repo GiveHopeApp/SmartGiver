@@ -19,7 +19,7 @@
     <div class="tab-content">
         <div id="signup">
             <h1>Enter Payment Information</h1>
-            <form id="panda_cc_form" th:object="${donation}" action="">
+            <form id="panda_cc_form">
                 <div class="field-wrap">
                     <label class="middle">Card Number</label>
                     <input class="center" type="text" maxlength="16" data-panda="credit_card"/>
@@ -42,17 +42,20 @@
                     <label>Last Name</label>
                     <input type="text" maxlength="16" data-panda="last_name"/>
                 </div>
-                <div class="hidden">
-                    <input type="text" th:field="*{charity.ein}"/>
-                    <input type="text" th:field="*{amount}"/>
-                </div>
                 <div id="tokenize">
                     <button id="donate_btn" class="button button-block" type="submit" >NEXT</button>
                 </div>
             </form>
         </div>
-        <div id="login">
+
+        <div class="hidden">
+            <form id="hiddenForm" th:object="${donation}" method="post">
+                <input type="text" th:field="*{charity.ein}"/>
+                <input type="text" th:field="*{amount}"/>
+                <input type="hidden" th:attr="name=${_csrf.parameterName},value=${_csrf.token}"/>
+            </form>
         </div>
+
     </div>
 </div>
 

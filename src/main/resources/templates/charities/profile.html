@@ -26,10 +26,9 @@
 
             <div class="donate-wrapper">
                 <h1>Donation Amount</h1>
-                <form th:action="*{'/donate/' + ein}" method="POST">
+                <form th:action="@{'/donate/' + ${charity.ein}}" method="POST">
                     <span class="dollar">$</span>
-                    <input name="amount" type="text"/>
-                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                    <input id="customAmount" name="amount" type="text"/>
                     <button type="button" value="5" class="button">$5</button>
                     <button type="button" value="25" class="active button">$25</button>
                     <button type="button" value="50" class="button">$50</button>

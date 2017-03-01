@@ -33,18 +33,17 @@ public class DonationsController {
 
     @PostMapping("/donate/confirm/{token}")
     public String showConfirmationPage (@PathVariable String token,
-                                        @ModelAttribute Donation donation,
-                                        @RequestParam ("email") String email) {
-
-        donationsDao.save(donation);
+                                        @ModelAttribute Donation donation) {
 
         String command = "curl -X POST --data " +
-                "source=" + token +
-                "&amount" + donation.getAmount() +
-                "&destination" + donation.getCharity().getEin() +
-                "receipt_email=" + email +
-                "&currency=usd" +
-                "https://" + ApiKeyLoader.getPandaPayKey() + ":@api.pandapay.io/v1/donations";
+                "'source=" + token +
+                "&amount=" + donation.getAmount().movePointRight(2) +
+                "&destination=" + donation.getCharity().getEin() +
+                "&receipt_email=david.alviola@gmail.com" +
+                "&currency=usd'" +
+                " https://" + ApiKeyLoader.getPandaPayKey() + ":@api.pandapay.io/v1/donations";
+
+        System.out.println(command);
 
         try {
             Runtime.getRuntime().exec(command);
@@ -52,16 +51,18 @@ public class DonationsController {
             e.printStackTrace();
         }
 
-        return "/"; //Send to thank you page
+        return "redirect:/"; //Send to thank you page
     }
 
     @PostMapping ("/donate/{ein}")
-    public String showDonationPage (@PathVariable String ein, @ModelAttribute Donation donation,
-                                    @RequestParam (name="amount")BigDecimal amount) {
+    public String showDonationPage (@ModelAttribute Donation donation, @PathVariable String ein,
+                                    @RequestParam BigDecimal amount) {
 
         donation.setCharity(charitiesDao.findByEin(ein));
         donation.setAmount(amount);
-        System.out.println(amount);
+
+        donationsDao.save(donation);
+
         return "/charities/donation-form";
     }
 }

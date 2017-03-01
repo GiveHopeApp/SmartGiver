@@ -19,7 +19,9 @@
             // credit card data.
             console.log('success');
 
-            $("#panda_cc_form").attr("action", "/donate/" + cardToken);
+            $("#hiddenForm").attr("action", "/donate/confirm/" + cardToken);
+
+            $("#hiddenForm").submit();
         });
 
         Panda.on('error', function(errors) {
