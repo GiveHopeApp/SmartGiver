@@ -2,6 +2,23 @@
  * Created by rubenvarela on 2/28/17.
  */
 $(document).ready(function () {
+
+    $('button').each(function () {
+        if ($(this).hasClass('active') == true) {
+            $('input').val($(this).val());
+            console.log('success')
+        } else {
+            console.log('failure')
+        }
+        checkInput();
+    });
+
+    $('.submit-btn').attr('disabled', true);
+
+    $('input').keyup(function() {
+        checkInput();
+    });
+
     $('.button').click(function() {
 
         $('.button').removeClass('active');
@@ -9,6 +26,7 @@ $(document).ready(function () {
 
         $('input').val($(this).val());
 
+        checkInput();
 
         console.log($('input').val());
     });
@@ -18,6 +36,7 @@ $(document).ready(function () {
     $('.button').last().click(function() {
         if (clicked == false) {
             $(this).css('transform', 'translateY(-9px)');
+            $('.submit-btn').css('transform', 'translateY(-9px)');
             $('.button').css('display', 'none');
             $(this).css('display', 'inline-block');
             $(this).text('X');
@@ -26,6 +45,7 @@ $(document).ready(function () {
             clicked = true
         } else {
             $(this).css('transform', 'none');
+            $('.submit-btn').css('transform', 'none');
             $('input').css('display', 'none');
             $('.button').css('display', 'inline-block');
             $(this).text('Custom');
@@ -34,5 +54,14 @@ $(document).ready(function () {
             $('.button:nth-of-type(2)').addClass('active');
             clicked = false
         }
-    })
+    });
+
+
+    function checkInput() {
+        if ($('input').val().length != 0) {
+            $('.submit-btn').attr('disabled', false);
+        } else {
+            $('.submit-btn').attr('disabled', true);
+        }
+    }
 });
