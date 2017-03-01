@@ -1,105 +1,67 @@
 body {
     font-family: 'Titillium Web', sans-serif;
 }
-.profile {
-    padding: 15px 20% 0 20%;
+
+.header-wrapper {
+    width: 100%;
+    padding: 15px 10px;
     text-align: center;
-    background: linear-gradient(to bottom, #6035e7 31%, #ffffff 0%);
+    background-color: #6035e7;
 }
-.img-wrap {
-    margin-left: 80px;
-    padding: 5px;
-    background-color: lightgray;
-    display: inline-block;
-    float: left;
-    border-radius: 80px;
-}
-.img-wrap img {
-    width: 160px;
-    height: 160px;
-    border-radius: 80px;
-}
-.img-wrap button {
-    -webkit-transform: translateY(-95px) translateX(-60px);
-            transform: translateY(-95px) translateX(-60px);
-    position: absolute;
-    opacity: 0;
-}
-.img-wrap:hover > button {
-    opacity: 1;
-    z-index: 999;
-}
-.img-wrap:hover > img{
-    opacity: 0.7;
-}
-.name-wrap {
-    display: inline-block;
+
+.header-wrapper h1 {
     color: white;
-    margin-right: 150px;
+    font-size: 46px;
+    margin-top: 10px;
+    margin-bottom: 0;
 }
-.name-wrap h1 {
-    font-size: 23px;
-    margin: 0 0 41px 0;
+
+.header-wrapper h2 {
+    color: white;
+    font-size: 35px;
     display: inline-block;
 }
-.name-wrap h1:first-of-type {
-    margin: 5px 0 13px 0;
-    font-size: 46px;
-    display: block;
-}
-.wrap {
-    width: 100%;
-}
-.invisible {
-    opacity: 0;
-}
-table {
-    width: 100%;
+
+.header-wrapper > * {
+    display: inline-block;
 }
 
-thead, tbody, tr, td, th { display: block; }
-
-tr:after {
-    content: ' ';
-    display: block;
-    visibility: hidden;
-    clear: both;
+.profilePic {
+    width: 100px;
+    height: 100px;
 }
 
-thead th {
-    font-size: 17px;
+.content-wrapper {
+    padding: 30px 12% 30px 12%;
+}
+
+.content-wrapper h1 {
+    font-size: 39px;
+    margin-top: 15px;
     text-align: center;
 }
 
-tbody {
-    height: 120px;
-    overflow-y: auto;
+.content-wrapper h2 {
+    font-size: 33px;
+    text-align: center;
 }
 
-thead {
-    /* fallback */
+.jumbotron {
+    border-radius: 10px;
 }
 
+.jumbotron:last-of-type {
+    padding: 23px 85px 15px 85px;
+}
 
-tbody td, thead th {
+th {
+    text-align: center;
     width: 50%;
-    float: left;
-}
-
-@media (max-width: 1166px) {
-    .img-wrap {
-        margin-left: 33%;
-    }
-}
-
-.favorites-wrap h1 {
-    margin-top: 36px;
-}
-
-.donation-wrap span {
     font-size: 20px;
 }
 
-h1 {
-    font-size: 31px;
+td {
+    text-align: center;
+    width: 50%;
+    font-size: 16px;
 }

@@ -3,12 +3,15 @@
  */
 $(document).ready(function () {
 
-    // $('button').each(function () {
-    //     if ($(this).hasClass('active') == true) {
-    //         $('input').val($(this).val());
-    //     }
-    // });
-    // checkInput();
+    $('button').each(function () {
+        if ($(this).hasClass('active') == true) {
+            $('input').val($(this).val());
+            console.log('success')
+        } else {
+            console.log('failure')
+        }
+        checkInput();
+    });
 
     $('.submit-btn').attr('disabled', true);
 
