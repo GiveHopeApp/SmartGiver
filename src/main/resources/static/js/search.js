@@ -25,7 +25,7 @@
 
             charities.forEach(function (charity) {
 
-                html += "<p>"
+                html += "<p>" + "<br>"
                     + "<a href='/charities/" + charity.id + "'>"
                     + charity.charityName + "</a> "
                     + charity.category + "</p>";
@@ -53,6 +53,8 @@
         //Generate the url
         var url = "/category/" + $(this).text() + ".json";
 
+        console.log(url);
+
         //The ajax request to the search controller
         var request = $.ajax ({
             url: url
@@ -65,16 +67,17 @@
 
             charities.forEach(function (charity) {
 
-                html += "<p>"
-                    + "<a href='/charities/" + charity.id + "'>"
-                    + charity.charityName + "</a></p>";
+                html += "<div><p>"
+                    + "<a id='generatedCharity' href='/charities/" + charity.id + "'>"
+                    + charity.charityName + "</a></p></div>";
             });
 
             if (charities.length == 0) {
                 html = "We didn't find anything..."
             }
-
+            console.log("test");
             $(".va-content").html(html);
+
         });
 
         //Clears the html if there is a failure
@@ -83,6 +86,8 @@
             html = "";
 
             $("#searchResults").html(html);
+
+
         });
     })
 
