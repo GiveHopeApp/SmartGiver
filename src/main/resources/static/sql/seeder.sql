@@ -15,7 +15,7 @@ values
   ('Cancer', 'LiveStrong Foundation', '74-2806618', 'Dedicated to enhancing the quality of life for those living with, through and beyond cancer by supporting scientific research, educational community programs and in public awareness efforts.', 'Austin', 'Texas'),
   ('Cancer', 'Multiple Myeloma Research Foundation', '06-1504413', 'To relentlessly pursue innovative means to accelerate collaborative scientific discoveries and the development of break through multiple myeloma treatments to extend and improve the lives of patients and lead to a cure.', 'Norwalk', 'Connecticut'),
   ('Cancer', 'Ovarian Cancer Research Fund Alliance', '13-3806788', 'To fund scientific research that leads to more effective identification, treatment, and ultimately a cure for ovarian cancer, as well as related educational and support initiatives.', 'New York', 'New York'),
-  ('Cancer', 'Pancreatic Cancer Action Network', '33-0841281', 'To advance research, support patients, and create hope for people who have pancreatic cancer.', 'Manhattan Beach', 'Califronia'),
+  ('Cancer', 'Pancreatic Cancer Action Network', '33-0841281', 'To advance research, support patients, and create hope for people who have pancreatic cancer.', 'Manhattan Beach', 'California'),
   ('Cancer', 'Prostate Cancer Foundation', '95-4418411', 'Committed to ending death and suffering from prostate cancer; accelerates the world\'s most promising prostate cancer research with the goal of developing new precision medicines and cures for prostate cancer.', 'Santa Monica', 'California'),
 
   # Child Protection, Sponsorship, and Youth Development
@@ -27,7 +27,7 @@ values
   ('Child Protection, Sponsorship, and Youth Development', 'Girls Incorporated (National Office)', '13-1915124', 'Inspires all girls to be strong, smart, and bold through life-changing programs and experiences that help girls navigate gender, economic, and social barriers.', 'New York', 'New York'),
   ('Child Protection, Sponsorship, and Youth Development', 'Prevent Child Abuse America (National Office', '23-7235671', 'To prevent the abuse and neglect of our nation\'s children.', 'Chicago', 'Illinois'),
   ('Child Protection, Sponsorship, and Youth Development', 'Save the Children', '06-0726487', 'To inspire breakthroughs in the way the world treats children, and to achieve immediate and lasting change in their lives.', 'Fairfield', 'Connecticut'),
-  ('Child Protection, Sponsorship, and Youth Development', 'Starlight Children\'s Foundation (National Office)', '95-3802159', 'Partners with experts to improve the life and health of kids and families around the world.', 'Los Angelese', 'California'),
+  ('Child Protection, Sponsorship, and Youth Development', 'Starlight Children\'s Foundation (National Office)', '95-3802159', 'Partners with experts to improve the life and health of kids and families around the world.', 'Los Angeles', 'California'),
   ('Child Protection, Sponsorship, and Youth Development', 'Unbound', '43-1243999', 'Provides financial support, services and encouragement to individuals and their families living on the margins of society around the world.', 'Kansas City', 'Kansas'),
   ('Child Protection, Sponsorship, and Youth Development', 'The Y (National Office)', '36-3258696', 'To serve as the national resource office for the nation\'s Ys, which strengthen community by nurturing the potential of kids, promoting healthy living for all, and fostering social responsibility.', 'Chicago', 'Illinois'),
 

@@ -14,12 +14,19 @@ body {
     font-size: 46px;
     margin-top: 10px;
     margin-bottom: 0;
+    font-family: Big Caslon, sans-serif;
+
+}
+
+p {
+    font-family: Avenir, sans-serif;
 }
 
 .header-wrapper h2 {
     color: white;
     font-size: 30px;
     display: inline-block;
+    font-family: Big Caslon, sans-serif;
 }
 .content-wrapper {
     padding: 30px 100px 30px 100px;
@@ -27,6 +34,7 @@ body {
 .content-wrapper h1 {
     font-size: 39px;
     margin-top: 15px;
+    font-family: Avenir, sans-serif;
 }
 .jumbotron {
     padding: 43px 35px;
@@ -89,3 +97,5 @@ form {
     display: none;
     font-size: 45px;
 }
+
+
