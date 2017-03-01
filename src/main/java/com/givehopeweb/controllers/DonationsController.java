@@ -60,6 +60,7 @@ public class DonationsController {
                                     @RequestParam (name="amount")BigDecimal amount) {
 
         donation.setCharity(charitiesDao.findByEin(ein));
+        donation.setAmount(amount);
         System.out.println(amount);
         return "/charities/donation-form";
     }
