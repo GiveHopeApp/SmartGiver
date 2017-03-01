@@ -25,17 +25,18 @@
 
             charities.forEach(function (charity) {
 
-                html += "<p>"
-                    + "<a href='/charities/" + charity.id + "'>"
-                    + charity.charityName + "</a> "
-                    + charity.category + "</p>";
+                html += "<tr>" +
+                            "<td>" +
+                                "<a href='/charities/" + charity.id + "'>" + charity.charityName + "</a>" +
+                            "</td>" +
+                        "</tr>"
             });
 
             if (charities.length == 0) {
                 html = "We didn't find anything..."
             }
 
-            $("#searchResults").html(html);
+            $(".table-content").html(html);
         });
 
         //Clears the html if there is a failure
@@ -43,12 +44,23 @@
 
             html = "";
 
-            $("#searchResults").html(html);
+            $(".table-content").html(html);
         });
 
     });
 
-    $(".va-title").click(function () {
+
+    $("button").click(function () {
+
+        //Change active button class to clicked button
+        $('button').removeClass('active');
+        $(this).addClass('active');
+
+        //Change th to category clicked
+        $('th').text($(this).text());
+
+        //Make charities list visible
+        $('.charities-wrapper').css('display', 'block');
 
         //Generate the url
         var url = "/category/" + $(this).text() + ".json";
@@ -65,16 +77,18 @@
 
             charities.forEach(function (charity) {
 
-                html += "<p>"
-                    + "<a href='/charities/" + charity.id + "'>"
-                    + charity.charityName + "</a></p>";
+                html += "<tr>" +
+                            "<td>" +
+                                "<a href='/charities/" + charity.id + "'>" + charity.charityName + "</a>" +
+                            "</td>" +
+                        "</tr>"
             });
 
             if (charities.length == 0) {
-                html = "We didn't find anything..."
+                html = "<tr><td>"+ "We didn't find anything..." + "</td>></tr>>"
             }
 
-            $(".va-content").html(html);
+            $(".table-content").html(html);
         });
 
         //Clears the html if there is a failure
@@ -82,7 +96,7 @@
 
             html = "";
 
-            $("#searchResults").html(html);
+            $(".table-content").html(html);
         });
     })
 

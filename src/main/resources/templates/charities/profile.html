@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <meta charset="UTF-8"/>
-        <title th:text="${charity.charityName}"></title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-        <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'/>
-        <link rel="stylesheet" href="/css/charity-profile.css"/>
-        <link rel="stylesheet" href="/css/navbar.css"/>
-    </head>
-    <body>
-    <nav th:include="fragments/navbar :: navbar"></nav>
-    <div th:object="${charity}" class="wrapper">
-        <div class="header-wrapper">
-            <h1 th:text="*{charityName}"></h1>
-            <h2><span th:text="*{city}"></span>, </h2>
-            <h2 th:text="*{state}"></h2>
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="${charity.charityName}"></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href="/css/charity-profile.css"/>
+    <link rel="stylesheet" href="/css/navbar.css"/>
+</head>
+<body>
+<nav th:include="fragments/navbar :: navbar"></nav>
+<div th:object="${charity}" class="wrapper">
+    <div class="header-wrapper">
+        <h1 th:text="*{charityName}"></h1>
+        <h2><span th:text="*{city}"></span>,  </h2>
+        <h2 th:text="*{state}"></h2>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="description-wrapper jumbotron">
+            <h1>Mission Statement</h1>
+            <p th:text="*{description}"></p>
         </div>
 
-        <div class="content-wrapper">
-            <div class="description-wrapper jumbotron">
-                <h1>Mission Statement</h1>
-                <p th:text="*{description}"></p>
-            </div>
 
+        <div class="donate-wrapper">
+            <h1>Donation Amount</h1>
+            <form action="/donate">
+                <span class="dollar">$</span><input type="text"/>
+                <button type="button" value="5" class="button">$5</button>
+                <button type="button" value="25" class="active button">$25</button>
+                <button type="button" value="50" class="button">$50</button>
+                <button type="button" value="100" class="button">$100</button>
+                <button type="button" value="500" class="button">$500</button>
+                <button type="button" class="button">Custom</button>
 
-            <div class="donate-wrapper">
-                <h1>Donation Amount</h1>
-                <form action="/donate">
-                    <span class="dollar">$</span><input type="text"/>
-                    <button type="button" value="5" class="button">$5</button>
-                    <button type="button" value="25" class="active button">$25</button>
-                    <button type="button" value="50" class="button">$50</button>
-                    <button type="button" value="100" class="button">$100</button>
-                    <button type="button" value="500" class="button">$500</button>
-                    <button type="button" class="button">Custom</button>
-
-                    <button type="submit" class="submit-btn">Next</button>
-                </form>
-            </div>
+                <button type="submit" class="submit-btn">Next</button>
+            </form>
         </div>
     </div>
-    <script src="/js/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="/js/charity-profile.js"></script>
-    </body>
+</div>
+<script src="/js/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="/js/charity-profile.js"></script>
+</body>
 </html>
