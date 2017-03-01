@@ -82,6 +82,10 @@ input {
 	border: solid transparent;
 }
 
+#th {
+	padding-bottom: 15px;
+}
+
 th {
 	font-size: 20px;
 	text-align: center;
