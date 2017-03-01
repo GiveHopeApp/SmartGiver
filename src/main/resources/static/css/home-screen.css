@@ -12,6 +12,7 @@ body {
     margin: 0;
     font-size: 65px;
     text-align: center;
+    font-family: 'Big Caslon', sans-serif;
 }
 
 #main {
@@ -36,7 +37,8 @@ img {
 
 #main h1 {
     color: black;
-    font-family: 'Source Sans Pro', sans-serif;
+    /*font-family: 'Source Sans Pro', sans-serif;*/
+    font-family: 'Avenir', sans-serif;
 }
 
 #main h1:first-of-type {
@@ -48,7 +50,8 @@ img {
     color: black;
     font-size: 20px;
     margin-top: 10px;
-    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: 'Avenir', sans-serif;
 }
 
 #text-wrapper > a {
@@ -78,8 +81,19 @@ img {
     outline: none;
 }
 
+footer p {
+    font-family: Avenir;
+    color: black;
+}
 
-
+footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    background:#999;
+}
 
 
 /*img {*/

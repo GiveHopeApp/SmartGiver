@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8"/>
     <title th:text="${charity.charityName}"></title>
@@ -8,12 +9,17 @@
     <link rel="stylesheet" href="/css/charity-profile.css"/>
     <link rel="stylesheet" href="/css/navbar.css"/>
 </head>
+
 <body>
 <nav th:include="fragments/navbar :: navbar"></nav>
 <div th:object="${charity}" class="wrapper">
+
     <div class="header-wrapper">
-        <h1 th:text="*{charityName}"></h1>
-        <h2><span th:text="*{city}"></span>,  </h2>
+        <h1 th:text="*{charityName}">
+        </h1>
+
+        <h2>
+            <span th:text="*{city}"></span>,</h2>
         <h2 th:text="*{state}"></h2>
     </div>
 
@@ -22,7 +28,6 @@
             <h1>Mission Statement</h1>
             <p th:text="*{description}"></p>
         </div>
-
 
         <div class="donate-wrapper">
             <h1>Donation Amount</h1>
