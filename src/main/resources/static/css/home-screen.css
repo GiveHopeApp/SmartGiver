@@ -1,22 +1,22 @@
 body {
-    font-family: 'Source Sans Pro', sans-serif;
     color: white;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 #head {
-    background-color: #5744e8;
     padding: 20px 0 20px 0;
+    background-color: #5744e8;
 }
 
 #head h1 {
+    margin: 0;
     font-size: 65px;
     text-align: center;
-    margin: 0;
 }
 
 #main {
-    padding: 100px 130px 0 130px;
     width: 100%;
+    padding: 100px 130px 0 130px;
 }
 #main div {
     display: inline-block;
@@ -36,34 +36,37 @@ img {
 
 #main h1 {
     color: black;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 #main h1:first-of-type {
-    font-size: 56px;
     margin: 0;
+    font-size: 56px;
 }
 
-#main h1:last-of-type {
+#main p {
+    color: black;
     font-size: 20px;
+    margin-top: 10px;
     font-family: 'Open Sans', sans-serif;
 }
 
 #text-wrapper > a {
-    margin-top: 10px;
-    display: inline-block;
     width: 165px;
-    text-align: center;
-    font-size: 16px;
-    letter-spacing: 1px;
     border: none;
     color: white;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+    display: inline-block;
     background-color: #6637fd;
     padding: 10px 20px 10px 20px;
 }
 
-a:hover {
+#text-wrapper a:hover {
+    text-decor1ation: none;
     background-color: #6637fd;
-    text-decoration: none;
 }
 
 .glyphicon {

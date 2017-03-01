@@ -10,6 +10,9 @@
     //The event listener for the search bar
     $("#searchTerm").keyup(function () {
 
+        //Changing th to match user input
+        $("th").text('Charities for ' + '"' + $(this).val() + '"');
+
         //Makes the search term the path variable for use by the controller
         var url = "/" + $(this).val() + ".json";
 
@@ -53,14 +56,14 @@
     $("button").click(function () {
 
         //Change active button class to clicked button
-        $('button').removeClass('active');
-        $(this).addClass('active');
+        $("button").removeClass("active");
+        $(this).addClass("active");
 
         //Change th to category clicked
-        $('th').text($(this).text());
+        $("th").text($(this).text());
 
         //Make charities list visible
-        $('.charities-wrapper').css('display', 'block');
+        $('.charities-wrapper').css("display", "block");
 
         //Generate the url
         var url = "/category/" + $(this).text() + ".json";
