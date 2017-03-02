@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' type='text/css'/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"/>
-    <link rel="stylesheet" href="css/donation-form.css"/>
-    <link rel="stylesheet" href="css/navbar.css"/>
+    <link rel="stylesheet" href="/css/donation-form.css"/>
+    <link rel="stylesheet" href="/css/navbar.css"/>
 </head>
 <body>
 <nav th:include="fragments/navbar :: navbar"></nav>
@@ -51,40 +51,23 @@
                 </div>
             </form>
         </div>
-        <div id="login">
+
+        <div class="hidden">
+            <form id="hiddenForm" th:object="${donation}" method="post">
+                <input type="text" th:field="*{charity.ein}"/>
+                <input type="text" th:field="*{amount}"/>
+                <input type="hidden" th:attr="name=${_csrf.parameterName},value=${_csrf.token}"/>
+            </form>
         </div>
+
     </div>
 </div>
 
 
-<script src="js/jquery.js"></script>
+<script src="/js/jquery.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
- <script src="js/login-register.js"></script>
+ <script src="/js/login-register.js"></script>
 <script src="//d2t45z63lq9zlh.cloudfront.net/panda-v0.0.5.min.js"></script>
-<script>
-    // Call Panda.init() with your Panda Publishable Key and the DOM id of the
-    // credit card-related form element
-
-    Panda.init('pk_test_wsQoLJzX6-yUXv1gGcUgvQ', 'panda_cc_form');
-
-    Panda.on('success', function(cardToken) {
-        console.log('success');
-        console.log(cardToken);
-
-        // You now have a token you can use to refer to that credit card later.
-        // This token is used in PandaPay API calls for creating donations and grants
-        // so that you don't have to worry about security concerns with dealing with
-        // credit card data.
-
-    });
-
-    Panda.on('error', function(errors) {
-
-        // errors is a human-readable list of things that went wrong
-        //  (invalid card number, missing last name, etc.)
-        console.log('error');
-        console.log(errors);
-    });
-</script>
+<script src="/js/donation.js"></script>
 </body>
 </html>

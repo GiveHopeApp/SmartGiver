@@ -5,17 +5,14 @@ $(document).ready(function () {
 
     $('button').each(function () {
         if ($(this).hasClass('active') == true) {
-            $('input').val($(this).val());
-            console.log('success')
-        } else {
-            console.log('failure')
+            $('#customAmount').val($(this).val());
         }
         checkInput();
     });
 
     $('.submit-btn').attr('disabled', true);
 
-    $('input').keyup(function() {
+    $('#customAmount').keyup(function() {
         checkInput();
     });
 
@@ -24,11 +21,9 @@ $(document).ready(function () {
         $('.button').removeClass('active');
         $(this).addClass('active');
 
-        $('input').val($(this).val());
+        $('#customAmount').val($(this).val());
 
         checkInput();
-
-        console.log($('input').val());
     });
 
     var clicked = false;
@@ -40,13 +35,13 @@ $(document).ready(function () {
             $('.button').css('display', 'none');
             $(this).css('display', 'inline-block');
             $(this).text('X');
-            $('input').css('display', 'inline-block');
+            $('#customAmount').css('display', 'inline-block');
             $('.dollar').css('display', 'inline-block');
             clicked = true
         } else {
             $(this).css('transform', 'none');
             $('.submit-btn').css('transform', 'none');
-            $('input').css('display', 'none');
+            $('#customAmount').css('display', 'none');
             $('.button').css('display', 'inline-block');
             $(this).text('Custom');
             $('.button').removeClass('active');
@@ -58,10 +53,11 @@ $(document).ready(function () {
 
 
     function checkInput() {
-        if ($('input').val().length != 0) {
+        if ($('#customAmount').val().length != 0) {
             $('.submit-btn').attr('disabled', false);
         } else {
             $('.submit-btn').attr('disabled', true);
         }
     }
+
 });
