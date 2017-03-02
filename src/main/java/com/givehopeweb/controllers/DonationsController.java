@@ -25,12 +25,14 @@ public class DonationsController {
 
     private Charities charitiesDao;
     private Donations donationsDao;
+    private ApiKeyLoader apiKeyLoader;
 
     @Autowired
-    public DonationsController (Charities charitiesDao, Donations donationsDao) {
+    public DonationsController (Charities charitiesDao, Donations donationsDao, ApiKeyLoader apiKeyLoader) {
 
         this.charitiesDao = charitiesDao;
         this.donationsDao = donationsDao;
+        this.apiKeyLoader = apiKeyLoader;
     }
 
     @PostMapping("/donate/confirm/{token}")
@@ -54,7 +56,7 @@ public class DonationsController {
                 "&destination=" + donation.getCharity().getEin() +
                 "&receipt_email=" + email +
                 "&currency=usd" +
-                " https://" + ApiKeyLoader.getPandaPayKey() + ":@api.pandapay.io/v1/donations";
+                " https://" + apiKeyLoader.getPandaPayKey() + ":@api.pandapay.io/v1/donations";
 
         Process process;
 
