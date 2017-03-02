@@ -44,7 +44,7 @@
                 </div>
                 <div class="field-wrap">
                     <label>Email</label>
-                    <input type="email"/>
+                    <input id="visibleEmail" type="email"/>
                 </div>
                 <div id="tokenize">
                     <button id="donate_btn" class="button button-block" type="submit" >NEXT</button>
@@ -56,6 +56,7 @@
             <form id="hiddenForm" th:object="${donation}" method="post">
                 <input type="text" th:field="*{charity.ein}"/>
                 <input type="text" th:field="*{amount}"/>
+                <input id="hiddenEmail" name="email" type="email"/>
                 <input type="hidden" th:attr="name=${_csrf.parameterName},value=${_csrf.token}"/>
             </form>
         </div>

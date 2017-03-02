@@ -20,6 +20,7 @@
             console.log('success');
 
             $("#hiddenForm").attr("action", "/donate/confirm/" + cardToken);
+            $("#hiddenEmail").val($("#visibleEmail").val());
 
             $("#hiddenForm").submit();
         });
