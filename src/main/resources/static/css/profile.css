@@ -22,13 +22,36 @@ body {
     display: inline-block;
 }
 
-.header-wrapper > * {
+.img-wrapper, .name-wrapper {
     display: inline-block;
 }
 
+.img-wrapper {
+    margin: 0 45px 0 -140px;
+    transform: translateY(-90px);
+}
+
 .profilePic {
-    width: 100px;
-    height: 100px;
+    width: 121px;
+    height: 125px;
+    border-width: 4px;
+    position: absolute;
+    border-radius: 80px;
+    border: solid #9E9E9E;
+}
+
+button {
+    position: relative;
+    visibility: hidden;
+    transform: translateY(45px);
+}
+
+.img-wrapper:hover > .profilePic {
+    opacity: 0.6;
+}
+
+.img-wrapper:hover > button {
+    visibility: visible;
 }
 
 .content-wrapper {
