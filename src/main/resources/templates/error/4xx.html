@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="'Ooops, ' + ${error}"></title>
+</head>
+<body>
+<th:block th:switch="${error}">
+    <div th:case="'Not Found'">
+        <h1>Page not found!!</h1>
+    </div>
+    <div th:case="'Forbidden'">
+        <h1>You don't have permission to view this page.</h1>
+    </div>
+</th:block>
+<img src = "https://www.nachi.org/images2012/good-error-page.jpg" />
+</body>
+</html>
