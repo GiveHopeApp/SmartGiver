@@ -14,7 +14,7 @@ body {
     font-size: 46px;
     margin-top: 10px;
     margin-bottom: 0;
-    /*font-family: Big Caslon, sans-serif;*/
+    font-family: Big Caslon, sans-serif;
 }
 
 p {
@@ -25,7 +25,7 @@ p {
     color: white;
     font-size: 30px;
     display: inline-block;
-    /*font-family: Big Caslon, sans-serif;*/
+    font-family: Big Caslon, sans-serif;
 }
 .content-wrapper {
     padding: 30px 100px 30px 100px;

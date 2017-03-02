@@ -14,7 +14,7 @@ body {
 #headerName {
 	text-align: center;
 	color: whitesmoke;
-	/*font-family: Big Caslon, sans-serif;*/
+	font-family: Big Caslon, sans-serif;
 	/*text-shadow: black 2px 1px;*/
 }
 
@@ -42,7 +42,7 @@ body {
 	display: inline-block;
 	border: solid transparent;
 	background-color: #DDDDDD;
-	/*font-family: 'Avenir', sans-serif;*/
+	font-family: 'Avenir', sans-serif;
 	/*text-shadow: black 1px 1px;*/
 }
 
