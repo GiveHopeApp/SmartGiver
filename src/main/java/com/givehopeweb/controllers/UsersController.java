@@ -110,6 +110,24 @@ public class UsersController {
         return "/users/profile";
     }
 
+    @PostMapping ("/profile")
+    public String saveProfilePic (@RequestParam (name = "url") String url) {
+
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+
+        user.setProfilePicture(url);
+
+        UserRole userRole = new UserRole();
+        userRole.setRole("ROLE_USER");
+        userRole.setUserId(user.getId());
+
+        roles.save(userRole);
+
+        users.save(user);
+
+        return "redirect:/profile";
+    }
+
     @GetMapping ("/login")
     public String showLoginForm (Model model) {
 

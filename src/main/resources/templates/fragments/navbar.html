@@ -46,14 +46,18 @@
                                         </p>
                                         <p class="text-left small" th:text="*{email}"></p>
                                         <p class="text-left dropdown-btn">
-                                            <a href="/profile" class="btn btn-primary btn-block btn-sm">Profile</a>
+                                            <form th:action="@{/logout}" th:method="POST">
+                                                <button type="submit" class="btn btn-primary btn-block btn-sm">
+                                                    Profile
+                                                </button>
+                                            </form>
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li class="divider navbar-login-session-bg"></li>
-                        <li><a href="#">Favourites Snippets<span class="glyphicon glyphicon-heart pull-right"></span></a></li>
+                        <li><a href="/logout">Logout</a></li>
                         <li id="last" class="divider"></li>
                         <li>
                             <form th:action="@{/logout}" th:method="POST">
