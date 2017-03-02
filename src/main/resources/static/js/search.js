@@ -36,7 +36,9 @@
             });
 
             if (charities.length == 0) {
-                html = "We didn't find anything..."
+                html = "<tr>" +
+                            "<td>"+ "We didn't find anything..." + "</td>" +
+                        "</tr>"
             }
 
             $(".table-content").html(html);
@@ -62,6 +64,13 @@
         //Change th to category clicked
         $("th").text($(this).text());
 
+        //Shrink input if th is too long
+        if ($("th").text().length > 50) {
+            $("input").css("width", "13%")
+        } else {
+            $("input").css("width", "15.5%")
+        }
+
         //Make charities list visible
         $('.charities-wrapper').css("display", "block");
 
@@ -72,6 +81,10 @@
         var request = $.ajax ({
             url: url
         });
+
+        $('html, body').animate({
+            scrollTop: $("#table-div").offset().top
+        }, 1000);
 
         //Generates the html for the results
         request.done(function (charities) {
@@ -88,7 +101,9 @@
             });
 
             if (charities.length == 0) {
-                html = "<tr><td>"+ "We didn't find anything..." + "</td>></tr>>"
+                html = "<tr>" +
+                            "<td>"+ "We didn't find anything..." + "</td>" +
+                        "</tr>"
             }
 
             $(".table-content").html(html);
@@ -101,6 +116,14 @@
 
             $(".table-content").html(html);
         });
+
+
+        // //Link button to send you down the page on click
+        // window.scroll({
+        //     top: 2500,
+        //     left: 0,
+        //     behavior: 'smooth'
+        // });
     })
 
 })();
