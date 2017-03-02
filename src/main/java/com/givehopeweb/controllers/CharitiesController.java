@@ -43,4 +43,9 @@ public class CharitiesController {
 
         return "charities/profile";
     }
+
+    @GetMapping ("/thank-you")
+    public String showThankYouPage () {
+        return "charities/thank-you";
+    }
 }
