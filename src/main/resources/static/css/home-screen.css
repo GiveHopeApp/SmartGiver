@@ -3,58 +3,51 @@ body {
     font-family: 'Titillium Web', sans-serif;
 }
 
-#head {
-    padding: 20px 0 20px 0;
-    background-color: #5744e8;
+.wrapper {
+    height: 100vh;
+    background-size: 100% 120%;
+    padding: 20px 130px 0 130px;
+    background-repeat: no-repeat;
+    background-image: url("/images/oshomah-abubakar-85614.jpg");
+    /*background-image: url("/images/mi-pham-151950.jpg");*/
 }
 
-#head h1 {
-    margin: 0;
-    font-size: 65px;
-    text-align: center;
-    font-family: 'Big Caslon', sans-serif;
+.navbar-wrapper {
+    padding: 0 10px;
 }
 
-#main {
-    width: 100%;
-    padding: 100px 130px 0 130px;
-}
-#main div {
-    display: inline-block;
-}
-#text-wrapper {
-    width: 450px;
+.navbar-wrapper a {
+    color: white;
+    font-size: 20px;
+    font-family: 'Avenir', sans-serif;
 }
 
-#img-wrapper {
+.navbar-wrapper a:first-of-type {
+    float: left;
+}
+
+.navbar-wrapper a:last-of-type {
     float: right;
 }
 
-img {
-    width: 150px;
-    height: 150px;
+.text-wrapper {
+    margin-top: 170px;
+    width: 450px;
 }
 
-#main h1 {
-    color: black;
-    /*font-family: 'Source Sans Pro', sans-serif;*/
-    font-family: 'Avenir', sans-serif;
-}
-
-#main h1:first-of-type {
-    margin: 0;
+.text-wrapper h1 {
     font-size: 56px;
-}
-
-#main p {
-    color: black;
-    font-size: 20px;
-    margin-top: 10px;
-    /*font-family: 'Open Sans', sans-serif;*/
     font-family: 'Avenir', sans-serif;
+    /*font-family: 'Source Sans Pro', sans-serif;*/
 }
 
-#text-wrapper > a {
+.text-wrapper p {
+    font-size: 20px;
+    font-family: 'Avenir', sans-serif;
+    /*font-family: 'Open Sans', sans-serif;*/
+}
+
+.text-wrapper > a {
     width: 165px;
     border: none;
     color: white;
@@ -64,11 +57,11 @@ img {
     letter-spacing: 1px;
     display: inline-block;
     background-color: #6637fd;
-    padding: 10px 20px 10px 20px;
+    padding: 15px 20px;
 }
 
-#text-wrapper a:hover {
-    text-decor1ation: none;
+.text-wrapper a:hover {
+    text-decoration: none;
     background-color: #6637fd;
 }
 
@@ -81,31 +74,16 @@ img {
     outline: none;
 }
 
-footer p {
-    font-family: Avenir;
-    color: black;
-}
-
-footer {
-    position:fixed;
-    left:0px;
-    bottom:0px;
-    height:30px;
-    width:100%;
-    background:#999;
-}
-
-
-/*img {*/
-    /*display: inline-block;*/
-    /*width: 120px;*/
-    /*height: 120px;*/
-    /*margin: 7px;*/
+/*footer p {*/
+    /*font-family: Avenir;*/
+    /*color: black;*/
 /*}*/
 
-/*#img-wrapper {*/
-    /*width: 420px;*/
-    /*float: right;*/
-    /*text-align: center;*/
-    /*background-color: lightgray;*/
+/*footer {*/
+    /*position:fixed;*/
+    /*left:0px;*/
+    /*bottom:0px;*/
+    /*height:30px;*/
+    /*width:100%;*/
+    /*background:#999;*/
 /*}*/
