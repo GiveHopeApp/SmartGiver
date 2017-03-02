@@ -58,4 +58,9 @@ public class GiveHopeController {
         return "/charities/categories";
     }
 
+    @GetMapping ("/thank-you")
+    public String showThankYouPage () {
+        return "charities/thank-you";
+    }
+
 }

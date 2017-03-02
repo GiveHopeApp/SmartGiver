@@ -78,7 +78,7 @@ public class DonationsController {
             e.printStackTrace();
         }
 
-        return "redirect:/"; //Send to thank you page
+        return "redirect:/thank-you";
     }
 
     @PostMapping ("/donate/{ein}")
