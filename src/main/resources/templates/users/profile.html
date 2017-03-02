@@ -25,41 +25,30 @@
     </div>
 
     <div class="content-wrapper">
-        <div class="amount-wrapper jumbotron" th:object="${totalDonation}">
+        <div class="amount-wrapper jumbotron">
             <h1>Amount Donated</h1>
-            <h2>$<span>736</span></h2><!--th:text="*{amount}"-->
+            <h2>$<span th:text="${totalDonation}"></span></h2><!--th:text="*{amount}"-->
         </div>
 
         <div class="favorite-wrapper jumbotron">
-            <h1>Your Favorite Charities</h1>
+            <h1>Your Donations</h1>
             <table class="table table-striped" align="center">
                 <thead>
                 <tr>
                     <th>Charity</th>
-                    <th>Category</th>
+                    <th>Amount</th>
                 </tr>
                 </thead>
 
                 <tbody>
-                <tr>
-                    <td class="filterable-cell">Charity Name</td>
-                    <td class="filterable-cell">Category</td>
+
+                <tr th:each="donation : ${donations}">
+                    <td class="filterable-cell" th:text="${donation.charity.charityName}"></td>
+                    <td class="filterable-cell">
+                        $<span th:text="${donation.amount}"></span>
+                    </td>
                 </tr>
 
-                <tr>
-                    <td class="filterable-cell">Charity Name</td>
-                    <td class="filterable-cell">Category</td>
-                </tr>
-
-                <tr>
-                    <td class="filterable-cell">Charity Name</td>
-                    <td class="filterable-cell">Category</td>
-                </tr>
-
-                <tr>
-                    <td class="filterable-cell">Charity Name</td>
-                    <td class="filterable-cell">Category</td>
-                </tr>
                 </tbody>
             </table>
         </div>
