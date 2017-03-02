@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>Smart Giver</title>
+    <title>Give Hope</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:600"/>
@@ -10,21 +10,23 @@
     <link rel="stylesheet" href="css/navbar.css"/>
 </head>
 <body>
-<nav th:include="fragments/navbar :: navbar"></nav>
-<div id="head">
-    <h1>Smart Giver</h1>
-</div>
-<div id="main">
-    <div id="text-wrapper">
+<!--<nav th:include="fragments/navbar :: navbar"></nav>-->
+<div class="wrapper">
+    <div class="navbar-wrapper">
+        <a>Give Hope</a>
+        <a href="/register">Login</a>
+    </div>
+
+    <div class="text-wrapper">
         <h1>We make it easy to donate</h1>
-        <p>Find A-rated charities analyzed by industry watchdogs* and make a donation directly through our site.</p>
-        <button><a href="/categories">Give Hope Now<span class="glyphicon glyphicon-play"></span></a></button>
+        <p>Find top-rated charities analyzed by industry watchdogs and make a donation directly through our site.</p>
+        <a href="/categories">Get Started<span class="glyphicon glyphicon-play"></span></a>
     </div>
 </div>
 
-<footer>
-<p>*All data collected from CharityWatch.org and CharityNavigator.org</p>
-</footer>
+<!--<footer>-->
+<!--<p>*All data collected from CharityWatch.org and CharityNavigator.org</p>-->
+<!--</footer>-->
 </body>
 <script src="js/jquery.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

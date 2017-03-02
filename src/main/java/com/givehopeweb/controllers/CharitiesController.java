@@ -1,6 +1,7 @@
 package com.givehopeweb.controllers;
 
 import com.givehopeweb.models.Charity;
+import com.givehopeweb.models.Donation;
 import com.givehopeweb.models.User;
 import com.givehopeweb.repositories.Charities;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +39,7 @@ public class CharitiesController {
         Charity charity = charitiesDao.findOne(id);
 
         model.addAttribute("charity", charity);
+        model.addAttribute("donation", new Donation());
 
         return "charities/profile";
     }

@@ -110,14 +110,14 @@ label.active-middle {
     transform: translateY(43px) translateX(-35px);
     font-size: 14px;
 }
-label.active-middle:nth-of-type(2) {
-    -webkit-transform: translateY(43px) translateX(-30px);
-    transform: translateY(43px) translateX(-26px);
-}
-label.active-middle:nth-of-type(3) {
-    -webkit-transform: translateY(43px) translateX(-30px);
-    transform: translateY(43px) translateX(-10px);
-}
+/*.expiration {*/
+    /*-webkit-transform: translateY(43px) translateX(80px);*/
+    /*transform: translateY(43px) translateX(82px);*/
+/*}*/
+/*.cvv {*/
+    /*-webkit-transform: translateY(43px) translateX(-30px);*/
+    /*transform: translateY(43px) translateX(-10px);*/
+/*}*/
 label.active .req {
     opacity: 0;
 }

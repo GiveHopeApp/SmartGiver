@@ -20,8 +20,7 @@
 .login-btn {
     float: right;
     margin: 13px;
-    border-width: 1px;
-    border-color: #532ec3;
+    border: none;
     color: #532ec3;
     background-color: transparent;
 }
