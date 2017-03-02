@@ -1,13 +1,11 @@
 package com.givehopeweb.controllers;
 
-import com.givehopeweb.models.Charity;
 import com.givehopeweb.models.Donation;
 import com.givehopeweb.repositories.Charities;
 import com.givehopeweb.repositories.Donations;
 import com.givehopeweb.services.ApiKeyLoader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.BufferedReader;
@@ -33,21 +31,36 @@ public class DonationsController {
 
     @PostMapping("/donate/confirm/{token}")
     public String showConfirmationPage (@PathVariable String token,
-                                        @ModelAttribute Donation donation) {
+                                        @ModelAttribute Donation donation,
+                                        @RequestParam (name = "email") String email) {
 
         String command = "curl -X POST --data " +
-                "'source=" + token +
+                "source=" + token +
                 "&amount=" + donation.getAmount().movePointRight(2) +
                 "&destination=" + donation.getCharity().getEin() +
-                "&receipt_email=david.alviola@gmail.com" +
-                "&currency=usd'" +
+                "&receipt_email=" + email +
+                "&currency=usd" +
                 " https://" + ApiKeyLoader.getPandaPayKey() + ":@api.pandapay.io/v1/donations";
 
-        System.out.println(command);
+        Process process;
 
         try {
-            Runtime.getRuntime().exec(command);
-        } catch (IOException e) {
+            process = Runtime.getRuntime().exec(command);
+            process.waitFor();
+
+            StringBuffer output = new StringBuffer();
+
+            BufferedReader reader =
+                    new BufferedReader(new InputStreamReader(process.getInputStream()));
+
+            String line = "";
+            while ((line = reader.readLine())!= null) {
+                output.append(line + "\n");
+            }
+
+            System.out.println(output);
+
+        } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
 
@@ -65,4 +78,5 @@ public class DonationsController {
 
         return "/charities/donation-form";
     }
+
 }
