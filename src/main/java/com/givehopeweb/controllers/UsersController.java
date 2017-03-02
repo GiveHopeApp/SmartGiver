@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.validation.Valid;
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -92,17 +93,15 @@ public class UsersController {
         model.addAttribute("user", user);
 
         List<Donation> donations = donationsDao.findByUserId(user.getId());
+        model.addAttribute("donations", donations);
 
-        Donation totalDonation = new Donation();
+        BigDecimal totalDonation = new BigDecimal(0).setScale(2);
 
         for (Donation donation : donations) {
-            if (totalDonation.getAmount() == null) {
-                totalDonation.setAmount(donation.getAmount());
-            }
 
-            totalDonation.setAmount(totalDonation.getAmount().add(donation.getAmount()));
+            totalDonation = totalDonation.add(donation.getAmount().setScale(2));
         }
-
+        System.out.println(totalDonation);
         model.addAttribute("totalDonation", totalDonation);
 
         List<Charity> favoriteCharities = charitiesDao.findUserFavorites(user.getId());

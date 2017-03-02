@@ -74,6 +74,10 @@ body {
     outline: none;
 }
 
+#brand {
+    float: left;
+}
+
 /*footer p {*/
     /*font-family: Avenir;*/
     /*color: black;*/
