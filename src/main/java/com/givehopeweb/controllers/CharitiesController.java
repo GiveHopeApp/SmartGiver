@@ -45,7 +45,17 @@ public class CharitiesController {
     }
 
     @GetMapping ("/thank-you")
-    public String showThankYouPage () {
+    public String showThankYouPage (Model model) {
+
+        if (!SecurityContextHolder.getContext().getAuthentication().getPrincipal()
+                .equals("anonymousUser")) {
+
+            User user = (User) SecurityContextHolder.getContext().getAuthentication()
+                    .getPrincipal();
+
+            model.addAttribute("user", user);
+        }
+
         return "charities/thank-you";
     }
 }

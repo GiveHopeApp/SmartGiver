@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
     <meta charset="UTF-8"/>
     <title>Give Hope</title>
@@ -13,8 +14,8 @@
 <!--<nav th:include="fragments/navbar :: navbar"></nav>-->
 <div class="wrapper">
     <div class="navbar-wrapper">
-        <a>Give Hope</a>
-        <a href="/register">Login</a>
+        <a id="brand" >Give Hope</a>
+        <a sec:authorize="isAnonymous()" href="/register">Login</a>
     </div>
 
     <div class="text-wrapper">
