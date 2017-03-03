@@ -30,8 +30,16 @@
             // errors is a human-readable list of things that went wrong
             //  (invalid card number, missing last name, etc.)
             console.log(errors);
+
+
+            var error;
+            for (var i = 0; i <= 6; i++) {
+                error = errors[i];
+                if (error[0] == "month") {
+                    console.log('test')
+                }
+            }
         });
     })
-
 
 })();
