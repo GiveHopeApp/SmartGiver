@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
     <meta charset="UTF-8" />
     <title>Thank You</title>
@@ -10,9 +11,9 @@
 <body>
 <div class="wrapper">
     <div class="navbar-wrapper">
-        <a id="brand" >Smart Giver</a>
-        <!--sec:authorize="isAnonymous()"-->
-        <a href="/register">Login</a>
+        <a id="brand" href="/">Smart Giver</a>
+        <a href="/register" sec:authorize="!isAuthenticated()">Login</a>
+        <a href="/profile" sec:authorize="isAuthenticated()">Profile</a>
     </div>
     <div class="text-wrapper">
         <h1>Thank You!</h1>

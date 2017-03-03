@@ -38,7 +38,7 @@
                                                 <span class="glyphicon glyphicon-user icon-size"></span>
                                             </span>
                                             <span th:if="${user.profilePicture} != null">
-                                                <img class="profilePic" th:attr="src=*{profilePicture}" />
+                                                <img class="navbarPic" th:attr="src=*{profilePicture}" />
                                             </span>
                                         </p>
                                     </div>
@@ -51,8 +51,8 @@
                                         </p>
                                         <p class="text-left small" th:text="*{email}"></p>
                                         <p class="text-left dropdown-btn">
-                                            <form th:action="@{/logout}" th:method="POST">
-                                                <button type="submit" class="btn btn-primary btn-block btn-sm">
+                                            <form th:action="@{/profile}" th:method="POST">
+                                                <button type="submit" class="profile-btn btn btn-primary btn-block btn-sm">
                                                     Profile
                                                 </button>
                                             </form>
@@ -62,16 +62,13 @@
                             </div>
                         </li>
                         <li class="divider navbar-login-session-bg"></li>
-                        <li><a href="/logout">Logout</a></li>
-                        <li id="last" class="divider"></li>
                         <li>
                             <form th:action="@{/logout}" th:method="POST">
-                                <button class="signout-btn">
-                                    Sign Out
-                                    <span class="glyphicon glyphicon-log-out pull-right"></span>
-                                </button>
+                                <input type="submit" class="signout-btn" value="Sign Out"/>
+                                <span class="glyphicon glyphicon-log-out pull-right"></span>
                             </form>
                         </li>
+                        <li id="last" class="divider"></li>
                     </ul>
                 </li>
             </ul>

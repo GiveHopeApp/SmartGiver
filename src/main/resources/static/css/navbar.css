@@ -17,6 +17,16 @@
     font-size: 87px;
 }
 
+.navbarPic {
+    width: 90px;
+    height: 90px;
+}
+
+.profile-btn {
+    margin-top: -40px;
+    visibility: visible;
+}
+
 .login-btn {
     float: right;
     margin: 13px;
@@ -32,9 +42,15 @@
 .signout-btn {
     width: 100%;
     border: none;
-    background-color: transparent;
     padding-left: 17px;
     padding-right: 17px;
+    visibility: visible;
+    background-color: transparent;
+}
+
+.glyphicon-log-out {
+    padding-right: 15px;
+    transform: translateY(-21px);
 }
 
 #last {
