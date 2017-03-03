@@ -6,7 +6,7 @@
 
     // Call Panda.init() with your Panda Publishable Key and the DOM id of the
     // credit card-related form element
-    Panda.init('pk_test_K9gngFSReXtFtL5FqFfHUQ', 'panda_cc_form');
+    Panda.init('pk_test_wsQoLJzX6-yUXv1gGcUgvQ', 'panda_cc_form');
 
     //Event listener for donate button
     $("#donate_btn").click(function() {
@@ -29,7 +29,6 @@
 
             // errors is a human-readable list of things that went wrong
             //  (invalid card number, missing last name, etc.)
-            console.log('error');
             console.log(errors);
         });
     })

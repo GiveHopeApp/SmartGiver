@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8" />
     <title>Thank You</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/thank-you.css"/>
+    <link rel="stylesheet" href="css/navbar.css"/>
 </head>
 <body>
-    <h1>Thank you for your gift</h1>
-    <p>Thank you for your generous gift to the American Heart Association</p>
-    <p>Your receipt is being mailed to the email address you provided</p>
+<div class="wrapper">
+    <div class="navbar-wrapper">
+        <a id="brand" >Smart Giver</a>
+        <!--sec:authorize="isAnonymous()"-->
+        <a href="/register">Login</a>
+    </div>
+    <div class="text-wrapper">
+        <h1>Thank You!</h1>
+        <p>We thank you for your generous gift you are awesome</p>
+        <p>Your receipt is being mailed to the email address you provided</p>
+    </div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/thank-you.js"></script>
 </body>
 </html>
