@@ -33,6 +33,10 @@ body {
 .text-wrapper {
     margin-top: 170px;
     width: 450px;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 1.5s;
+    /*-webkit-animation-iteration-count: infinite;*/
+    -webkit-animation-timing-function: linear;
 }
 
 .text-wrapper h1 {
@@ -61,6 +65,7 @@ body {
     background-color: #6637fd;
     padding: 15px 20px;
     font-family: 'Avenir', sans-serif;
+
 }
 
 .text-wrapper a:hover {
