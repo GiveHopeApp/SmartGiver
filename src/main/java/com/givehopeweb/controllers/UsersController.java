@@ -101,7 +101,7 @@ public class UsersController {
 
             totalDonation = totalDonation.add(donation.getAmount().setScale(2));
         }
-        System.out.println(totalDonation);
+
         model.addAttribute("totalDonation", totalDonation);
 
         List<Charity> favoriteCharities = charitiesDao.findUserFavorites(user.getId());
@@ -115,15 +115,13 @@ public class UsersController {
 
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 
-        user.setProfilePicture(url);
+        User saveUser = users.findOne(user.getId());
 
-        UserRole userRole = new UserRole();
-        userRole.setRole("ROLE_USER");
-        userRole.setUserId(user.getId());
+        saveUser.setProfilePicture(url);
 
-        roles.save(userRole);
+        users.save(saveUser);
 
-        users.save(user);
+        System.out.println(url);
 
         return "redirect:/profile";
     }

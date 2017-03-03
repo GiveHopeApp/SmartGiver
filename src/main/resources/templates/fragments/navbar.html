@@ -34,7 +34,12 @@
                                 <div class="row">
                                     <div class="col-lg-4">
                                         <p class="text-center">
-                                            <span class="glyphicon glyphicon-user icon-size"></span>
+                                            <span th:if="${user.profilePicture} == null">
+                                                <span class="glyphicon glyphicon-user icon-size"></span>
+                                            </span>
+                                            <span th:if="${user.profilePicture} != null">
+                                                <img class="profilePic" th:attr="src=*{profilePicture}" />
+                                            </span>
                                         </p>
                                     </div>
                                     <div class="col-lg-8" th:object="${user}">

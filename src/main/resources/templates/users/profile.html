@@ -14,7 +14,12 @@
         <div th:object="${user}" class="wrapper">
             <div class="header-wrapper">
                 <div class="img-wrapper">
-                    <img class="profilePic" src="images/user.png"/>
+                    <span th:if="${user.profilePicture} == null">
+                        <img class="profilePic" src="images/user.png"/>
+                    </span>
+                    <span th:if="${user.profilePicture} != null">
+                        <img class="profilePic" th:attr="src=*{profilePicture}" />
+                    </span>
                     <input type="filepicker" data-fp-apikey="A1JDvoVpERDyNr0Ob75a1z" onchange="changePic()"/>
                 </div>
 
@@ -56,7 +61,7 @@
             </div>
 
             <form id="hiddenForm" class="hidden" method="post" action="/profile">
-                <input id="url" name="url" />
+                <input type="text" id="url" name="url" />
                 <input type="hidden" th:attr="name=${_csrf.parameterName},value=${_csrf.token}"/>
             </form>
         </div>
@@ -68,8 +73,12 @@
         <script>
         function changePic() {
 
-            $('.profilePic').attr('src', event.fpfile.url);
-            $("#url").val($("#profilePic").attr("src"));
+            var link = event.fpfile.url;
+            console.log(link);
+
+            $("#url").val(link);
+            $(".profilePic").attr("src", event.fpfile.url);
+
             $("#hiddenForm").submit();
 
         }
