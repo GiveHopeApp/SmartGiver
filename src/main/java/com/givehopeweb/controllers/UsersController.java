@@ -101,13 +101,29 @@ public class UsersController {
 
             totalDonation = totalDonation.add(donation.getAmount().setScale(2));
         }
-        System.out.println(totalDonation);
+
         model.addAttribute("totalDonation", totalDonation);
 
         List<Charity> favoriteCharities = charitiesDao.findUserFavorites(user.getId());
         model.addAttribute("favorites", favoriteCharities);
 
         return "/users/profile";
+    }
+
+    @PostMapping ("/profile")
+    public String saveProfilePic (@RequestParam (name = "url") String url) {
+
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+
+        User saveUser = users.findOne(user.getId());
+
+        saveUser.setProfilePicture(url);
+
+        users.save(saveUser);
+
+        System.out.println(url);
+
+        return "redirect:/profile";
     }
 
     @GetMapping ("/login")
