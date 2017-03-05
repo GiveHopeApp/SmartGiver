@@ -14,7 +14,7 @@ body {
     font-size: 46px;
     margin-top: 10px;
     margin-bottom: 0;
-    /*font-family: Big Caslon, sans-serif;*/
+    font-family: Big Caslon, sans-serif;
 }
 
 p {
@@ -25,7 +25,7 @@ p {
     color: white;
     font-size: 30px;
     display: inline-block;
-    /*font-family: Big Caslon, sans-serif;*/
+    font-family: Big Caslon, sans-serif;
 }
 .content-wrapper {
     padding: 30px 100px 30px 100px;
@@ -63,10 +63,16 @@ form {
 .donate-wrapper .active {
     color: white;
     background-color: #6035e7;
+    -webkit-stroke-width: 2.5px;
+    -webkit-stroke-color: #FFFFFF;
+    -webkit-fill-color: #FFFFFF;
+    box-shadow: 1px 0px 10px #000000;
 }
+
 .donate-wrapper .active:hover {
     background-color: #6035e7;
 }
+
 .donate-wrapper input {
     width: 42.5%;
     height: 85px;
@@ -80,6 +86,14 @@ form {
     padding: 0 0 0 10px;
     background-color: white;
 }
+
+.donate-wrapper input:hover {
+    -webkit-stroke-width: 2.5px;
+    -webkit-stroke-color: #FFFFFF;
+    -webkit-fill-color: #FFFFFF;
+    box-shadow: 1px 0px 10px #000000;
+}
+
 .submit-btn {
     width: 210px;
     color: white;

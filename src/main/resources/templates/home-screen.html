@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>Give Hope</title>
+    <title>Smart Giver</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:600"/>
     <link rel="stylesheet" href="css/home-screen.css"/>
     <link rel="stylesheet" href="css/navbar.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
 </head>
 <body>
 <!--<nav th:include="fragments/navbar :: navbar"></nav>-->
 <div class="wrapper">
     <div class="navbar-wrapper">
-        <a id="brand" >Give Hope</a>
-        <a sec:authorize="isAnonymous()" href="/register">Login</a>
+        <p>Smart Giver</p>
+        <a class="animated " href="/register">Login</a>
     </div>
 
     <div class="text-wrapper">
         <h1>We make it easy to donate</h1>
-        <p>Find top-rated charities analyzed by industry watchdogs and make a donation directly through our site.</p>
+        <p>Find only A-rated charities analyzed by industry watchdogs and make a safe donation directly through our site.</p>
         <a href="/categories">Get Started<span class="glyphicon glyphicon-play"></span></a>
     </div>
 </div>
@@ -31,4 +32,10 @@
 </body>
 <script src="js/jquery.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+    $(function(){  // $(document).ready shorthand
+        $('.text-wrapper').hide().fadeIn(6000);
+    });
+</script>
+
 </html>

@@ -1,6 +1,6 @@
 body {
     color: white;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Big Caslon', sans-serif;
 }
 
 .wrapper {
@@ -8,7 +8,7 @@ body {
     background-size: 100% 120%;
     padding: 20px 130px 0 130px;
     background-repeat: no-repeat;
-    background-image: url("/images/oshomah-abubakar-85614.jpg");
+    background-image: url("../images/smartgiverthinker.jpg");
     /*background-image: url("/images/mi-pham-151950.jpg");*/
 }
 
@@ -16,10 +16,23 @@ body {
     padding: 0 10px;
 }
 
-.navbar-wrapper a {
+.navbar-wrapper a, p {
+    display: inline-block;
     color: white;
     font-size: 20px;
-    font-family: 'Avenir', sans-serif;
+    font-family: 'Big Caslon', sans-serif;
+}
+
+.navbar-wrapper a:hover {
+    text-decoration: none;;
+    -webkit-stroke-width: 5.3px;
+    -webkit-stroke-color: #FFFFFF;
+    -webkit-fill-color: #FFFFFF;
+    text-shadow: 1px 0px 20px white;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    transition: 0.5s all ease;
 }
 
 .navbar-wrapper a:first-of-type {
@@ -33,17 +46,23 @@ body {
 .text-wrapper {
     margin-top: 170px;
     width: 450px;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 1.5s;
+    /*-webkit-animation-iteration-count: infinite;*/
+    -webkit-animation-timing-function: linear;
 }
 
 .text-wrapper h1 {
     font-size: 56px;
     font-family: 'Avenir', sans-serif;
+    text-shadow: 1px 1px #2f2f2f;
     /*font-family: 'Source Sans Pro', sans-serif;*/
 }
 
 .text-wrapper p {
     font-size: 20px;
     font-family: 'Avenir', sans-serif;
+    text-shadow: 1px 1px #2f2f2f;
     /*font-family: 'Open Sans', sans-serif;*/
 }
 
@@ -58,11 +77,13 @@ body {
     display: inline-block;
     background-color: #6637fd;
     padding: 15px 20px;
+    font-family: 'Avenir', sans-serif;
+
 }
 
 .text-wrapper a:hover {
     text-decoration: none;
-    background-color: #6637fd;
+    background-color: #9894fd;
 }
 
 .glyphicon {
@@ -91,3 +112,4 @@ body {
     /*width:100%;*/
     /*background:#999;*/
 /*}*/
+
