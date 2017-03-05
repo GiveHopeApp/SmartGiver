@@ -16,10 +16,23 @@ body {
     padding: 0 10px;
 }
 
-.navbar-wrapper a {
+.navbar-wrapper a, p {
+    display: inline-block;
     color: white;
     font-size: 20px;
     font-family: 'Big Caslon', sans-serif;
+}
+
+.navbar-wrapper a:hover {
+    text-decoration: none;;
+    -webkit-stroke-width: 5.3px;
+    -webkit-stroke-color: #FFFFFF;
+    -webkit-fill-color: #FFFFFF;
+    text-shadow: 1px 0px 20px white;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    transition: 0.5s all ease;
 }
 
 .navbar-wrapper a:first-of-type {
@@ -70,7 +83,7 @@ body {
 
 .text-wrapper a:hover {
     text-decoration: none;
-    background-color: #6637fd;
+    background-color: #9894fd;
 }
 
 .glyphicon {
@@ -99,3 +112,4 @@ body {
     /*width:100%;*/
     /*background:#999;*/
 /*}*/
+

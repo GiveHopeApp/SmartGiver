@@ -45,6 +45,14 @@ body {
 	color: white;
 	font-family: 'Avenir', sans-serif;
 	text-shadow: black 1px 1px;
+
+}
+
+button:hover {
+	-webkit-stroke-width: 2.5px;
+	-webkit-stroke-color: #FFFFFF;
+	-webkit-fill-color: #FFFFFF;
+	box-shadow: 1px 0px 10px #000000;
 }
 
 .categories-wrapper button:hover {
