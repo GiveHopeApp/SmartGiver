@@ -1,79 +1,88 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8"/>
-    <title th:text="${user.username}"></title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'/>
-    <link rel="stylesheet" href="css/profile.css"/>
-    <link rel="stylesheet" href="css/navbar.css"/>
-</head>
-<body>
-<nav th:include="fragments/navbar :: navbar"></nav>
-<div th:object="${user}" class="wrapper">
-    <div class="header-wrapper">
-        <div class="img-wrapper">
-            <img class="profilePic" src="images/user.png"/>
-            <input type="filepicker" data-fp-apikey="A1JDvoVpERDyNr0Ob75a1z" onchange="changePic()"/>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+    <head>
+        <meta charset="UTF-8"/>
+        <title th:text="${user.username}"></title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+        <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'/>
+        <link rel="stylesheet" href="css/profile.css"/>
+        <link rel="stylesheet" href="css/navbar.css"/>
+    </head>
+    <body>
+        <nav th:include="fragments/navbar :: navbar"></nav>
+        <div th:object="${user}" class="wrapper">
+            <div class="header-wrapper">
+                <div class="img-wrapper">
+                    <span th:if="${user.profilePicture} == null">
+                        <img class="profilePic" src="images/user.png"/>
+                    </span>
+                    <span th:if="${user.profilePicture} != null">
+                        <img class="profilePic" th:attr="src=*{profilePicture}" />
+                    </span>
+                    <input type="filepicker" data-fp-apikey="A1JDvoVpERDyNr0Ob75a1z" onchange="changePic()"/>
+                </div>
+
+                <div class="name-wrapper">
+                    <h1><span th:text="*{firstName}"></span> <span th:text="*{lastName}"></span></h1>
+                    <h2><span th:text="*{username}"></span>-</h2>
+                    <h2 th:text="*{email}"></h2>
+                </div>
+            </div>
+
+            <div class="content-wrapper">
+                <div class="amount-wrapper jumbotron">
+                    <h1>Amount Donated</h1>
+                    <h2>$<span th:text="${totalDonation}"></span></h2><!--th:text="*{amount}"-->
+                </div>
+
+                <div class="favorite-wrapper jumbotron">
+                    <h1>Your Donations</h1>
+                    <table class="table table-striped" align="center">
+                        <thead>
+                        <tr>
+                            <th>Charity</th>
+                            <th>Amount</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+
+                        <tr th:each="donation : ${donations}">
+                            <td class="filterable-cell" th:text="${donation.charity.charityName}"></td>
+                            <td class="filterable-cell">
+                                $<span th:text="${donation.amount}"></span>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <form id="hiddenForm" class="hidden" method="post" action="/profile">
+                <input type="text" id="url" name="url" />
+                <input type="hidden" th:attr="name=${_csrf.parameterName},value=${_csrf.token}"/>
+            </form>
         </div>
 
-        <div class="name-wrapper">
-            <h1><span th:text="*{firstName}"></span> <span th:text="*{lastName}"></span></h1>
-            <h2><span th:text="*{username}"></span>-</h2>
-            <h2 th:text="*{email}"></h2>
-        </div>
-    </div>
+        <script src="js/jquery.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="//api.filestackapi.com/filestack.js" type="text/javascript"></script>
 
-    <div class="content-wrapper">
-        <div class="amount-wrapper jumbotron" th:object="${totalDonation}">
-            <h1>Amount Donated</h1>
-            <h2>$<span>736</span></h2><!--th:text="*{amount}"-->
-        </div>
+        <script>
+        function changePic() {
 
-        <div class="favorite-wrapper jumbotron">
-            <h1>Your Favorite Charities</h1>
-            <table class="table table-striped" align="center">
-                <thead>
-                <tr>
-                    <th>Charity</th>
-                    <th>Category</th>
-                </tr>
-                </thead>
+            var link = event.fpfile.url;
+            console.log(link);
 
-                <tbody>
-                <tr>
-                    <td class="filterable-cell">Charity Name</td>
-                    <td class="filterable-cell">Category</td>
-                </tr>
+            $("#url").val(link);
+            $(".profilePic").attr("src", event.fpfile.url);
 
-                <tr>
-                    <td class="filterable-cell">Charity Name</td>
-                    <td class="filterable-cell">Category</td>
-                </tr>
+            $("#hiddenForm").submit();
 
-                <tr>
-                    <td class="filterable-cell">Charity Name</td>
-                    <td class="filterable-cell">Category</td>
-                </tr>
+        }
+        </script>
 
-                <tr>
-                    <td class="filterable-cell">Charity Name</td>
-                    <td class="filterable-cell">Category</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
-<script src="js/jquery.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="//api.filestackapi.com/filestack.js" type="text/javascript"></script>
-<script>
-function changePic() {
-    console.log('test');
-
-    $('.profilePic').attr('src', event.fpfile.url);
-}
-</script>
-</body>
+    </body>
 </html>
