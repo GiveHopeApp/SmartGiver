@@ -49,24 +49,25 @@ body {
 }
 
 button:hover {
-	-webkit-stroke-width: 2.5px;
-	-webkit-stroke-color: #FFFFFF;
-	-webkit-fill-color: #FFFFFF;
-	box-shadow: 1px 0px 10px #000000;
+	-webkit-transition: 0.5s all ease;
+	-moz-transition: 0.5s all ease;
+	-o-transition: 0.5s all ease;
+	transition: 0.5s all ease;
 }
 
-.categories-wrapper button:hover {
-	background-color: #e9e9e9;
-}
 
-.categories-wrapper .active {
-	color: white;
-	background-color: #6035e7;
-}
+/*.categories-wrapper button:hover {*/
+	/*background-color: #e9e9e9;*/
+/*}*/
 
-.categories-wrapper .active:hover {
-	background-color: #6035e7;
-}
+/*.categories-wrapper .active {*/
+	/*color: white;*/
+	/*background-color: #6035e7;*/
+/*}*/
+
+/*.categories-wrapper .active:hover {*/
+	/*background-color: #6035e7;*/
+/*}*/
 
 .full {
 	width: 97.25%;

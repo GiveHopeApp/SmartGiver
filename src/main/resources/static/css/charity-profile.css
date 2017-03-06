@@ -106,6 +106,14 @@ form {
     border: solid transparent;
     background-color: #6035e7;
 }
+
+.submit-btn:hover {
+    background-color: #665dfd;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+}
 .dollar {
     display: none;
     font-size: 45px;
