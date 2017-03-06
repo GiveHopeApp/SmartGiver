@@ -15,6 +15,7 @@ body {
 	text-align: center;
 	color: whitesmoke;
 	/*text-shadow: black 2px 1px;*/
+	font-family: 'Big Caslon', sans-serif;
 }
 
 .header-wrapper h1 {
@@ -43,11 +44,13 @@ body {
 	border: solid transparent;
 	/*background-color: #DDDDDD;*/
 	font-family: 'Avenir', sans-serif;
-	text-shadow: black 1px 1px;
-
+	text-shadow: 1px 1px black;
 }
 
 button:hover {
+	-webkit-box-shadow: 0 8px 6px -6px black;
+	-moz-box-shadow: 0 8px 6px -6px black;
+	box-shadow: 0 8px 6px -6px black;
 	-webkit-transition: 0.5s all ease;
 	-moz-transition: 0.5s all ease;
 	-o-transition: 0.5s all ease;

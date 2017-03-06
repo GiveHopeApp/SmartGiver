@@ -73,6 +73,6 @@ a:hover {
 }
 
 .navbar-brand {
-    font-family: 'Avenir', sans-serif;
-    /*font-family: 'Big Caslon', sans-serif;*/
+    /*font-family: 'Avenir', sans-serif;*/
+    font-family: 'Big Caslon', sans-serif;
 }
