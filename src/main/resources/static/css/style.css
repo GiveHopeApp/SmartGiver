@@ -14,7 +14,6 @@ body {
 #headerName {
 	text-align: center;
 	color: whitesmoke;
-	font-family: Big Caslon, sans-serif;
 	/*text-shadow: black 2px 1px;*/
 }
 
@@ -32,7 +31,7 @@ body {
 }
 
 .categories-wrapper button {
-	color: black;
+	color: white;
 	height: 60px;
 	font-size: 23px;
 	margin: 5px 5px;
@@ -43,7 +42,6 @@ body {
 	display: inline-block;
 	border: solid transparent;
 	/*background-color: #DDDDDD;*/
-	color: white;
 	font-family: 'Avenir', sans-serif;
 	text-shadow: black 1px 1px;
 

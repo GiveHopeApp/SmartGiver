@@ -37,7 +37,6 @@ body {
 .form .tab-group h1 {
     color: white;
     font-size: 40px;
-    font-family: Big Caslon, sans-serif;
 }
 .tab-group:after {
     content: "";

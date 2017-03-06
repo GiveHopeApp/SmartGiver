@@ -4,7 +4,7 @@
 .navbar-login {
     width: 305px;
     padding: 10px;
-    padding-bottom: 0p;
+    padding-bottom: 0;
 }
 
 .navbar-login-session {
@@ -64,6 +64,6 @@ a {
 }
 
 .navbar-brand {
-    font-family: 'Big Caslon', sans-serif;
-    
+    font-family: 'Avenir', sans-serif;
+    /*font-family: 'Big Caslon', sans-serif;*/
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8"/>
     <title>Smart Giver</title>
@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:600"/>
     <link rel="stylesheet" href="css/home-screen.css"/>
     <link rel="stylesheet" href="css/navbar.css"/>
-    <link rel="stylesheet" href="css/animate.css"/>
 </head>
 <body>
 <div class="wrapper">
@@ -22,21 +21,12 @@
 
     <div class="text-wrapper">
         <h1>We make it easy to donate</h1>
-        <p>Find only A-rated charities analyzed by industry watchdogs and make a safe donation directly through our site.</p>
+        <p>Find only top-rated charities analyzed by industry watchdogs and make a safe donation directly through our site.</p>
         <a href="/categories">Get Started<span class="glyphicon glyphicon-play"></span></a>
     </div>
 </div>
-
-<!--<footer>-->
-<!--<p>*All data collected from CharityWatch.org and CharityNavigator.org</p>-->
-<!--</footer>-->
 </body>
 <script src="js/jquery.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script>
-    $(function(){  // $(document).ready shorthand
-        $('.text-wrapper').hide().fadeIn(6000);
-    });
-</script>
 
 </html>
