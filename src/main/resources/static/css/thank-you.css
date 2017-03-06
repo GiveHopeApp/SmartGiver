@@ -20,6 +20,10 @@ body {
     float: right;
 }
 
+.profile-btn {
+    margin-top: -40px;
+}
+
 .wrapper {
     height: 100vh;
     background-size: 100% 120%;
