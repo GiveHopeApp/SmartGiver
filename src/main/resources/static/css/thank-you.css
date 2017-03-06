@@ -1,27 +1,6 @@
 body {
     color: white;
-    font-family: 'Avenir', sans-serif;
-}
-
-.navbar-wrapper {
-    padding: 0 10px;
-}
-
-.navbar-wrapper a {
-    color: white;
-    font-size: 20px;
-}
-
-.navbar-wrapper a:first-of-type {
-    float: left;
-}
-
-.navbar-wrapper a:last-of-type {
-    float: right;
-}
-
-.profile-btn {
-    margin-top: -40px;
+    font-family: 'Big Caslon', sans-serif;
 }
 
 .wrapper {
@@ -29,23 +8,108 @@ body {
     background-size: 100% 120%;
     padding: 20px 130px 0 130px;
     background-repeat: no-repeat;
-    background-image: url("/images/oshomah-abubakar-85614.jpg");
+    background-image: url("../images/smartgiverplanthands2.jpeg");
     /*background-image: url("/images/mi-pham-151950.jpg");*/
+}
+
+.navbar-wrapper {
+    padding: 0 10px;
+}
+
+.navbar-wrapper a, p {
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    font-family: 'Big Caslon', sans-serif;
+}
+
+.navbar-wrapper a:hover {
+    text-decoration: none;;
+    -webkit-stroke-width: 5.3px;
+    -webkit-stroke-color: #FFFFFF;
+    -webkit-fill-color: #FFFFFF;
+    text-shadow: 1px 0px 20px white;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+}
+
+.navbar-wrapper a:first-of-type {
+    float: right;
+    margin-left: 20px;
+}
+
+.navbar-wrapper a:last-of-type {
+    float: right;
 }
 
 .text-wrapper {
     margin-top: 170px;
     width: 450px;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 1.5s;
+    /*-webkit-animation-iteration-count: infinite;*/
+    -webkit-animation-timing-function: linear;
 }
 
 .text-wrapper h1 {
-    font-size: 82px;
+    font-size: 56px;
+    font-family: 'Avenir', sans-serif;
+    text-shadow: 1px 1px #2f2f2f;
+    /*font-family: 'Source Sans Pro', sans-serif;*/
 }
 
-.text-wrapper p:first-of-type {
-    font-size: 27px;
-}
-
-.text-wrapper p:last-of-type {
+.text-wrapper p {
     font-size: 20px;
+    font-family: 'Avenir', sans-serif;
+    text-shadow: 1px 1px #2f2f2f;
+    /*font-family: 'Open Sans', sans-serif;*/
 }
+
+.text-wrapper > a {
+    width: 165px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+    display: inline-block;
+    background-color: #6637fd;
+    padding: 15px 20px;
+    font-family: 'Avenir', sans-serif;
+
+}
+
+.text-wrapper a:hover {
+    text-decoration: none;
+    background-color: #9894fd;
+}
+
+.glyphicon {
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+*:focus {
+    outline: none;
+}
+
+#brand {
+    float: left;
+}
+
+/*footer p {*/
+/*font-family: Avenir;*/
+/*color: black;*/
+/*}*/
+
+/*footer {*/
+/*position:fixed;*/
+/*left:0px;*/
+/*bottom:0px;*/
+/*height:30px;*/
+/*width:100%;*/
+/*background:#999;*/
+/*}*/
