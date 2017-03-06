@@ -14,7 +14,7 @@ body {
 #headerName {
 	text-align: center;
 	color: whitesmoke;
-	/*font-family: Big Caslon, sans-serif;*/
+	font-family: Big Caslon, sans-serif;
 	/*text-shadow: black 2px 1px;*/
 }
 
@@ -42,9 +42,18 @@ body {
 	letter-spacing: 1px;
 	display: inline-block;
 	border: solid transparent;
-	background-color: #DDDDDD;
-	/*font-family: 'Avenir', sans-serif;*/
-	/*text-shadow: black 1px 1px;*/
+	/*background-color: #DDDDDD;*/
+	color: white;
+	font-family: 'Avenir', sans-serif;
+	text-shadow: black 1px 1px;
+
+}
+
+button:hover {
+	-webkit-stroke-width: 2.5px;
+	-webkit-stroke-color: #FFFFFF;
+	-webkit-fill-color: #FFFFFF;
+	box-shadow: 1px 0px 10px #000000;
 }
 
 .categories-wrapper button:hover {
@@ -186,5 +195,81 @@ td {
 /*#international:hover {*/
 	/*background-color: #72c6d6;*/
 /*}*/
+
+#animals {
+	background-color: #d0ea4a;
+}
+
+#animals:hover {
+	background-color: #ddea8a;
+}
+
+#cancer {
+	background-color: #c8afdd;
+}
+
+#cancer:hover {
+	background-color: #d4cedd;
+}
+
+#environment {
+	background-color: #36c785;
+}
+
+#environment:hover {
+	background-color: #76c79c;
+}
+
+#education {
+	background-color: #da9b28;
+}
+
+#education:hover {
+	background-color: #dabe5e;
+}
+
+#children {
+	background-color: #e6836f
+}
+
+#children:hover {
+	background-color: #e6aa9f;
+}
+
+#veterans {
+	background-color: #5b3272;
+}
+#veterans:hover {
+	background-color: #A27FAB;
+}
+
+#health {
+	background-color: #e23d30;
+}
+#health:hover {
+	background-color: #e2827c;
+}
+
+#hunger {
+	background-color: #9ec277;
+}
+#hunger:hover {
+	background-color: #a7c292;
+}
+
+#humans {
+	background-color: #4f5eb4;
+}
+#humans:hover {
+	background-color: #838db4;
+}
+
+#international {
+	background-color: #2cb8d6;
+}
+#international:hover {
+	background-color: #72c6d6;
+}
+
 
 
