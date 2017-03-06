@@ -37,6 +37,7 @@ body {
 .form .tab-group h1 {
     color: white;
     font-size: 40px;
+    font-family: Big Caslon, sans-serif;
 }
 .tab-group:after {
     content: "";
@@ -74,6 +75,7 @@ body {
     color: #6035e7;
     font-weight: 300;
     margin: 0 0 40px;
+    font-family: Avenir, Arial sans-serif;
 }
 
 label {
