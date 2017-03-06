@@ -1,5 +1,5 @@
 #SmartGiver
-GiveSmart is a charity donation application that congregates only A and A+ rated charities. Users 
+SmartGiver is a charity donation application that congregates only A and A+ rated charities. Users 
 can search for charities by category or by keyword in the search bar. Once a charity is selected, the
  user is taken to the charity's profile page which contains its mission statement and location. 
  If the user decides to donate, they can select from predetermined amounts or enter a custom 
