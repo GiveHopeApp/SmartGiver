@@ -31,6 +31,10 @@ body {
     transform: translateY(-90px);
 }
 
+.profile-btn {
+    margin-top: -40px;
+}
+
 .profilePic {
     width: 121px;
     height: 125px;
@@ -69,11 +73,11 @@ button {
     text-align: center;
 }
 
-.jumbotron {
+.jumbotron{
     border-radius: 10px;
 }
 
-.jumbotron:last-of-type {
+.jumbotron:first-of-type {
     padding: 23px 85px 15px 85px;
 }
 

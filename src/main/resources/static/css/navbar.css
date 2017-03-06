@@ -4,7 +4,7 @@
 .navbar-login {
     width: 305px;
     padding: 10px;
-    padding-bottom: 0p;
+    padding-bottom: 0;
 }
 
 .navbar-login-session {
@@ -15,6 +15,15 @@
 
 .icon-size {
     font-size: 87px;
+}
+
+.navbarPic {
+    width: 90px;
+    height: 90px;
+}
+
+.profile-btn {
+    visibility: visible;
 }
 
 .login-btn {
@@ -28,9 +37,15 @@
 .signout-btn {
     width: 100%;
     border: none;
-    background-color: transparent;
     padding-left: 17px;
     padding-right: 17px;
+    visibility: visible;
+    background-color: transparent;
+}
+
+.glyphicon-log-out {
+    padding-right: 15px;
+    transform: translateY(-21px);
 }
 
 #last {
@@ -58,6 +73,6 @@ a:hover {
 }
 
 .navbar-brand {
-    font-family: 'Big Caslon', sans-serif;
-    
+    font-family: 'Avenir', sans-serif;
+    /*font-family: 'Big Caslon', sans-serif;*/
 }

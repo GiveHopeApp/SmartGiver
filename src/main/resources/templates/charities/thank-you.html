@@ -1,38 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
     <meta charset="UTF-8" />
     <title>Thank You</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:600"/>
     <link rel="stylesheet" href="css/thank-you.css"/>
     <link rel="stylesheet" href="css/navbar.css"/>
-    <link rel="stylesheet" href="css/animate.css"/>
 </head>
 <body>
-
 <div class="wrapper">
     <div class="navbar-wrapper">
-        <p>Smart Giver</p>
-        <a class="login animated" href="/register">Login</a>
-        <a class="categories animated" href="/categories">Categories</a>
-
+        <a id="brand" href="/">Smart Giver</a>
+        <a href="/register" sec:authorize="!isAuthenticated()">Login</a>
+        <a href="/profile" sec:authorize="isAuthenticated()">Profile</a>
     </div>
-
     <div class="text-wrapper">
-        <h1>Thank you for your trust and generosity!</h1>
-        <!--<p>Thank you for your generous gift to the American Heart Association</p>-->
+        <h1>Thank You!</h1>
+        <p>We thank you for your generous gift</p>
         <p>Your receipt is being mailed to the email address you provided</p>
     </div>
 </div>
-</body>
-
 <script src="js/jquery.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script>
-    $(function(){  // $(document).ready shorthand
-        $('.text-wrapper').hide().fadeIn(4500);
-    });
-</script>
+</body>
 </html>
