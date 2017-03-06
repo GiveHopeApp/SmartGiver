@@ -37,7 +37,6 @@ body {
 .form .tab-group h1 {
     color: white;
     font-size: 40px;
-    font-family: Big Caslon, sans-serif;
 }
 .tab-group:after {
     content: "";
@@ -207,14 +206,17 @@ textarea {
 
 .overlay {
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     display: none;
     position: fixed;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .img-overlay {
-    width: 100px;
-    height: 100px;
+    width: 65px;
+    height: 65px;
+    margin-top: 350px;
 }

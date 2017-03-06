@@ -14,8 +14,6 @@
         $(".overlay").fadeIn();
 
         Panda.on('success', function(cardToken) {
-
-            $(".overlay").fadeOut();
             // You now have a token you can use to refer to that credit card later.
             // This token is used in PandaPay API calls for creating donations and grants
             // so that you don't have to worry about security concerns with dealing with
@@ -26,6 +24,8 @@
             $("#hiddenEmail").val($("#visibleEmail").val());
 
             $("#hiddenForm").submit();
+
+            $(".overlay").fadeOut();
         });
 
         Panda.on('error', function(errors) {
