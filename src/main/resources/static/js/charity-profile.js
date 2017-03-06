@@ -43,7 +43,7 @@ $(document).ready(function () {
             $('.submit-btn').css('transform', 'none');
             $('#customAmount').css('display', 'none');
             $('.button').css('display', 'inline-block');
-            $(this).text('Custom');
+            $(this).text('Other');
             $('.button').removeClass('active');
             $('.dollar').css('display', 'none');
             $('.button:nth-of-type(2)').addClass('active');

@@ -1,0 +1,51 @@
+body {
+    color: white;
+    font-family: 'Avenir', sans-serif;
+}
+
+.navbar-wrapper {
+    padding: 0 10px;
+}
+
+.navbar-wrapper a {
+    color: white;
+    font-size: 20px;
+}
+
+.navbar-wrapper a:first-of-type {
+    float: left;
+}
+
+.navbar-wrapper a:last-of-type {
+    float: right;
+}
+
+.profile-btn {
+    margin-top: -40px;
+}
+
+.wrapper {
+    height: 100vh;
+    background-size: 100% 120%;
+    padding: 20px 130px 0 130px;
+    background-repeat: no-repeat;
+    background-image: url("/images/oshomah-abubakar-85614.jpg");
+    /*background-image: url("/images/mi-pham-151950.jpg");*/
+}
+
+.text-wrapper {
+    margin-top: 170px;
+    width: 450px;
+}
+
+.text-wrapper h1 {
+    font-size: 82px;
+}
+
+.text-wrapper p:first-of-type {
+    font-size: 27px;
+}
+
+.text-wrapper p:last-of-type {
+    font-size: 20px;
+}

@@ -12,11 +12,12 @@
     <link rel="stylesheet" href="css/animate.css"/>
 </head>
 <body>
-<!--<nav th:include="fragments/navbar :: navbar"></nav>-->
 <div class="wrapper">
     <div class="navbar-wrapper">
-        <p>Smart Giver</p>
-        <a class="animated " href="/register">Login</a>
+      
+        <a id="brand" >Smart Giver</a>
+        <a sec:authorize="isAnonymous()" href="/register">Login</a>
+
     </div>
 
     <div class="text-wrapper">

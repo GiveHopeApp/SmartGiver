@@ -6,7 +6,7 @@ body {
 .wrapper {
     height: 100vh;
     background-size: 100% 120%;
-    padding: 20px 130px 0 130px;
+    padding: 50px 130px 0 130px;
     background-repeat: no-repeat;
     background-image: url("../images/smartgiverthinker.jpg");
     /*background-image: url("/images/mi-pham-151950.jpg");*/
@@ -19,8 +19,8 @@ body {
 .navbar-wrapper a, p {
     display: inline-block;
     color: white;
-    font-size: 20px;
-    font-family: 'Big Caslon', sans-serif;
+    font-size: 25px;
+    font-family: 'Avenir', sans-serif;
 }
 
 .navbar-wrapper a:hover {
@@ -35,16 +35,12 @@ body {
     transition: 0.5s all ease;
 }
 
-.navbar-wrapper a:first-of-type {
-    float: left;
-}
-
 .navbar-wrapper a:last-of-type {
     float: right;
 }
 
 .text-wrapper {
-    margin-top: 170px;
+    margin-top: 210px;
     width: 450px;
     -webkit-animation-name: fadeIn;
     -webkit-animation-duration: 1.5s;
@@ -53,17 +49,13 @@ body {
 }
 
 .text-wrapper h1 {
-    font-size: 56px;
+    font-size: 62px;
     font-family: 'Avenir', sans-serif;
-    text-shadow: 1px 1px #2f2f2f;
-    /*font-family: 'Source Sans Pro', sans-serif;*/
 }
 
 .text-wrapper p {
-    font-size: 20px;
+    font-size: 24px;
     font-family: 'Avenir', sans-serif;
-    text-shadow: 1px 1px #2f2f2f;
-    /*font-family: 'Open Sans', sans-serif;*/
 }
 
 .text-wrapper > a {
@@ -98,18 +90,3 @@ body {
 #brand {
     float: left;
 }
-
-/*footer p {*/
-    /*font-family: Avenir;*/
-    /*color: black;*/
-/*}*/
-
-/*footer {*/
-    /*position:fixed;*/
-    /*left:0px;*/
-    /*bottom:0px;*/
-    /*height:30px;*/
-    /*width:100%;*/
-    /*background:#999;*/
-/*}*/
-
