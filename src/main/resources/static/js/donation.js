@@ -33,16 +33,14 @@
             $(".overlay").fadeOut();
             // errors is a human-readable list of things that went wrong
             //  (invalid card number, missing last name, etc.)
-            console.log(errors);
 
+            $("#errors").html("");
 
-            // var error;
-            // for (var i = 0; i <= 6; i++) {
-            //     error = errors[i];
-            //     if (error[0] == "month") {
-            //         console.log('test')
-            //     }
-            // }
+            errors.forEach(function (error) {
+                $("#errors").append(
+                    "<p>" + error.message + "</p>"
+                 );
+            });
         });
     })
 

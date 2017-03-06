@@ -222,3 +222,8 @@ textarea {
     height: 65px;
     margin-top: 350px;
 }
+
+#errors {
+    text-align: center;
+    color: red;
+}
