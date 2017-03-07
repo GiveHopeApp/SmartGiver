@@ -9,7 +9,6 @@ body {
     padding: 50px 130px 0 130px;
     background-repeat: no-repeat;
     background-image: url("../images/smartgiverthinker.jpg");
-    /*background-image: url("/images/mi-pham-151950.jpg");*/
 }
 
 .navbar-wrapper {
@@ -84,4 +83,9 @@ body {
 
 #brand {
     float: left;
+    font-family: 'Big Caslon', sans-serif;
+}
+
+#login {
+    font-family: 'Big Caslon', sans-serif;
 }

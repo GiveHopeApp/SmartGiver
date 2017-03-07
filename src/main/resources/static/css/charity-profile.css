@@ -15,6 +15,7 @@ body {
     font-size: 46px;
     margin-top: 10px;
     margin-bottom: 0;
+    font-family: 'Big Caslon', sans-serif;
 }
 
 p {
@@ -25,6 +26,7 @@ p {
     color: white;
     font-size: 30px;
     display: inline-block;
+    font-family: 'Big Caslon', sans-serif;
 }
 .content-wrapper {
     padding: 30px 100px 30px 100px;
@@ -62,6 +64,9 @@ form {
 .donate-wrapper .active {
     color: white;
     background-color: #6035e7;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
 }
 
 .donate-wrapper .active:hover {
