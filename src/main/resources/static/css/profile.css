@@ -1,7 +1,6 @@
 body {
-    font-family: 'Big Caslon', sans-serif;
+    font-family: Titillium Web, sans-serif;
 }
-
 
 .header-wrapper {
     width: 100%;
@@ -15,12 +14,14 @@ body {
     font-size: 46px;
     margin-top: 10px;
     margin-bottom: 0;
+    font-family: 'Big Caslon', sans-serif;
 }
 
 .header-wrapper h2 {
     color: white;
     font-size: 35px;
     display: inline-block;
+    font-family: 'Avenir', sans-serif;
 }
 
 .img-wrapper, .name-wrapper {
@@ -67,11 +68,13 @@ button {
     font-size: 39px;
     margin-top: 15px;
     text-align: center;
+    font-family: 'Avenir', sans-serif;
 }
 
 .content-wrapper h2 {
     font-size: 33px;
     text-align: center;
+    font-family: 'Avenir', sans-serif;
 }
 
 .jumbotron{

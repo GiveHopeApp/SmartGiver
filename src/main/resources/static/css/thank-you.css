@@ -21,6 +21,7 @@ body {
     color: white;
     font-size: 20px;
     font-family: 'Big Caslon', sans-serif;
+
 }
 
 .navbar-wrapper a:hover {
@@ -42,6 +43,11 @@ body {
 
 .navbar-wrapper a:last-of-type {
     float: right;
+}
+
+.thankyouCategory {
+    float: left;
+    margin-left: 20px;
 }
 
 .text-wrapper {
