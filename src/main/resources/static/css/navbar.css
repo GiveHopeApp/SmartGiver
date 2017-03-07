@@ -59,11 +59,9 @@
 a {
     text-decoration: none;
     color: #5f5f5f;
-    font-family: 'Source Sans Pro', sans-serif;
-    /*font-family: 'Avenir', sans-serif;*/
+    font-family: 'Avenir', sans-serif;
 }
 
 .navbar-brand {
-    font-family: 'Avenir', sans-serif;
-    /*font-family: 'Big Caslon', sans-serif;*/
+    font-family: 'Libre Baskerville', serif;
 }

@@ -14,6 +14,7 @@ body {
 #headerName {
 	text-align: center;
 	color: whitesmoke;
+	font-family: 'Libre Baskerville', serif;
 	/*text-shadow: black 2px 1px;*/
 }
 
@@ -65,6 +66,10 @@ body {
 	background-color: #DDDDDD;
 }
 
+.text-category p {
+	cursor: pointer;
+}
+
 .img-wrapper {
 	width: 100%;
 	height: 150px;
@@ -103,11 +108,7 @@ button:hover {
 }
 
 .fourth {
-	width: 23.5%;
-}
-
-.fourth {
-	width: 23%;
+	width: 23.35%;
 }
 
 .charities-wrapper {
@@ -156,7 +157,7 @@ p {
 
 #animals {
 	background-size: cover;
-	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.3), rgba(96, 53, 231, 0.3)), url("/images/animal-welfare.jpg");
+	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/animal-welfare.jpg");
 }
 
 /*#animals:hover {*/
@@ -165,7 +166,7 @@ p {
 
 #cancer {
 	background-size: cover;
-	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.3), rgba(96, 53, 231, 0.3)), url("/images/cancer-patient.jpg");
+	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/cancer-patient.jpg");
 }
 
 /*#cancer:hover {*/
@@ -174,7 +175,7 @@ p {
 
 #environment {
 	background-size: cover;
-	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.3), rgba(96, 53, 231, 0.3)), url("/images/enviornment.jpg");
+	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/enviornment.jpg");
 }
 
 /*#environment:hover {*/
@@ -184,7 +185,7 @@ p {
 #education {
 	height: 119px;
 	background-size: cover;
-	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.3), rgba(96, 53, 231, 0.3)), url("/images/education.jpg");
+	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/education.jpg");
 }
 
 /*#education:hover {*/
@@ -193,7 +194,7 @@ p {
 
 #children {
 	background-size: cover;
-	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.3), rgba(96, 53, 231, 0.3)), url("/images/education.jpg");
+	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/education.jpg");
 }
 
 /*#children:hover {*/
@@ -202,7 +203,7 @@ p {
 
 #veterans {
 	background-size: cover;
-	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.3), rgba(96, 53, 231, 0.3)), url("/images/veteran.jpg");
+	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/veteran.jpg");
 }
 
 /*#veterans:hover {*/
@@ -211,7 +212,7 @@ p {
 
 #health {
 	background-size: cover;
-	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.3), rgba(96, 53, 231, 0.3)), url("/images/education.jpg");
+	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/education.jpg");
 }
 
 /*#health:hover {*/
@@ -220,7 +221,7 @@ p {
 
 #hunger {
 	background-size: cover;
-	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.3), rgba(96, 53, 231, 0.3)), url("/images/hunger.jpg");
+	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/hunger.jpg");
 }
 
 /*#hunger:hover {*/
@@ -229,7 +230,7 @@ p {
 
 #humans {
 	background-size: cover;
-	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.3), rgba(96, 53, 231, 0.3)), url("/images/education.jpg");
+	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/education.jpg");
 }
 
 /*#humans:hover {*/
@@ -238,9 +239,16 @@ p {
 
 #international {
 	background-size: cover;
-	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.3), rgba(96, 53, 231, 0.3)), url("/images/international.jpg");
+	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/international.jpg");
 }
 
 /*#international:hover {*/
 	/*background-color: #72c6d6;*/
 /*}*/
+
+
+@media (min-width: 1838px) {
+	#education {
+		height: 301%;
+	}
+}

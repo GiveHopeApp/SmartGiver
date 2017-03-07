@@ -37,6 +37,7 @@ body {
 .form .tab-group h1 {
     color: white;
     font-size: 40px;
+    font-family: 'Libre Baskerville', serif;
 }
 .tab-group:after {
     content: "";

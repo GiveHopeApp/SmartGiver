@@ -8,18 +8,25 @@ body {
     background-size: 100% 120%;
     padding: 50px 130px 0 130px;
     background-repeat: no-repeat;
-    background-image: url("../images/smartgiverthinker.jpg");
-    /*background-image: url("/images/mi-pham-151950.jpg");*/
+    background-image: url("../images/pexels-photo-89820.jpeg");
+    /*background-image: url("../images/pexels-photo-196667.jpeg");*/
 }
 
 .navbar-wrapper {
     padding: 0 10px;
 }
 
+.navbar-wrapper a {
+    font-family: 'Libre Baskerville', serif;
+}
+
 .navbar-wrapper a, p {
     display: inline-block;
     color: white;
     font-size: 25px;
+}
+
+.navbar-wrapper p {
     font-family: 'Avenir', sans-serif;
 }
 
@@ -83,5 +90,10 @@ body {
 }
 
 #brand {
+    font-family: 'Libre Baskerville', serif;
     float: left;
+}
+
+#login {
+    font-family: 'Libre Baskerville', serif;
 }

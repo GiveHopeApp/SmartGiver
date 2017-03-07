@@ -14,12 +14,14 @@ body {
     font-size: 46px;
     margin-top: 10px;
     margin-bottom: 0;
+    font-family: 'Libre Baskerville', serif;
 }
 
 .header-wrapper h2 {
     color: white;
     font-size: 35px;
     display: inline-block;
+    font-family: 'Libre Baskerville', serif;
 }
 
 .img-wrapper, .name-wrapper {

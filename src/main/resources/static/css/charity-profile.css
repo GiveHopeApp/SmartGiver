@@ -15,6 +15,7 @@ body {
     font-size: 46px;
     margin-top: 10px;
     margin-bottom: 0;
+    font-family: 'Libre Baskerville', serif;
 }
 
 p {
@@ -25,6 +26,7 @@ p {
     color: white;
     font-size: 30px;
     display: inline-block;
+    font-family: 'Libre Baskerville', serif;
 }
 .content-wrapper {
     padding: 30px 100px 30px 100px;
