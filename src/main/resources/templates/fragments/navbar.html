@@ -20,9 +20,9 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/categories">Categories</a></li>
+                <!--<li class="active"><a href="/categories">Categories</a></li>-->
             </ul>
-            <button class="login-btn animated" sec:authorize="!isAuthenticated()"><a href="/register">Log In</a></button>
+            <a class="login-btn animated" sec:authorize="!isAuthenticated()" href="/register">Log In</a>
             <ul class="nav navbar-nav navbar-right" sec:authorize="isAuthenticated()">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
