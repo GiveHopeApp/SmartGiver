@@ -246,3 +246,7 @@ p {
 /*#international:hover {*/
 	/*background-color: #72c6d6;*/
 /*}*/
+
+.nav-category {
+	display: none;
+}
