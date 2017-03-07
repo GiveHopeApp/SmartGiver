@@ -195,7 +195,7 @@ p {
 
 #hunger {
 	background-size: cover;
-	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/hunger.jpg");
+	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/homeless.jpg");
 }
 
 #humans {
