@@ -74,6 +74,7 @@ body {
 .img-wrapper {
 	width: 100%;
 	height: 150px;
+	cursor: pointer;
 }
 
 button:hover {
@@ -82,20 +83,6 @@ button:hover {
 	-o-transition: 0.5s all ease;
 	transition: 0.5s all ease;
 }
-
-
-/*.categories-wrapper button:hover {*/
-	/*background-color: #e9e9e9;*/
-/*}*/
-
-/*.categories-wrapper .active {*/
-	/*color: white;*/
-	/*background-color: #6035e7;*/
-/*}*/
-
-/*.categories-wrapper .active:hover {*/
-	/*background-color: #6035e7;*/
-/*}*/
 
 .category-row {
 	margin-bottom: 25px;
