@@ -70,11 +70,6 @@ body {
 
 .text-wrapper a:hover {
     text-decoration: none;
-    background-color: #665dfd;
-    -webkit-transition: 0.5s all ease;
-    -moz-transition: 0.5s all ease;
-    -o-transition: 0.5s all ease;
-    transition: 0.5s all ease;
 }
 
 .glyphicon {
