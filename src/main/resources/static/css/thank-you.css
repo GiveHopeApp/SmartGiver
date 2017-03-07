@@ -1,6 +1,6 @@
 body {
     color: white;
-    font-family: 'Big Caslon', sans-serif;
+    font-family: 'PT Serif', serif;
 }
 
 .wrapper {
@@ -20,7 +20,7 @@ body {
     display: inline-block;
     color: white;
     font-size: 20px;
-    font-family: 'Big Caslon', sans-serif;
+    font-family: 'PT Serif', serif;
 
 }
 

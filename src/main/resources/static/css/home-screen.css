@@ -1,6 +1,6 @@
 body {
     color: white;
-    font-family: 'Big Caslon', sans-serif;
+    font-family: 'PT Serif', serif;
 }
 
 .wrapper {
@@ -16,7 +16,8 @@ body {
 }
 
 .navbar-wrapper a {
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'PT Serif', serif;
+    text-shadow: 1px 1px black;
 }
 
 .navbar-wrapper a, p {
@@ -27,18 +28,11 @@ body {
 
 .navbar-wrapper p {
     font-family: 'Avenir', sans-serif;
+    text-shadow: 1px 1px black;
 }
 
 .navbar-wrapper a:hover {
-    text-decoration: none;;
-    -webkit-stroke-width: 5.3px;
-    -webkit-stroke-color: #FFFFFF;
-    -webkit-fill-color: #FFFFFF;
-    text-shadow: 1px 0px 20px white;
-    -webkit-transition: 0.5s all ease;
-    -moz-transition: 0.5s all ease;
-    -o-transition: 0.5s all ease;
-    transition: 0.5s all ease;
+    text-decoration: none;
 }
 
 .navbar-wrapper a:last-of-type {
@@ -53,11 +47,13 @@ body {
 .text-wrapper h1 {
     font-size: 62px;
     font-family: 'Avenir', sans-serif;
+    text-shadow: 1px 1px black;
 }
 
 .text-wrapper p {
     font-size: 24px;
     font-family: 'Avenir', sans-serif;
+    text-shadow: 1px 1px black;
 }
 
 .text-wrapper > a {
@@ -89,15 +85,21 @@ body {
 }
 
 #brand {
-    font-family: 'Libre Baskerville', serif;
     float: left;
-    font-family: 'Big Caslon', sans-serif;
+    font-family: 'PT Serif', serif;
+    text-shadow: 1px 1px black;
 }
 
 #login {
-    font-family: 'Big Caslon', sans-serif;
+    font-family: 'PT Serif', serif;
+    font-size: 25px;
+    text-shadow: 1px 1px black;
 }
 
-#login {
-    font-family: 'Libre Baskerville', serif;
+#get-started-btn {
+    text-shadow: none;
+}
+
+#get-started-btn:hover {
+    background: #6637fd;
 }
