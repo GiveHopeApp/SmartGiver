@@ -8,17 +8,24 @@ body {
     background-size: 100% 120%;
     padding: 50px 130px 0 130px;
     background-repeat: no-repeat;
-    background-image: url("../images/smartgiverthinker.jpg");
+    background-image: url("../images/pexels-photo-89820.jpeg");
 }
 
 .navbar-wrapper {
     padding: 0 10px;
 }
 
+.navbar-wrapper a {
+    font-family: 'Libre Baskerville', serif;
+}
+
 .navbar-wrapper a, p {
     display: inline-block;
     color: white;
     font-size: 25px;
+}
+
+.navbar-wrapper p {
     font-family: 'Avenir', sans-serif;
 }
 
@@ -82,10 +89,15 @@ body {
 }
 
 #brand {
+    font-family: 'Libre Baskerville', serif;
     float: left;
     font-family: 'Big Caslon', sans-serif;
 }
 
 #login {
     font-family: 'Big Caslon', sans-serif;
+}
+
+#login {
+    font-family: 'Libre Baskerville', serif;
 }
