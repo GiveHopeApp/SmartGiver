@@ -37,7 +37,7 @@ body {
 .form .tab-group h1 {
     color: white;
     font-size: 40px;
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'PT Serif', serif;
 }
 .tab-group:after {
     content: "";
@@ -190,7 +190,7 @@ textarea {
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
     -webkit-appearance: none;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Avenir', sans-serif;
 }
 .button:hover, .button:focus {
     background: #532ec3;
