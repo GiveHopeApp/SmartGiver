@@ -64,6 +64,9 @@ form {
 .donate-wrapper .active {
     color: white;
     background-color: #6035e7;
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px black;
 }
 
 .donate-wrapper .active:hover {

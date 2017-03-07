@@ -1,5 +1,5 @@
 body {
-    font-family: 'Titillium Web', sans-serif;
+    font-family: Titillium Web, sans-serif;
 }
 
 .header-wrapper {
@@ -68,11 +68,13 @@ button {
     font-size: 39px;
     margin-top: 15px;
     text-align: center;
+    font-family: 'Avenir', sans-serif;
 }
 
 .content-wrapper h2 {
     font-size: 33px;
     text-align: center;
+    font-family: 'Avenir', sans-serif;
 }
 
 .jumbotron{

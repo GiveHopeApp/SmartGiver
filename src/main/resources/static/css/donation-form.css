@@ -195,6 +195,7 @@ textarea {
 .button:hover, .button:focus {
     background: #532ec3;
 }
+
 .button-block {
     display: block;
     width: 100%;

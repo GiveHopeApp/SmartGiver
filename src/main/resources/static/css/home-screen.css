@@ -9,7 +9,6 @@ body {
     padding: 50px 130px 0 130px;
     background-repeat: no-repeat;
     background-image: url("../images/pexels-photo-89820.jpeg");
-    /*background-image: url("../images/pexels-photo-196667.jpeg");*/
 }
 
 .navbar-wrapper {
@@ -92,6 +91,11 @@ body {
 #brand {
     font-family: 'Libre Baskerville', serif;
     float: left;
+    font-family: 'Big Caslon', sans-serif;
+}
+
+#login {
+    font-family: 'Big Caslon', sans-serif;
 }
 
 #login {

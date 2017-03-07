@@ -12,6 +12,7 @@
 <div class="wrapper">
     <div class="navbar-wrapper">
         <a id="brand" href="/">Smart Giver</a>
+        <a class="thankyouCategory" href="/categories">Categories</a>
         <a href="/register" sec:authorize="!isAuthenticated()">Login</a>
         <a href="/profile" sec:authorize="isAuthenticated()">Profile</a>
     </div>
@@ -23,4 +24,12 @@
 </div>
 <script src="js/jquery.js"></script>
 </body>
+
+<script src="js/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+    $(function(){  // $(document).ready shorthand
+        $('.text-wrapper').hide().fadeIn(6000);
+    });
+</script>
 </html>

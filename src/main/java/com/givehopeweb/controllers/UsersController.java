@@ -83,7 +83,7 @@ public class UsersController {
 
         roles.save(userRole);
 
-        return "redirect:/";
+        return "redirect:/register";
     }
 
     @GetMapping ("/profile")
