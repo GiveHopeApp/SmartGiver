@@ -55,27 +55,27 @@
     });
 
 
-    $("button").click(function () {
+    $(".fourth, .half").click(function () {
 
         //Change active button class to clicked button
-        $("button").removeClass("active");
-        $(this).addClass("active");
+        $(".fourth > .text-category, .half > .text-category").removeClass("active");
+        $(this).children().last().addClass("active");
 
         //Change th to category clicked
         $("th").text($(this).text());
 
         //Shrink input if th is too long
-        if ($("th").text().length > 50) {
-            $("input").css("width", "13%")
+        if ($("th").text().length > 43) {
+            $("#searchTerm").css("width", "13%")
         } else {
-            $("input").css("width", "15.5%")
+            $("#searchTerm").css("width", "15.5%")
         }
 
         //Make charities list visible
         $('.charities-wrapper').css("display", "block");
 
         //Generate the url
-        var url = "/category/" + $(this).text() + ".json";
+        var url = "/category/" + $(this).children().last().children().text() + ".json";
 
         //The ajax request to the search controller
         var request = $.ajax ({

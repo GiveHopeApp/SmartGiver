@@ -23,7 +23,7 @@ body {
 }
 
 .content-wrapper {
-	padding: 40px 12% 30px 12%;
+	padding: 40px 10% 30px 10%;
 }
 
 .categories-wrapper {
@@ -43,8 +43,31 @@ body {
 	border: solid transparent;
 	/*background-color: #DDDDDD;*/
 	font-family: 'Avenir', sans-serif;
-	text-shadow: black 1px 1px;
+}
 
+.categories-wrapper .fourth, .half, .full {
+	color: white;
+	height: 60px;
+	font-size: 23px;
+	margin: 5px 5px;
+	box-shadow: none;
+	padding: 2px 10px;
+	border-radius: 5px;
+	letter-spacing: 1px;
+	display: inline-block;
+	border: solid transparent;
+	font-family: 'Avenir', sans-serif;
+}
+
+.text-category {
+	color: black;
+	padding: 10px;
+	background-color: #DDDDDD;
+}
+
+.img-wrapper {
+	width: 100%;
+	height: 150px;
 }
 
 button:hover {
@@ -68,6 +91,10 @@ button:hover {
 	/*background-color: #6035e7;*/
 /*}*/
 
+.category-row {
+	margin-bottom: 25px;
+}
+
 .full {
 	width: 97.25%;
 }
@@ -76,8 +103,12 @@ button:hover {
 	width: 48%;
 }
 
-.third {
-	width: 31.5%;
+.fourth {
+	width: 23.5%;
+}
+
+.fourth {
+	width: 23%;
 }
 
 .charities-wrapper {
@@ -120,155 +151,97 @@ td {
 	text-align: center;
 }
 
-/*#animals {*/
-	/*background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.4), rgba(96, 53, 231, 0.4)), url("/images/animal-welfare.jpg");*/
-/*}*/
+p {
+	margin: 0;
+}
+
+#animals {
+	background-size: cover;
+	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.3), rgba(96, 53, 231, 0.3)), url("/images/animal-welfare.jpg");
+}
 
 /*#animals:hover {*/
 	/*background-color: #ddea8a;*/
 /*}*/
 
-/*#cancer {*/
-	/*background-color: #c8afdd;*/
-/*}*/
+#cancer {
+	background-size: cover;
+	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.3), rgba(96, 53, 231, 0.3)), url("/images/cancer-patient.jpg");
+}
 
 /*#cancer:hover {*/
 	/*background-color: #d4cedd;*/
 /*}*/
 
-/*#environment {*/
-	/*background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.4), rgba(96, 53, 231, 0.4)), url("/images/enviornment.jpg");*/
-/*}*/
+#environment {
+	background-size: cover;
+	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.3), rgba(96, 53, 231, 0.3)), url("/images/enviornment.jpg");
+}
 
 /*#environment:hover {*/
 	/*background-color: #76c79c;*/
 /*}*/
 
-/*#education {*/
-	/*background-color: #da9b28;*/
-/*}*/
+#education {
+	height: 119px;
+	background-size: cover;
+	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.3), rgba(96, 53, 231, 0.3)), url("/images/education.jpg");
+}
 
 /*#education:hover {*/
 	/*background-color: #dabe5e;*/
 /*}*/
 
-/*#children {*/
-	/*background-color: #e6836f*/
-/*}*/
+#children {
+	background-size: cover;
+	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.3), rgba(96, 53, 231, 0.3)), url("/images/education.jpg");
+}
 
 /*#children:hover {*/
 	/*background-color: #e6aa9f;*/
 /*}*/
 
-/*#veterans {*/
-	/*background-color: #5b3272;*/
-/*}*/
+#veterans {
+	background-size: cover;
+	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.3), rgba(96, 53, 231, 0.3)), url("/images/veteran.jpg");
+}
+
 /*#veterans:hover {*/
 	/*background-color: #A27FAB;*/
 /*}*/
 
-/*#health {*/
-	/*background-color: #e23d30;*/
-/*}*/
+#health {
+	background-size: cover;
+	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.3), rgba(96, 53, 231, 0.3)), url("/images/education.jpg");
+}
+
 /*#health:hover {*/
 	/*background-color: #e2827c;*/
 /*}*/
 
-/*#hunger {*/
-	/*background-color: #9ec277;*/
-/*}*/
+#hunger {
+	background-size: cover;
+	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.3), rgba(96, 53, 231, 0.3)), url("/images/hunger.jpg");
+}
+
 /*#hunger:hover {*/
 	/*background-color: #a7c292;*/
 /*}*/
 
-/*#humans {*/
-	/*background-color: #4f5eb4;*/
-/*}*/
+#humans {
+	background-size: cover;
+	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.3), rgba(96, 53, 231, 0.3)), url("/images/education.jpg");
+}
+
 /*#humans:hover {*/
 	/*background-color: #838db4;*/
 /*}*/
 
-/*#international {*/
-	/*background-color: #2cb8d6;*/
-/*}*/
+#international {
+	background-size: cover;
+	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.3), rgba(96, 53, 231, 0.3)), url("/images/international.jpg");
+}
+
 /*#international:hover {*/
 	/*background-color: #72c6d6;*/
 /*}*/
-
-#animals {
-	background-color: #d0ea4a;
-}
-
-#animals:hover {
-	background-color: #ddea8a;
-}
-
-#cancer {
-	background-color: #c8afdd;
-}
-
-#cancer:hover {
-	background-color: #d4cedd;
-}
-
-#environment {
-	background-color: #36c785;
-}
-
-#environment:hover {
-	background-color: #76c79c;
-}
-
-#education {
-	background-color: #da9b28;
-}
-
-#education:hover {
-	background-color: #dabe5e;
-}
-
-#children {
-	background-color: #e6836f
-}
-
-#children:hover {
-	background-color: #e6aa9f;
-}
-
-#veterans {
-	background-color: #5b3272;
-}
-#veterans:hover {
-	background-color: #A27FAB;
-}
-
-#health {
-	background-color: #e23d30;
-}
-#health:hover {
-	background-color: #e2827c;
-}
-
-#hunger {
-	background-color: #9ec277;
-}
-#hunger:hover {
-	background-color: #a7c292;
-}
-
-#humans {
-	background-color: #4f5eb4;
-}
-#humans:hover {
-	background-color: #838db4;
-}
-
-#international {
-	background-color: #2cb8d6;
-}
-#international:hover {
-	background-color: #72c6d6;
-}
-
-
-
