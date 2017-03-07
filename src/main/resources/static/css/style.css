@@ -162,27 +162,15 @@ p {
 	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/animal-welfare.jpg");
 }
 
-/*#animals:hover {*/
-	/*background-color: #ddea8a;*/
-/*}*/
-
 #cancer {
 	background-size: cover;
-	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/cancer-patient.jpg");
+	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/cancer.jpg");
 }
-
-/*#cancer:hover {*/
-	/*background-color: #d4cedd;*/
-/*}*/
 
 #environment {
 	background-size: cover;
 	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/enviornment.jpg");
 }
-
-/*#environment:hover {*/
-	/*background-color: #76c79c;*/
-/*}*/
 
 #education {
 	height: 119px;
@@ -190,64 +178,35 @@ p {
 	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/education.jpg");
 }
 
-/*#education:hover {*/
-	/*background-color: #dabe5e;*/
-/*}*/
-
 #children {
 	background-size: cover;
-	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/education.jpg");
+	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/pexels-photo-233223.jpeg");
 }
-
-/*#children:hover {*/
-	/*background-color: #e6aa9f;*/
-/*}*/
 
 #veterans {
 	background-size: cover;
 	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/veteran.jpg");
 }
 
-/*#veterans:hover {*/
-	/*background-color: #A27FAB;*/
-/*}*/
-
 #health {
 	background-size: cover;
-	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/education.jpg");
+	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/medic-hospital-laboratory-medical-40559.jpeg");
 }
-
-/*#health:hover {*/
-	/*background-color: #e2827c;*/
-/*}*/
 
 #hunger {
 	background-size: cover;
-	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/hunger.jpg");
+	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/homeless.jpg");
 }
-
-/*#hunger:hover {*/
-	/*background-color: #a7c292;*/
-/*}*/
 
 #humans {
 	background-size: cover;
-	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/education.jpg");
+	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/protest.jpg");
 }
-
-/*#humans:hover {*/
-	/*background-color: #838db4;*/
-/*}*/
 
 #international {
 	background-size: cover;
 	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/international.jpg");
 }
-
-/*#international:hover {*/
-	/*background-color: #72c6d6;*/
-/*}*/
-
 
 @media (min-width: 1838px) {
 	#education {
