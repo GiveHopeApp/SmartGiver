@@ -30,12 +30,19 @@
     float: right;
     margin: 13px;
     border: none;
-    color: #532ec3;
     background-color: transparent;
 }
 
-.login-btn a:hover {
+.login-btn:hover {
     text-decoration: none;
+    -webkit-stroke-width: 5.3px;
+    -webkit-stroke-color: #665dfd;
+    -webkit-fill-color: #665dfd;
+    text-shadow: 1px 0px 20px #665dfd;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    transition: 0.5s all ease;
 }
 
 .signout-btn {
@@ -62,6 +69,34 @@ a {
     font-family: 'Avenir', sans-serif;
 }
 
+a:hover {
+    background: transparent;
+    text-decoration: none;
+    -webkit-stroke-width: 5.3px;
+    -webkit-stroke-color: #665dfd;
+    -webkit-fill-color: #665dfd;
+    text-shadow: 1px 0px 20px #665dfd;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+}
+
 .navbar-brand {
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'PT Serif', serif;
+}
+
+.navbar-brand:hover {
+    -webkit-stroke-width: 5.3px;
+    -webkit-stroke-color: #665dfd;
+    -webkit-fill-color: #665dfd;
+    text-shadow: 1px 0px 20px #665dfd;
+    -webkit-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+}
+
+#categories-nav:hover {
+    background: transparent;
 }

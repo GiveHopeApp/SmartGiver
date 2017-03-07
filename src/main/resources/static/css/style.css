@@ -14,9 +14,7 @@ body {
 #headerName {
 	text-align: center;
 	color: whitesmoke;
-	font-family: 'Libre Baskerville', serif;
-	/*text-shadow: black 2px 1px;*/
-	font-family: 'Big Caslon', sans-serif;
+	font-family: 'PT Serif', serif;
 }
 
 .header-wrapper h1 {
@@ -193,6 +191,10 @@ p {
 #international {
 	background-size: cover;
 	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/international.jpg");
+}
+
+.nav-category {
+	display: none;
 }
 
 @media (min-width: 1838px) {
