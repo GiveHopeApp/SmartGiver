@@ -7,8 +7,10 @@ html {
 }
 
 body {
-  font-family: 'Titillium Web', sans-serif;
+  /*font-family: 'Titillium Web', sans-serif;*/
+  font-family: Avenir, Arial sans-serif;
 }
+
 
 a {
   text-decoration: none;
@@ -167,8 +169,10 @@ textarea {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   -webkit-appearance: none;
-  font-family: 'Titillium Web', sans-serif;
+  /*font-family: 'Titillium Web', sans-serif;*/
+  font-family: Avenir, Arial sans-serif;
 }
+
 .button:hover, .button:focus {
   background: #532ec3;
 }
@@ -183,4 +187,8 @@ textarea {
 }
 .error {
     color: red;
+}
+
+.login-btn {
+  display: none;
 }

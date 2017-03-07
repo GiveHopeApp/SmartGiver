@@ -46,7 +46,6 @@ $(document).ready(function () {
             $(this).text('Other');
             $('.button').removeClass('active');
             $('.dollar').css('display', 'none');
-            $('.button:nth-of-type(2)').addClass('active');
             clicked = false
         }
     });
