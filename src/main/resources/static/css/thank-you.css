@@ -1,6 +1,5 @@
 body {
     color: white;
-    font-family: 'PT Serif', serif;
 }
 
 .wrapper {
@@ -9,7 +8,6 @@ body {
     padding: 20px 130px 0 130px;
     background-repeat: no-repeat;
     background-image: url("../images/smartgiverplanthands2.jpeg");
-    /*background-image: url("/images/mi-pham-151950.jpg");*/
 }
 
 .navbar-wrapper {
@@ -20,7 +18,7 @@ body {
     display: inline-block;
     color: white;
     font-size: 20px;
-    font-family: 'PT Serif', serif;
+    font-family: 'Playfair Display', serif;
 
 }
 
@@ -53,24 +51,23 @@ body {
 .text-wrapper {
     margin-top: 170px;
     width: 450px;
-    -webkit-animation-name: fadeIn;
-    -webkit-animation-duration: 1.5s;
-    /*-webkit-animation-iteration-count: infinite;*/
-    -webkit-animation-timing-function: linear;
+    /*-webkit-animation-name: fadeIn;*/
+    /*-webkit-animation-duration: 1.5s;*/
+    /*!*-webkit-animation-iteration-count: infinite;*!*/
+    /*-webkit-animation-timing-function: linear;*/
 }
 
 .text-wrapper h1 {
+    color: white;
     font-size: 56px;
     font-family: 'Avenir', sans-serif;
     text-shadow: 1px 1px #2f2f2f;
-    /*font-family: 'Source Sans Pro', sans-serif;*/
 }
 
 .text-wrapper p {
     font-size: 20px;
     font-family: 'Avenir', sans-serif;
     text-shadow: 1px 1px #2f2f2f;
-    /*font-family: 'Open Sans', sans-serif;*/
 }
 
 .text-wrapper > a {
@@ -82,7 +79,7 @@ body {
     text-align: center;
     letter-spacing: 1px;
     display: inline-block;
-    background-color: #6637fd;
+    /*background-color: #6637fd;*/
     padding: 15px 20px;
     font-family: 'Avenir', sans-serif;
 
@@ -90,7 +87,6 @@ body {
 
 .text-wrapper a:hover {
     text-decoration: none;
-    background-color: #9894fd;
 }
 
 .glyphicon {
@@ -105,17 +101,3 @@ body {
 #brand {
     float: left;
 }
-
-/*footer p {*/
-/*font-family: Avenir;*/
-/*color: black;*/
-/*}*/
-
-/*footer {*/
-/*position:fixed;*/
-/*left:0px;*/
-/*bottom:0px;*/
-/*height:30px;*/
-/*width:100%;*/
-/*background:#999;*/
-/*}*/

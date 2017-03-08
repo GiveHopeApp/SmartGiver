@@ -1,5 +1,4 @@
 body {
-	/*font-family: 'Titillium Web', sans-serif;*/
 	font-family: 'Avenir', sans-serif;
 }
 
@@ -14,7 +13,7 @@ body {
 #headerName {
 	text-align: center;
 	color: whitesmoke;
-	font-family: 'PT Serif', serif;
+	font-family: 'Playfair Display', serif;
 }
 
 .header-wrapper h1 {
@@ -160,7 +159,7 @@ p {
 #education {
 	height: 119px;
 	background-size: cover;
-	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/education.jpg");
+	background-image: linear-gradient(to bottom, rgba(96, 53, 231, 0.2), rgba(96, 53, 231, 0.2)), url("/images/book.jpg");
 }
 
 #children {
