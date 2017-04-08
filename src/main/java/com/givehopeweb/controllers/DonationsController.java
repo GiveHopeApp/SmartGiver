@@ -116,10 +116,10 @@ public class DonationsController {
     }
 
     /**
-     * <p>The <code>showDonationPage</code> method shows the donation form view to the user.
-     * This method uses the EIN in the path to retrieve a charity object from the database and
-     * attach it to the donation object. The donation is saved to the database at this point to
-     * avoid null pointer exceptions if saved after successful donation.</p>
+     * <p>The <code>showDonationPage</code> method handles the post request when a donation
+     * amount is selected. This method uses the EIN in the path to retrieve a charity object from
+     * the database and attach it to the donation object. The donation is saved to the database
+     * at this point to avoid null pointer exceptions if saved after successful donation.</p>
      *
      * @param donation object containing donation information
      * @param ein path variable used to direct the donation to the specific charity
@@ -149,6 +149,28 @@ public class DonationsController {
         donation.setAmount(amount);
 
         donationsDao.save(donation);
+
+        return "/charities/donation-form";
+    }
+
+    /**
+     *<p>The <code>showDonationPage</code> method shows the donation form.</p>
+     *
+     * @param model used to hold various objects for reference
+     * @return donation form view
+     */
+    @GetMapping ("/donate")
+    public String showDonationPage(Model model) {
+
+        //Adds logged in user object to model for navbar personalization
+        if (!SecurityContextHolder.getContext().getAuthentication().getPrincipal()
+                .equals("anonymousUser")) {
+
+            User user = (User) SecurityContextHolder.getContext().getAuthentication()
+                    .getPrincipal();
+
+            model.addAttribute("user", user);
+        }
 
         return "/charities/donation-form";
     }
