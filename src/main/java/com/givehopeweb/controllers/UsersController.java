@@ -55,30 +55,6 @@ public class UsersController {
     }
 
     /**
-     * <p>The <code>showRegistrationPage</code> method displays the login/registration view.</p>
-     *
-     * @param model holds various objects for reference
-     * @return login/registration page
-     */
-    @GetMapping ("/register")
-    public String showRegistrationPage (Model model) {
-
-        if (!SecurityContextHolder.getContext().getAuthentication().getPrincipal()
-                .equals("anonymousUser")) {
-
-            User user = (User) SecurityContextHolder.getContext().getAuthentication()
-                    .getPrincipal();
-
-            model.addAttribute("user", user);
-        } else {
-
-            model.addAttribute("user", new User() );
-        }
-
-        return  "/users/login-register";
-    }
-
-    /**
      * <p>The <code>registerUser</code> method handles the POST request sent when registering a
      * new user. Form validation occurs in the back-end and redirects the user back to the
      * registration page with appropriate error messages if invalid data is submitted.</p>
@@ -177,9 +153,7 @@ public class UsersController {
     }
 
     /**
-     * <p>The <code>showLoginForm</code> method displays the login/registration page. This method
-     * is identical to the <code>showRegistrationForm</code> method, but must be present for
-     * Spring Security to handle login/logout correctly.</p>
+     * <p>The <code>showLoginForm</code> method displays the login/registration page.</p>
      *
      * @param model holds various objects for reference
      * @return displays the login/registration page
