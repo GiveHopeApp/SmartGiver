@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Controller
 public class CharitiesController {
 
+    //Injected classes
     private Charities charitiesDao;
 
     /**
