@@ -15,6 +15,7 @@ public class GiveHopeController {
     @GetMapping ("/")
     public String showLandingPage (Model model) {
 
+        //Adds logged in user object to model for navbar personalization
         if (!SecurityContextHolder.getContext().getAuthentication().getPrincipal()
                 .equals("anonymousUser")) {
 
@@ -31,6 +32,7 @@ public class GiveHopeController {
     @GetMapping ("/donate")
     public String showDonationPage(Model model) {
 
+        //Adds logged in user object to model for navbar personalization
         if (!SecurityContextHolder.getContext().getAuthentication().getPrincipal()
                 .equals("anonymousUser")) {
 
@@ -46,6 +48,7 @@ public class GiveHopeController {
     @GetMapping ("/categories")
     public String showCategoriesPage(Model model) {
 
+        //Adds logged in user object to model for navbar personalization
         if (!SecurityContextHolder.getContext().getAuthentication().getPrincipal()
                 .equals("anonymousUser")) {
 

@@ -41,6 +41,7 @@ public class DonationsController {
                                         @RequestParam (name = "email") String email,
                                         Model model) {
 
+        //Adds logged in user object to model for navbar personalization
         if (!SecurityContextHolder.getContext().getAuthentication().getPrincipal()
                 .equals("anonymousUser")) {
 
@@ -87,6 +88,7 @@ public class DonationsController {
     public String showDonationPage (@ModelAttribute Donation donation, @PathVariable String ein,
                                     @RequestParam BigDecimal amount, Model model) {
 
+        //Adds logged in user object to model for navbar personalization
         if (!SecurityContextHolder.getContext().getAuthentication().getPrincipal()
                 .equals("anonymousUser")) {
 
