@@ -13,7 +13,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * Created by David on 2/22/17.
+ * <p>The <code>UserDetailsLoader</code> class is a service used to implement Spring Security
+ * features for authentication and authorization.</p>
+ *
+ * @author David Ryan Alviola
+ * @since March 2017
  */
 @Service("customUserDetailsService")
 public class UserDetailsLoader implements UserDetailsService {
