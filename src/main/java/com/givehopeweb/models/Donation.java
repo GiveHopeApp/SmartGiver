@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 
 /**
- * <p>The <code>Donation</code> class stores information about each charity. Spring
+ * <p>The <code>Donation</code> class stores information about each donation. Spring
  * annotations are used to designate the <code>Donation</code> class as a table and each of its
  * properties as a column. Foreign keys are used to link donations to users if they are
  * logged in when donating and link donations to the charity by ID. Getters and setters for each of

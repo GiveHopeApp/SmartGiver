@@ -8,16 +8,32 @@ import javax.validation.constraints.Size;
 import java.util.List;
 
 /**
- * Created by David on 2/17/17.
+ * <p>The <code>User</code> class stores information about each user. Spring
+ * annotations are used to designate the <code>User</code> class as a table and each of its
+ * properties as a column. Foreign keys link the user to the donations they make. Getters and
+ * setters for each of the properties are present.</p>
+ *
+ * @author David Ryan Alviola
+ * @since March 2017
  */
 @Entity
 @Table (name = "users")
 public class User {
 
+    /**
+     * Default constructor for the <code>User</code> class. This constructor is used when
+     * creating a new user.
+     */
     public User () {
 
     }
 
+    /**
+     * <p>Constructor for <code>User</code> class when retrieving user information from the
+     * database.</p>
+     *
+     * @param user object with user information
+     */
     public User (User user) {
 
         id = user.id;

@@ -3,7 +3,13 @@ package com.givehopeweb.models;
 import javax.persistence.*;
 
 /**
- * Created by David on 2/17/17.
+ * <p>The <code>UserRole</code> class stores which roles the user belongs to. Spring
+ * annotations are used to designate the <code>UserRole</code> class as a table and each of its
+ * properties as a column. Foreign keys link to the role to the user that has it assigned. Getters
+ * and setters for each of the properties are present.</p>
+ *
+ * @author David Ryan Alviola
+ * @since March 2017
  */
 @Entity
 @Table(name = "user_roles")
