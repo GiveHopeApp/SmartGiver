@@ -6,7 +6,12 @@ import javax.persistence.*;
 import java.util.List;
 
 /**
- * Created by David on 2/17/17.
+ * <p>The <code>Charity</code> class stores information about each charity. Spring
+ * annotations are used to designate the <code>Charity</code> class as a table and each of its
+ * properties as a column. Getters and setters for each of the properties are present.</p>
+ *
+ * @author David Ryan Alviola
+ * @since March 2017
  */
 @Entity
 @Table (name = "charities")

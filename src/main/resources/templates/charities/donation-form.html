@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
     <meta charset="UTF-8"/>
     <title>Donate</title>
@@ -44,15 +45,21 @@
                     <input type="text" maxlength="16" data-panda="last_name"/>
                 </div>
                 <div class="field-wrap">
-                    <label>Email</label>
-                    <input id="visibleEmail" type="email"/>
+
+                    <label sec:authorize="isAuthenticated()" class="active highlight"
+                           for="visibleEmail">Email</label>
+                    <input sec:authorize="isAuthenticated()"
+                           id="visibleEmail" type="email" th:value="${user.email}"/>
+
+                    <label sec:authorize="isAnonymous()" for="visibleEmail">Email</label>
+                    <input sec:authorize="isAnonymous()" id="visibleEmail" type="email"/>
+
                 </div>
                 <div id="tokenize">
                     <button id="donate_btn" class="button button-block" type="submit" >NEXT</button>
                 </div>
             </form>
         </div>
-
         <div class="hidden">
             <form id="hiddenForm" th:object="${donation}" method="post">
                 <input type="text" th:field="*{charity.ein}"/>
