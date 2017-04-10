@@ -13,8 +13,12 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 /**
- * Created by David on 2/22/17.
- */
+ * <p>The <code>SecurityConfiguration</code> class is a service used to implement Spring Security
+ * features for authentication and authorization.</p>
+ *
+ * @author David Ryan Alviola
+ * @since March 2017
+ **/
 @Configuration
 @EnableWebSecurity
 @ComponentScan(basePackageClasses = UserWithRole.class)
@@ -33,7 +37,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http
                 .formLogin()
                 .loginPage("/login")
-                .defaultSuccessUrl("/profile") // user's home page, it can be any URL
+                .defaultSuccessUrl("/profile") // user's home page
                 .permitAll() // Anyone can go to the login page
             .and()
                 .authorizeRequests()

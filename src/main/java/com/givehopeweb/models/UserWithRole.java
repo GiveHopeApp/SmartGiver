@@ -9,7 +9,13 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * Created by David on 2/21/17.
+ * <p>The <code>UserWithRole</code> class is used to implement Spring Security features for
+ * authentication and authorization. The <code>UserWithRole</code> class works with the
+ * <code>UserRole</code> class to authenticate and determine the level of authorization for each
+ * user.</p>
+ *
+ * @author David Ryan Alviola
+ * @since March 2017
  */
 public class UserWithRole extends User implements UserDetails {
 

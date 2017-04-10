@@ -6,7 +6,11 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 /**
- * Created by David on 2/22/17.
+ * <p>The <code>UserWithRole</code> class is a service used to implement Spring Security features
+ * for authentication and authorization.</p>
+ *
+ * @author David Ryan Alviola
+ * @since March 2017
  */
 @Service("userService")
 public class UserService {

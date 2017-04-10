@@ -8,7 +8,11 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
- * Created by David on 2/21/17.
+ * <p>The <code>Roles</code> interface is used to implement Spring Security features for
+ * authentication and authorization of users.</p>
+ *
+ * @author David Ryan Alviola
+ * @since March 2017
  */
 
 @Repository
