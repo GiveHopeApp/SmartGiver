@@ -79,13 +79,14 @@ public class DonationsController {
         //The linux command to send donation payment to the PandaPay API. The apiKeyLoader
         // service is called and inserts the secret key. The decimal for the donation amount is
         // moved two places to the right since the PandaPay API takes the amount in cents.
-        String command = "curl -X POST --data " +
-                "source=" + token +
-                "&amount=" + donation.getAmount().movePointRight(2) +
-                "&destination=" + donation.getCharity().getEin() +
-                "&receipt_email=" + email +
-                "&currency=usd" +
-                " https://" + apiKeyLoader.getPandaPayKey() + ":@api.pandapay.io/v1/donations";
+        StringBuilder command = new StringBuilder();
+
+        command.append("curl -X POST --data source=").append(token)
+                .append("&amount=").append(donation.getAmount().movePointRight(2))
+                .append("&destination=").append(donation.getCharity().getEin())
+                .append("&receipt_email=").append(email)
+                .append("&currency=usd https://").append(apiKeyLoader.getPandaPayKey())
+                .append(":@api.pandapay.io/v1/donations");
 
         Process process;
 
@@ -93,7 +94,7 @@ public class DonationsController {
         // response from the PandaPay API in the Spring console. Successful donations return a
         // JSON with the donation information, otherwise an error message is returned.
         try {
-            process = Runtime.getRuntime().exec(command);
+            process = Runtime.getRuntime().exec(command.toString());
             process.waitFor();
 
             StringBuffer output = new StringBuffer();
