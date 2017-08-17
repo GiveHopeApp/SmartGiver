@@ -1,4 +1,5 @@
 #SmartGiver
+
 SmartGiver is a charity donation application that congregates only A and A+ rated charities. Users 
 can search for charities by category or by keyword in the search bar. Once a charity is selected, the
 user is taken to the charity's profile page which contains its mission statement and location. 
@@ -9,10 +10,12 @@ sent to the PandaPay API for payment to the charity. The user receives a confirm
 the donation was successful. The application only tracks donation amounts and the EIN of the charity that was 
 designated, so no credit card information is saved on the database.
   
-##Try it for yourself:  
+##Try it for yourself: 
+ 
 [SmartGiver](http://smartgiver.us)
   
 ##Project Setup
+
 Clone the project from GitHub as a Spring project. Log in to MySQL as the root user and run the
 scripts from the migration file in the sql folder. This will create the database for the 
 project and a user. Copy the **application.properties.dist** file and paste it in the same 
@@ -25,6 +28,7 @@ parameter in the Panda.init command: **Panda.init("publishable_key", "panda_cc_f
 into the application.properties file as the value for **pandaPay.apiKey**.
    
 ##Project Organization
+
 The project is organized based on the MVC design pattern. The views are contained in the 
 resources folder and organized by the models that the views pertain to. The models and 
 controllers are contained inside the java folder. The controllers are located inside the 
@@ -36,5 +40,6 @@ services present are used for SpringSecurityConfiguration or loading the the sec
 API key.
    
 ##Further Documentation
+
 [PandaPay API](https://www.pandapay.io/api-reference)
     
